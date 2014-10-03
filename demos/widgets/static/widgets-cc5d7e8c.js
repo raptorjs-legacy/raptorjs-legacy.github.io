@@ -1,0 +1,1 @@
+define("raptor/widgets",function(e,t,n){"use strict";var r=e("raptor/widgets/WidgetsContext"),i="widgets";return{getWidgetsContext:function(e){var t=e.attributes;return t[i]||(t[i]=new r(e))}}});

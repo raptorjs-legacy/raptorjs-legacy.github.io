@@ -1,0 +1,1 @@
+define.extend("raptor/widgets/WidgetsContext",function(e,t){"use strict";return{initWidgets:function(){var t=this.widgets,n=e("raptor/widgets");t.forEach(function(e){n.initWidget(e)}),this.clearWidgets()}}});

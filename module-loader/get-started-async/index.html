@@ -1,0 +1,159 @@
+<!DOCTYPE html><html><head><title itemprop="name">RaptorJS: Get Started using the Asynchronous Module Loader</title><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/static/font-awesome-87349705.css">
+<link rel="stylesheet" type="text/css" href="/static/module-loader-get-started-async-4e6c9ed2.css">
+<link rel="stylesheet" type="text/css" href="/static/docs-6e628a8c.css">
+<link rel="stylesheet" type="text/css" href="/static/code-editor-f1386401.css">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-33982282-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+var __insp=__insp||[];__insp.push(["wid",2568045892]),function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"==document.location.protocol?"https":"http")+"://www.inspectlet.com/inspectlet-jq.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}();</script></head><body><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"><a class="brand" href="/">RaptorJS</a><ul class="nav"><li class="divider-vertical"></li><li id="w0"><a href="/get-started/">Get Started</a></li><li class="divider-vertical"></li><li id="w1" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Learn<b class="caret"></b></a><ul class="dropdown-menu"><li id="w2"><a href="/">Overview</a></li><li id="w3"><a href="/get-started/">Get Started</a></li><li id="w4"><a href="/tutorial/">Tutorial</a></li><li id="w5"><a href="/api/">API Reference</a></li><li id="w6"><a target="_blank" href="https://github.com/raptorjs/samples">Sample Apps</a></li><li id="w7"><a href="/faq/">FAQ</a></li><li class="divider"></li><li id="w8"><a href="/modules-classes/">Modules and Classes</a></li><li id="w9"><a href="/packaging/">Packaging and Extensions</a></li><li id="w10"><a href="/module-loader/">Module Loader</a></li><li id="w11"><a href="/optimizer/">Optimizer</a></li><li id="w12"><a href="/raptor-templates/">Raptor Templates</a></li><li id="w13"><a href="/widgets/">Widget Framework</a></li><li class="divider"></li><li id="w14"><a href="/ui-components/">Building UI Components</a></li><li id="w15"><a href="/logging/">Logging</a></li><li id="w16"><a href="/resource-search-path/">Resource Search Path</a></li></ul></li><li class="divider-vertical"></li><li id="w17" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a><ul class="dropdown-menu"><li id="w18"><a href="https://github.com/raptorjs/raptorjs">Source code</a></li><li id="w19"><a href="https://github.com/raptorjs/raptorjs/issues">Issue Tracker</a></li><li id="w20"><a href="/contribute/">Contribute</a></li><li id="w21"><a href="/contributors/">Contributors</a></li><li class="divider"></li><li id="w22"><a href="http://groups.google.com/group/raptorjs">Discussion Forum</a></li><li class="divider"></li><li id="w23"><a href="http://twitter.com/raptorjs">Twitter (@raptorjs)</a></li><li id="w24"><a href="https://plus.google.com/111493691067944627473/">Google+</a></li><li class="divider"></li><li id="w25"><a href="https://github.com/raptorjs/branding">Logos</a></li></ul></li><li class="divider-vertical"></li><li id="w26" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a><ul class="dropdown-menu"><li id="w27"><a href="https://github.com/raptorjs/raptorjs/wiki/Release-Notes">Release Notes</a></li><li id="w28"><a href="/design-philosophy/">Design Philosophy</a></li><li id="w29"><a target="_blank" href="https://github.com/raptorjs/raptorjs/blob/master/LICENSE.md">License</a></li><li id="w30"><a href="/credits/">Credits</a></li><li id="w31"><a href="/creators/">Creators</a></li></ul></li><li class="divider-vertical"></li></ul></div></div></div><div class="container"><div class="docs"><div class="bd"><div class="docs-content"><h1 id="title">RaptorJS: Get Started using the Asynchronous Module Loader</h1><div class="toc nav" id="docsNav"><ul class="toc"><li class="toc toc-level-0"><a href="#Overview">Overview</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#View_Demo">View Demo</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Demo_Source">Demo Source</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#HTML_Page_Template">HTML Page Template</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#HTML_Output">HTML Output</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#AsyncModules">Asynchronously Loaded Modules</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Downloading_Modules_Asynchronously">Downloading Modules Asynchronously</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Building_the_Sample">Building the Sample</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Discussion">Discussion</a><ul class="toc"></ul></li></ul><div class="docs-nav-footer"><ul><li><span class="powered-by">Powered by <a href="/" class="raptorjs">RaptorJS</a></span></li><li><a href="/license/">License</a></li><li><a href="/credits/">Credits</a></li></ul></div></div><div class="section section-level-0"><h2 id="Overview">Overview</h2><div class="bd"><p>RaptorJS includes a lightweight AMD-compatible package/module loader that
+allows JavaScript and CSS resources to be downloaded asynchronously after the
+initial page load. This async loader works in conjunction with the
+<a href="/optimizer/">RaptorJS Optimizer </a> to efficiently download resources from the server. </p><p>The RaptorJS Optimizer is needed to write the optimized resource bundles to
+disk
+<i>and</i> and to generate the metadata that the RaptorJS Async Loader requires to
+efficiently download resources asynchronously. The metadata generated by the
+RaptorJS Optimizer includes URLs that the loader uses to download resources.
+This optimically generated metadata removes the need for developers to embedded
+manually maintained configuration data as part of a webpage. For optimal
+performance, the async loader will always download resources in
+<i>parallel</i> and execute resources in the order that they finish downloading.</p><p>For simplicity, this guide will make use of <a href="/raptor-templates/">Raptor Templates</a> and the provided <a href="/optimizer/taglib/">RaptorJS Optimizer Taglib</a> to begin using the RaptorJS Async Loader. However, Raptor Templates is not
+required to use the RaptorJS Async Loader (but it does make things a lot easier
+out-of-the-box).</p><p>For this guide, we are going to create a page that includes a module named
+"module-a" synchronously (as part of the initial page load). In addition, the
+page will asynchronously download a module named "module-b" when a button is
+clicked. Both "module-a" and "module-b" will consist of both JavaScript and CSS
+resources.</p></div></div><div class="section section-level-0"><h2 id="View_Demo">View Demo</h2><div class="bd"><div class="view-demo"><h1><i class="icon-play-circle icon-large"></i> <a href="/demos/async-loader/" target="_blank">View Demo: Asynchronous Module Loading</a></h1></div></div></div><div class="section section-level-0"><h2 id="Demo_Source">Demo Source</h2><div class="bd"><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader" target="_blank">/async-loader/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/README.md" target="_blank">README.md</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/build.js" target="_blank">build.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/build.xml" target="_blank">build.xml</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules" target="_blank">modules/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules/module-a" target="_blank">module-a/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules/module-a/module-a.css" target="_blank">module-a.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules/module-a/module-a.js" target="_blank">module-a.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules/module-a/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules/module-b" target="_blank">module-b/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules/module-b/module-b.css" target="_blank">module-b.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules/module-b/module-b.js" target="_blank">module-b.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/modules/module-b/package.json" target="_blank">package.json</a></b></li></ul></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/optimizer-config.xml" target="_blank">optimizer-config.xml</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/package.json" target="_blank">package.json</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/pages" target="_blank">pages/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/pages/index" target="_blank">index/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/pages/index/index.css" target="_blank">index.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/pages/index/index.js" target="_blank">index.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/async-loader/pages/index/index.rhtml" target="_blank">index.rhtml</a></b></li></ul></li></ul></li></ul></li></ul></div></div><div class="section section-level-0"><h2 id="HTML_Page_Template">HTML Page Template</h2><div class="bd"><p>Below is the page template that we will use for this guide:</p><div class="code-editor" id="w32"><h2 class="code-editor-title">/pages/index/index.rhtml</h2> <textarea id="w32-textarea" style="display: none;" name="code-0"><c:template
+    xmlns:c="core"
+    xmlns:html="html"
+    xmlns:optimizer="optimizer">
+    
+    <optimizer:page name="index" base-path="${data.outputDir}">
+        <dependencies>
+            <module name="raptor"/>
+            <js path="index.js"/>
+            <css path="index.css"/>
+            <module name="module-a"/>
+            <module name="module-b" async="true"/>
+
+            <!-- Required for asynchronous module loading -->
+            <module name="raptor/loader"/>
+        </dependencies>
+    </optimizer:page>
+    
+    <html html:doctype="html">
+        <head>
+            <title>Async Module Loading Test Page</title>
+            <optimizer:slot name="head"/>
+        </head>
+        <body>
+            <button type="button" onclick="TestPage.loadModuleBAsync()">Load "module-b" Asynchrously</button>
+            <optimizer:slot name="body"/>
+        </body>
+    </html>
+
+</c:template></textarea></div><p>You will notice that "module-b" is marked as "async" in the above template. The
+purpose of the "async" attribute is explained in the
+<a href="#AsyncModules">Asynchronously Loaded Modules</a> section below.</p></div></div><div class="section section-level-0"><h2 id="HTML_Output">HTML Output</h2><div class="bd"><p>When the above template is rendered output similar to the following will be
+produced:</p><div class="code-editor" id="w33"><h2 class="code-editor-title">build/index.html</h2> <textarea id="w33-textarea" style="display: none;" name="code-1">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;title>Async Module Loading Test Page&lt;/title>
+        &lt;link rel="stylesheet" type="text/css" href="static/index-1a51f97d.css">
+    &lt;/head>
+    &lt;body>
+        &lt;button type="button" onclick="TestPage.loadModuleBAsync()">Load "module-b" Asynchrously&lt;/button>
+        &lt;script type="text/javascript" src="static/index-04722da0.js">&lt;/script>
+    &lt;/body>
+&lt;/html></textarea></div></div></div><div class="section section-level-0"><h2 id="AsyncModules">Asynchronously Loaded Modules</h2><div class="bd"><p>By default, the RaptorJS Optimizer will include the code for a module as part
+of the initial page load by generating the appropriate &lt;link> and
+&lt;script> tags that include the optimized bundles. However, when a page
+dependency is marked as "async" the RaptorJS Optimizer will instead only
+include enough metadata so that the module can be downloaded asynchronously
+when needed. For example, because "module-b" is marked as async, the following
+JavaScript code will be included as part of JavaScript code included in the
+initial page
+load:</p><div class="code-editor" id="w34"> <textarea id="w34-textarea" style="display: none;" name="code-2">$rloaderMeta = {
+    "module-b": {
+        css: ["static/index-async-21cbcb13.css"],
+        js:  ["static/index-async-f4a3ad20.js"]
+    }
+};</textarea></div><p>The above metadata provides the client-side asynchronous module loader with the
+exact URLs that are needed to load the module asynchronously. There is no guess
+work on the client-side and all of the URLs include exact checksums (by
+default) and can easily be configured to use a host name for a Content
+Distribution Network
+(CDN).</p></div></div><div class="section section-level-0"><h2 id="Downloading_Modules_Asynchronously">Downloading Modules Asynchronously</h2><div class="bd"><p>The following code is used to download "module-b" asynchronously and then
+invoke a method on the loaded
+module:</p><div class="code-editor" id="w35"> <textarea id="w35-textarea" style="display: none;" name="code-3">require(['module-b'], function(moduleB) {
+    moduleB.sayHello();
+});</textarea></div><p>The source code for "module-b" is the following:</p><div class="code-editor" id="w36"> <textarea id="w36-textarea" style="display: none;" name="code-4">define(
+    "module-b",
+    function(require) {
+        return {
+            sayHello: function(to) {
+                var div = document.createElement('div');
+                div.className = 'module-b';
+                div.innerHTML = 'Hello from "module-b"!';
+                document.body.appendChild(div);
+            }
+        };
+    });</textarea></div><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>If you would like to download multiple modules asynchronously then simply
+provide an array of module IDs as shown in the following
+example:</p><div class="code-editor" id="w37"> <textarea id="w37-textarea" style="display: none;" name="code-5">require(
+    ['module-a', 'module-b'], 
+    function(moduleA, moduleB) {
+        //Do something with the loaded modules...
+    });</textarea></div><p>In addition, you can also choose to use the <code>require</code> function to access the modules after they have been loaded:</p><div class="code-editor" id="w38"> <textarea id="w38-textarea" style="display: none;" name="code-6">require(
+    ['module-a', 'module-b'], 
+    function() {
+        var moduleA = require('module-a');
+        var moduleB = require('module-b');
+        //Do something with the loaded modules...
+    });</textarea></div></div></div></div></div><div class="section section-level-0"><h2 id="Building_the_Sample">Building the Sample</h2><div class="bd"><p>The sample project includes a build script named <code><a href="https://github.com/raptorjs/samples/blob/master/async-loader/build.js">build.js</a></code> that renders the <code><a href="https://github.com/raptorjs/samples/blob/master/async-loader/pages/index/index.rhtml">pages/index/index.rhtml</a></code> template shown above and saves the generated HTML string to <code><a href="https://github.com/raptorjs/raptorjs-legacy.github.io/blob/master/demos/async-loader/index.html">build/index.html</a></code> . In the process of rendering the page, the RaptorJS Optimizer Taglib will
+write the optimized resource bundles to disk (along with the metadata required
+by the RaptorJS Async
+Loader).</p><p>Please see the following documentation for additional information for building
+the sample project:
+<a href="https://github.com/raptorjs/samples/tree/master/async-loader/README.md"></a></p></div></div><div class="section section-level-0"><h2 id="Discussion">Discussion</h2><div class="bd"><div id="disqus_thread"></div></div></div></div></div><div class="docs-footer-padding"></div></div></div><script type="text/javascript" src="/static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="/static/jquery-371da524.js"></script>
+<script type="text/javascript" src="/static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="/static/module-loader-get-started-async-02c7930e.js"></script>
+<script type="text/javascript" src="/static/code-editor-36478451.js"></script><script type="text/javascript">$rwidgets(
+["components.nav.Nav.NavItemWidget","w0",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w1",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w2",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w3",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w4",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w5",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w6",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w7",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w8",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w9",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w10",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w11",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w12",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w13",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w14",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w15",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w16",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w17",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w18",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w19",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w20",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w21",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w22",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w23",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w24",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w25",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w26",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w27",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w28",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w29",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w30",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w31",0,0,0,0]],
+["components/editors/CodeEditor/CodeEditorWidget","w32",{"mode":"xml","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w33",{"mode":"htmlmixed","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w34",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w35",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w36",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w37",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w38",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components.social.Disqus.DisqusWidget","disqus_thread",{"shortName":"raptor-js","id":"module-loader-get-started-async","title":"RaptorJS: Get Started using the Asynchronous Module Loader"},0,0,0]);</script></body></html>

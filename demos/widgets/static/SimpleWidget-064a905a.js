@@ -1,0 +1,1 @@
+define("SimpleWidget",function(e){var t=function(e){var t=this.getEl(),n=$(t);n.click(function(){n.css("background-color",e.color)})};return t.prototype={},t});

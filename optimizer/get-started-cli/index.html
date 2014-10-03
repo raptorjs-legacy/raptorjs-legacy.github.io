@@ -1,0 +1,175 @@
+<!DOCTYPE html><html><head><title itemprop="name">RaptorJS Optimizer: Get Started using the Command Line Interface</title><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/static/font-awesome-87349705.css">
+<link rel="stylesheet" type="text/css" href="/static/optimizer-get-started-cli-4e6c9ed2.css">
+<link rel="stylesheet" type="text/css" href="/static/docs-6e628a8c.css">
+<link rel="stylesheet" type="text/css" href="/static/code-editor-f1386401.css">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-33982282-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+var __insp=__insp||[];__insp.push(["wid",2568045892]),function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"==document.location.protocol?"https":"http")+"://www.inspectlet.com/inspectlet-jq.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}();</script></head><body><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"><a class="brand" href="/">RaptorJS</a><ul class="nav"><li class="divider-vertical"></li><li id="w0"><a href="/get-started/">Get Started</a></li><li class="divider-vertical"></li><li id="w1" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Learn<b class="caret"></b></a><ul class="dropdown-menu"><li id="w2"><a href="/">Overview</a></li><li id="w3"><a href="/get-started/">Get Started</a></li><li id="w4"><a href="/tutorial/">Tutorial</a></li><li id="w5"><a href="/api/">API Reference</a></li><li id="w6"><a target="_blank" href="https://github.com/raptorjs/samples">Sample Apps</a></li><li id="w7"><a href="/faq/">FAQ</a></li><li class="divider"></li><li id="w8"><a href="/modules-classes/">Modules and Classes</a></li><li id="w9"><a href="/packaging/">Packaging and Extensions</a></li><li id="w10"><a href="/module-loader/">Module Loader</a></li><li id="w11"><a href="/optimizer/">Optimizer</a></li><li id="w12"><a href="/raptor-templates/">Raptor Templates</a></li><li id="w13"><a href="/widgets/">Widget Framework</a></li><li class="divider"></li><li id="w14"><a href="/ui-components/">Building UI Components</a></li><li id="w15"><a href="/logging/">Logging</a></li><li id="w16"><a href="/resource-search-path/">Resource Search Path</a></li></ul></li><li class="divider-vertical"></li><li id="w17" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a><ul class="dropdown-menu"><li id="w18"><a href="https://github.com/raptorjs/raptorjs">Source code</a></li><li id="w19"><a href="https://github.com/raptorjs/raptorjs/issues">Issue Tracker</a></li><li id="w20"><a href="/contribute/">Contribute</a></li><li id="w21"><a href="/contributors/">Contributors</a></li><li class="divider"></li><li id="w22"><a href="http://groups.google.com/group/raptorjs">Discussion Forum</a></li><li class="divider"></li><li id="w23"><a href="http://twitter.com/raptorjs">Twitter (@raptorjs)</a></li><li id="w24"><a href="https://plus.google.com/111493691067944627473/">Google+</a></li><li class="divider"></li><li id="w25"><a href="https://github.com/raptorjs/branding">Logos</a></li></ul></li><li class="divider-vertical"></li><li id="w26" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a><ul class="dropdown-menu"><li id="w27"><a href="https://github.com/raptorjs/raptorjs/wiki/Release-Notes">Release Notes</a></li><li id="w28"><a href="/design-philosophy/">Design Philosophy</a></li><li id="w29"><a target="_blank" href="https://github.com/raptorjs/raptorjs/blob/master/LICENSE.md">License</a></li><li id="w30"><a href="/credits/">Credits</a></li><li id="w31"><a href="/creators/">Creators</a></li></ul></li><li class="divider-vertical"></li></ul></div></div></div><div class="container"><div class="docs"><div class="bd"><div class="docs-content"><h1 id="title">RaptorJS Optmizer: Get Started using the Command Line Interface</h1><div class="toc nav" id="docsNav"><div class="return">&laquo; Return to <a href="/optimizer/">RaptorJS Optimizer</a></div><ul class="toc"><li class="toc toc-level-0"><a href="#Overview">Overview</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#View_Demo">View Demo</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Demo_Source">Demo Source</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Creating_a_Package">Creating a Package</a><ul class="toc"><li class="toc toc-level-1"><a href="#Module_Directories">Module Directories</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Package_File_Format">Package File Format</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Installation">Installation</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Usage">Usage</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Further_Reading">Further Reading</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Discussion">Discussion</a><ul class="toc"></ul></li></ul><div class="docs-nav-footer"><ul><li><span class="powered-by">Powered by <a href="/" class="raptorjs">RaptorJS</a></span></li><li><a href="/license/">License</a></li><li><a href="/credits/">Credits</a></li></ul></div></div><div class="section section-level-0"><h2 id="Overview">Overview</h2><div class="bd"><p><img src="/images/optimized-delivery.png" width="128" height="128" class="section-icon"> The RaptorJS Optimizer is a server-side tool that can be be used to build
+optimized web pages by bundling, compiling and minifying page dependencies.
+This tool makes managing complex JavaScript and CSS dependencies almost
+effortless while helping you produce extremely optimized web pages.
+</p><p>Unlike other optimizers, the RaptorJS Optimizer does not require that you write
+your code a certain way. Simply tell the optimizers which modules your page
+depends on and it will take care of the rest—including writing optimized
+JavaScript and CSS bundles to disk
+<i>and</i> generating the HTML that is required to include those bundles. All
+dependencies are described using rich packaging metadata files that are easy to
+maintain and allow you to leverage the full power of the
+<a href="/packaging/">RaptorJS Packaging</a> system.</p><p>Every application has different requirements so the RaptorJS Optimizer gives
+you full control over how resources are combined and where to include resources
+on your HTML pages. Its ease-of-use and flexibility make it perfect for any
+size application. Best of all, the RaptorJS Optimizer is designed so that it
+can easily be used at runtime—freeing you from yet another build
+tool.</p></div></div><div class="section section-level-0"><h2 id="View_Demo">View Demo</h2><div class="bd"><div class="view-demo"><h1><i class="icon-play-circle icon-large"></i> <a href="/demos/optimizer-cli/" target="_blank">View Demo: /demos/optimizer-cli</a></h1></div></div></div><div class="section section-level-0"><h2 id="Demo_Source">Demo Source</h2><div class="bd"><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli" target="_blank">/optimizer-cli/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/build.xml" target="_blank">build.xml</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/css" target="_blank">css/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/css/global.css" target="_blank">global.css</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules" target="_blank">modules/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-a" target="_blank">module-a/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-a/module-a.css" target="_blank">module-a.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-a/module-a.js" target="_blank">module-a.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-a/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-b" target="_blank">module-b/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-b/module-b.css" target="_blank">module-b.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-b/module-b.js" target="_blank">module-b.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-b/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-c" target="_blank">module-c/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-c/module-c.css" target="_blank">module-c.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-c/module-c.js" target="_blank">module-c.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-c/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-d" target="_blank">module-d/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-d/module-d.css" target="_blank">module-d.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-d/module-d.js" target="_blank">module-d.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/module-d/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/pages" target="_blank">pages/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/pages/index" target="_blank">index/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/pages/index/index.css" target="_blank">index.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/pages/index/index.html" target="_blank">index.html</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/pages/index/index.js" target="_blank">index.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/pages/index/package.json" target="_blank">package.json</a></b></li></ul></li></ul></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/package.json" target="_blank">package.json</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/run-optimizer.sh" target="_blank">run-optimizer.sh</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/write-page.js" target="_blank">write-page.js</a></b></li></ul></li></ul></div></div><div class="section section-level-0"><h2 id="Creating_a_Package">Creating a Package</h2><div class="bd"><p><img src="/images/package.png" width="128" height="128" class="section-icon"> The first step to generating optimized web pages is to create packages for all
+of your modules. A module is a collection of related resources that work
+together to provide functionality in your application. Modules can consist of
+resources of any type (JavaScript, CSS, LESS, Raptor Templates, etc.) and
+modules can have dependencies on other modules. Packages are necessary so that
+the optimizer will understand the dependencies in your application. A package
+is defined using a simple
+<code>package.json</code> file. The RaptorJS Optimizer utilizes the same format of package files
+described in the documentation for the
+<a href="/packaging/">RaptorJS Packaging System</a>. The packaging format is quickly described in this guide, but for more
+advanced usage please see the developer guide for the
+<a href="/packaging/">RaptorJS Packaging System</a>.</p> <div class="section section-level-1"><h2 id="Module_Directories">Module Directories</h2><div class="bd"><p>A <code>package.json</code> file should be placed in a directory that corresponds to a module name. For
+example, the corresponding
+<code>package.json</code> file for a module named "test.hello" should be placed in the following
+location:
+<code><nobr>&lt;modules-dir>/test/hello/package.json</nobr></code>. In order for the RaptorJS Optimizer to be able to find your modules, you need
+to add the root directory containing your modules to the
+<a href="/resource-search-path/"><nobr>RaptorJS Resource Search Path</nobr></a> as shown in the following code:</p><div class="code-editor" id="w32"> <textarea id="w32-textarea" style="display: none;" name="code-0">require('raptor/resources').addSearchPathDir("/path/to/modules");</textarea></div></div></div><div class="section section-level-1"><h2 id="Package_File_Format">Package File Format</h2><div class="bd"><p>At a minimum, a package needs to describe what is included in the package. This
+is done by adding a "raptor" » "dependencies" property to a package.json file
+that is an array of dependecies that should be included as part of the package.
+A simple
+<code>package.json</code> is shown below:</p><div class="code-editor" id="w33"> <textarea id="w33-textarea" style="display: none;" name="code-1">{
+    "raptor": {
+        "dependencies": [
+            { "module": "raptor/widgets" },
+            { "module": "raptor/templating" },
+            "my-widget.js",
+            "my-css-stylesheet.css",
+            "my-less-stylesheet.less",
+            "my-template.rhtml"
+        ]
+    }
+}</textarea></div><p>Please see the documentation for <a href="/packaging/">RaptorJS Packaging</a> for more details on packaging up code.</p></div></div></div></div><div class="section section-level-0"><h2 id="Installation">Installation</h2><div class="bd"><p>The RaptorJS Optimizer provides a simple command line interface (CLI)
+application named
+<code>raptor-optimizer</code> that can be used to generate optimized resource bundles for a page. To use
+this utility, the
+<code>raptor</code> module should first be installed globally using the following command:</p><pre class="sh">$ npm install raptor --global</pre><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>NOTE: You will need to give administrative rights when installing a Node
+package globally so typically the above command will be used with the
+<code>sudo</code> command on Mac and Linux:</p><pre class="sh">$ sudo npm install raptor --global</pre></div></div></div></div><div class="section section-level-0"><h2 id="Usage">Usage</h2><div class="bd"><p>The optimizer CLI is flexible and supports various use cases. Below is the
+usage information for the
+<code>raptor-optimizer</code> application:</p><pre class="sh" style="clear: both;">$ raptor-optimizer --help
+Usage: raptor-optimizer [dependency-1] [dependency-2] [dependency-n] [options]
+Examples:
+  Optimize a set of dependencies:
+   raptor-optimizer my-module /some-resource.js --name test-page --source=path/to/my-modules
+
+  Optimize a package:
+   raptor-optimizer --name test-page --package path/to/package.json --source=path/to/my-modules
+
+  Optimize using a configuration file:
+   raptor-optimizer --name test-page --package path/to/package.json --source=path/to/my-modules --config path/to/optimizer-config.xml
+
+  Optimize all of the pages defined in a configuration file:
+   raptor-optimizer --config path/to/optimizer-config.xml
+
+NOTE: Modules to download asynchronously should be suffixed with a question mark. For example:
+  Optimize a page with an asynchronous dependency:
+   raptor-optimizer my-module my-async-module? --name test-page
+
+
+Options:
+  -n, --name         The name of the page being optimized (e.g. "my-page")
+  -p, --package      A package manifest describing page dependencies
+  -o, --out          The output directory for static bundles and optimized page JSON files
+  -s, --source       A comma-separated list of source directories to search for modules and resources
+  -c, --config       Path to an optimizer XML configuration file
+  -m, --minify       Enable JavaScript and CSS minification (disabled by default)                                                 [boolean]
+  --checksum         Include checksums for files                                                                                  [boolean]
+  --help             Display this usage information
+  -u, --url-prefix   URL prefix for resource bundles
+  -d, --development  Enable developer-friendly mode                                                                               [boolean]
+  -b, --base-path    Base path for generating URLs
+  -h, --html         Generate a JSON file that contains the HTML markup required to include the dependencies (organized by slot)
+  -e, --extensions   Comma separated list of enabled extensions</pre><p>For this guide, we will be using using the following command that can be found
+in
+<a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/run-optimizer.sh">run-optimizer.sh</a></p><div class="code-editor" id="w34"><h2 class="code-editor-title">/run-optimizer.sh</h2> <textarea id="w34-textarea" style="display: none;" name="code-2">#!/bin/sh
+
+npm install &&
+rm -rf build &&
+raptor-optimizer \
+    raptor \
+    /css/global.css \
+    pages/index \
+    module-c \
+    module-d? \
+    --name index \
+    --source modules \
+    --out build/static \
+    --url-prefix static/ \
+    --extensions browser,raptor/logging/console \
+    --html \
+    --minify && 
+node write-page.js</textarea></div><p>After running the above command, you will see output similar to the following:</p><pre class="sh" style="clear: both;">INFO raptor/optimizer/cli: Enabled JavaScript and CSS minification
+INFO raptor/optimizer/cli: Optimizing bundle with name "index"...
+INFO raptor/optimizer/PageOptimizer: Optimized page bundles for "index" built in 19ms
+INFO raptor/optimizer/BundleFileWriter: Writing bundle file to "build/static/index-async.js"...
+INFO raptor/optimizer/BundleWriter: Bundle "index-async" (js) written to disk in 58ms
+INFO raptor/optimizer/BundleFileWriter: Writing bundle file to "build/static/index-async.css"...
+INFO raptor/optimizer/BundleWriter: Bundle "index-async" (css) written to disk in 8ms
+INFO raptor/optimizer/BundleFileWriter: Writing bundle file to "build/static/index.js"...
+INFO raptor/optimizer/BundleWriter: Bundle "index" (js) written to disk in 403ms
+INFO raptor/optimizer/BundleFileWriter: Writing bundle file to "build/static/index.css"...
+INFO raptor/optimizer/BundleWriter: Bundle "index" (css) written to disk in 1ms
+INFO raptor/optimizer/PageOptimizer: Optimized page "index" in 490ms
+INFO raptor/optimizer/cli: Writing HTML for optimized page to "build/static/index-html.json"...
+Optimization successfully completed!
+Optimized HTML page written to disk:
+build/index.html</pre><p>In addition to generating the optimized resource bundles, the <code>--html</code> flag causes an additional file named <code>index-html.json</code> to be generated which contains the HTML to use for each slot to include the
+optimized resource bundles on a page. The contents of the
+<code>index-html.json</code> will be similar to the following:</p><div class="code-editor" id="w35"> <textarea id="w35-textarea" style="display: none;" name="code-3">{
+  "body": '&lt;script type="text/javascript" src="static/index.js">&lt;/script>',
+  "head": '&lt;link rel="stylesheet" type="text/css" href="static/index.css">'
+}</textarea></div><p>The <code><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/write-page.js">write-page.js</a></code> script uses the generated <code>index-html.json</code> file to update the static <code><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/pages/index/index.html">modules/pages/index/index.html</a></code> file to include the generated HTML and then writes the resulting file to <code>build/index.html</code>.</p></div></div><div class="section section-level-0"><h2 id="Further_Reading">Further Reading</h2><div class="bd"><ul><li><a href="/optimizer/developer-guide/">RaptorJS Optimizer: Developer Guide</a></li><li><a href="/optimizer/configuration/">RaptorJS Optimizer: Configuration</a></li><li><a href="/optimizer/get-started-javascript-api/">RaptorJS Optimizer: Get Started with the JavaScript API</a></li><li><a href="/optimizer/get-started-raptor-templates/">RaptorJS Optimizer: Get Started using the Optimizer Taglib for Raptor Templates</a></li><li><a href="/raptor-templates/">Raptor Templates</a></li></ul></div></div><div class="section section-level-0"><h2 id="Discussion">Discussion</h2><div class="bd"><div id="disqus_thread"></div></div></div></div></div><div class="docs-footer-padding"></div></div></div><script type="text/javascript" src="/static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="/static/jquery-371da524.js"></script>
+<script type="text/javascript" src="/static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="/static/optimizer-get-started-cli-02c7930e.js"></script>
+<script type="text/javascript" src="/static/code-editor-36478451.js"></script><script type="text/javascript">$rwidgets(
+["components.nav.Nav.NavItemWidget","w0",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w1",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w2",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w3",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w4",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w5",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w6",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w7",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w8",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w9",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w10",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w11",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w12",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w13",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w14",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w15",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w16",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w17",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w18",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w19",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w20",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w21",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w22",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w23",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w24",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w25",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w26",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w27",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w28",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w29",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w30",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w31",0,0,0,0]],
+["components/editors/CodeEditor/CodeEditorWidget","w32",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w33",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w34",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w35",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components.social.Disqus.DisqusWidget","disqus_thread",{"shortName":"raptor-js","id":"optimizer-get-started-cli","title":"RaptorJS Optmizer: Get Started using the Command Line Interface"},0,0,0]);</script></body></html>

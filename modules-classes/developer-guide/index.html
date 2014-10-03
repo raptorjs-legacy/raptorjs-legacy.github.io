@@ -1,0 +1,384 @@
+<!DOCTYPE html><html><head><title itemprop="name">RaptorJS: Modules &amp; Classes</title><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/static/font-awesome-87349705.css">
+<link rel="stylesheet" type="text/css" href="/static/modules-classes-developer-guide-26dcd56c.css">
+<link rel="stylesheet" type="text/css" href="/static/docs-6e628a8c.css">
+<link rel="stylesheet" type="text/css" href="/static/code-editor-f1386401.css">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-33982282-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+var __insp=__insp||[];__insp.push(["wid",2568045892]),function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"==document.location.protocol?"https":"http")+"://www.inspectlet.com/inspectlet-jq.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}();</script></head><body data-spy="scroll"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"><a class="brand" href="/">RaptorJS</a><ul class="nav"><li class="divider-vertical"></li><li id="w0"><a href="/get-started/">Get Started</a></li><li class="divider-vertical"></li><li id="w1" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Learn<b class="caret"></b></a><ul class="dropdown-menu"><li id="w2"><a href="/">Overview</a></li><li id="w3"><a href="/get-started/">Get Started</a></li><li id="w4"><a href="/tutorial/">Tutorial</a></li><li id="w5"><a href="/api/">API Reference</a></li><li id="w6"><a target="_blank" href="https://github.com/raptorjs/samples">Sample Apps</a></li><li id="w7"><a href="/faq/">FAQ</a></li><li class="divider"></li><li id="w8"><a href="/modules-classes/">Modules and Classes</a></li><li id="w9"><a href="/packaging/">Packaging and Extensions</a></li><li id="w10"><a href="/module-loader/">Module Loader</a></li><li id="w11"><a href="/optimizer/">Optimizer</a></li><li id="w12"><a href="/raptor-templates/">Raptor Templates</a></li><li id="w13"><a href="/widgets/">Widget Framework</a></li><li class="divider"></li><li id="w14"><a href="/ui-components/">Building UI Components</a></li><li id="w15"><a href="/logging/">Logging</a></li><li id="w16"><a href="/resource-search-path/">Resource Search Path</a></li></ul></li><li class="divider-vertical"></li><li id="w17" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a><ul class="dropdown-menu"><li id="w18"><a href="https://github.com/raptorjs/raptorjs">Source code</a></li><li id="w19"><a href="https://github.com/raptorjs/raptorjs/issues">Issue Tracker</a></li><li id="w20"><a href="/contribute/">Contribute</a></li><li id="w21"><a href="/contributors/">Contributors</a></li><li class="divider"></li><li id="w22"><a href="http://groups.google.com/group/raptorjs">Discussion Forum</a></li><li class="divider"></li><li id="w23"><a href="http://twitter.com/raptorjs">Twitter (@raptorjs)</a></li><li id="w24"><a href="https://plus.google.com/111493691067944627473/">Google+</a></li><li class="divider"></li><li id="w25"><a href="https://github.com/raptorjs/branding">Logos</a></li></ul></li><li class="divider-vertical"></li><li id="w26" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a><ul class="dropdown-menu"><li id="w27"><a href="https://github.com/raptorjs/raptorjs/wiki/Release-Notes">Release Notes</a></li><li id="w28"><a href="/design-philosophy/">Design Philosophy</a></li><li id="w29"><a target="_blank" href="https://github.com/raptorjs/raptorjs/blob/master/LICENSE.md">License</a></li><li id="w30"><a href="/credits/">Credits</a></li><li id="w31"><a href="/creators/">Creators</a></li></ul></li><li class="divider-vertical"></li></ul></div></div></div><div class="container"><div class="docs"><div class="bd"><div class="docs-content"><h1 id="title">Getting Started with Modules, Classes, Mixins and Enums</h1><div class="toc nav" id="docsNav"><ul class="toc"><li class="toc toc-level-0"><a href="#Introduction">Introduction</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Basic_Usage">Basic Usage</a><ul class="toc"><li class="toc toc-level-1"><a href="#Defining">Defining</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Requiring">Requiring</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Require">Require</a><ul class="toc"><li class="toc toc-level-1"><a href="#RequireSync">require(id)</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#RequireAsync">require(ids, callback)</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#RequireFind">require.find(id)</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#RequireExists">require.exists(id)</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Modules">Modules</a><ul class="toc"><li class="toc toc-level-1"><a href="#Defining_a_Module">Defining a Module</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Classes">Classes</a><ul class="toc"><li class="toc toc-level-1"><a href="#DefineClass">Defining a Class</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Creating_an_Instance_of_a_Class">Creating an Instance of a Class</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Inheritance">Inheritance</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Mixins">Mixins</a><ul class="toc"><li class="toc toc-level-1"><a href="#Defining_a_Mixin">Defining a Mixin</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#raptor_extendtarget_mixins">raptor.extend(target, mixins)</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#DefineExtend">define.extend(targetId, factory)</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#DefineEnum">Enums</a><ul class="toc"><li class="toc toc-level-1"><a href="#Defining_an_Enum">Defining an Enum</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Enum_Methods">Enum Methods</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Enum_Usage">Enum Usage</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Anonymous_Objects">Anonymous Objects</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#ModuleLogger">Logging</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Differences_from_the_AMD_Spec">Differences from the AMD Spec</a><ul class="toc"><li class="toc toc-level-1"><a href="#Module_IDs">Module IDs</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Factory_Function_Arguments">Factory Function Arguments</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Sync_and_Async_require">Sync and Async require</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Asynchronous_Package_Loading">Asynchronous Package Loading</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Global_require_function">Global require function</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Additional_define_methods">Additional define methods</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Additional_module_methods">Additional module methods</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Additional_require_methods">Additional require methods</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Node_Integration">Node Integration</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Discussion">Discussion</a><ul class="toc"></ul></li></ul><div class="docs-nav-footer"><ul><li><span class="powered-by">Powered by <a href="/" class="raptorjs">RaptorJS</a></span></li><li><a href="/license/">License</a></li><li><a href="/credits/">Credits</a></li></ul></div></div><div class="section section-level-0"><h2 id="Introduction">Introduction</h2><div class="bd"><p>Out of the box, JavaScript lacks basic support for namespaces, and defining and
+using "classes" is not always elegant. Because JavaScript is a very dynamic
+language many libraries and frameworks have been developed to address some of
+these shortcomings—each with their own benefits and
+disadvantages.</p><p>RaptorJS provides a simple library for defining namespaced modules, classes,
+mixins and enums. This library uses a clean and easy-to-understand syntax based
+on the
+<a href="https://github.com/amdjs/amdjs-api/wiki/AMD">Asynchronous Module Definition (AMD)</a> syntax. RaptorJS provides an AMD implementation that extends AMD in backwards
+compatible ways to provide new features that make building modular JavaScript
+applications even easier. The syntax is is very close to pure JavaScript, but
+fills gaps in the existing JavaScript language. Now you can start creating
+modular code that is easy to maintain without waiting for a new version of
+JavaScript or switching to an alternate
+language.</p><p>The RaptorJS AMD implementation can be loaded on the server (under Node.js and
+Rhino) or in the browser
+<nobr>(<span class="popover-target" id="w32" data-content="Not including a partial EcmaScript 5 shim required for older web browsers.">~1.8k gzipped</span>)</nobr>. To generate a build for the browser you can use the following command after
+installing Node.js and the "raptor" module (see
+<a href="/get-started/">Get Started</a> guide):</p><pre class="sh">raptor-optimizer raptor --name raptor --out build --minify</pre><p>The above command will generate a file named "raptor.js" in a nested "build"
+directory. The core "raptor" module includes the core module system for
+RaptorJS which supports AMD, class inheritance, mixins and enums. The generated
+file also includes optional polyfills for
+<a href="https://github.com/raptorjs/raptorjs/tree/master/lib/raptor/ecma/es5">EcmaScript 5</a> and <a href="https://github.com/raptorjs/raptorjs/tree/master/lib/raptor/ecma/es6">EcmaScript 6</a> which are only needed on older browsers. These polyfills can be excluded in
+the generated file by using the following command
+instead:</p><pre class="sh">raptor-optimizer raptor --name raptor --out build --minify --extensions no-es5,no-es6</pre><p>The "--extensions" switch is used to enable one or more extensions that is used
+to control how resources are packaged and optimized. See the following
+package.json file for an example:
+<a href="https://github.com/raptorjs/raptorjs/blob/master/lib/raptor/ecma/es5/package.json">raptor/ecma/es5/package.json</a></p><p>RaptorJS includes a <a href="http://raptorjs.org/packaging/">very flexible packaging system</a> that is used by the <a href="http://raptorjs.org/optimizer/">RaptorJS Optimizer</a> to give developers full control over what code gets included on a particular
+web
+page.</p></div></div><div class="section section-level-0"><h2 id="Basic_Usage">Basic Usage</h2><div class="bd"><p>The RaptorJS AMD implementation follows the basic pattern for defining objects
+which is to associate a
+<i>factory function</i> with a <i>string</i> ID. The job of the factory function is to return the initialized object when
+it is first
+required.</p><div class="section section-level-1"><h2 id="Defining">Defining</h2><div class="bd"><div class="code-editor" id="w33"> <textarea id="w33-textarea" style="display: none;" name="code-0">define(
+    'some/namespace/my-module', 
+    function(require, exports, module) {
+        return { //Return the module definition
+            sayHello: function() {
+                console.log("Hello World!");
+            }
+        }
+    });</textarea></div></div></div><div class="section section-level-1"><h2 id="Requiring">Requiring</h2><div class="bd"><p>To "require" an object using RaptorJS, the <code>require(id)</code> function should be used. The <code>require(id)</code> function will initialize the required object if it had not previously
+required. An object is initialized by invoking the factory function to get back
+the final object. The initialized object is then cached so that it can simply
+be returned for subsequent requires of the same object
+ID.</p><p>On the server-side, if <code>require(id)</code> is invoked and the object has not been registered then RaptorJS goes through a
+resolving phase to find and load the requested object from
+disk.</p><div class="code-editor" id="w34"> <textarea id="w34-textarea" style="display: none;" name="code-1">var myModule = require('some/namespace/my-module');
+myModule.sayHello();</textarea></div><p>Asynchronous "requiring" of function is also supported. Please see the <a href="#RequireAsync">require(ids, callback)</a> section below.</p></div></div></div></div><div class="section section-level-0"><h2 id="Require">Require</h2><div class="bd"><div class="section section-level-1"><h2 id="RequireSync">require(id)</h2><div class="bd"><p>The <code>require(id)</code> function should be used to synchronously get a reference to another
+module/class/mixin/enum as shown in the following sample
+code:</p><div class="code-editor" id="w35"> <textarea id="w35-textarea" style="display: none;" name="code-2">var myModule = require('some/namespace/my-module');
+myModule.sayHello();</textarea></div><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>NOTE: When using synchronous <code>require(id)</code> function, the code for the requested module must be available. For
+asynchronous loading, please see the next
+section.</p></div></div></div></div><div class="section section-level-1"><h2 id="RequireAsync">require(ids, callback)</h2><div class="bd"><p>The <code>require(ids, callback)</code> function should be used to asynchronously load one or more modules and get a
+reference to the loaded modules. The following code illustrates how the
+asynchronous require function can be
+used:</p><div class="code-editor" id="w36"> <textarea id="w36-textarea" style="display: none;" name="code-3">require(['a', 'b', 'c'], function(a, b, c) {
+    //Modules a, b and c are ready to be used
+});</textarea></div><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>Asynchronous module loading (loading a module asynchronously from a server) is
+provided by the
+<a href="/module-loader/">RaptorJS Asynchronous Module Loader</a>. The <code><a href="">raptor/loader</a></code> module must be included on the page for asynchronous module loading to work.
+In addition, any modules that are to be loaded asynchronously must be added as
+an "async" dependency. Please see the documentation for the
+<a href="/module-loader/">RaptorJS Asynchronous Module Loader</a> for more details.</p></div></div></div></div><div class="section section-level-1"><h2 id="RequireFind">require.find(id)</h2><div class="bd"><p>The <code>require.find(id)</code> method can be used to get a reference to a module. Unlike the <code>require</code> function, <code>require.find(id)</code> will return null if a module with the specified ID is not found.</p><div class="code-editor" id="w37"> <textarea id="w37-textarea" style="display: none;" name="code-4">var myModule = require.find('my-module');
+if (myModule) {
+    // Module found
+}
+else {
+    // Module not found
+}</textarea></div></div></div><div class="section section-level-1"><h2 id="RequireExists">require.exists(id)</h2><div class="bd"><p>The <code>require.exists(id)</code> method can be used to check if a module exists with the specified module ID.
+The method will return
+<code>true</code> of the module exists, <code>false</code> otherwise.</p><div class="code-editor" id="w38"> <textarea id="w38-textarea" style="display: none;" name="code-5">if (require.exists('my-module') {
+    // Module exists
+}
+else {
+    // Module does not exist
+}</textarea></div></div></div></div></div><div class="section section-level-0"><h2 id="Modules">Modules</h2><div class="bd"><div class="section section-level-1"><h2 id="Defining_a_Module">Defining a Module</h2><div class="bd"><p>A JavaScript object/module can be associated with a name as shown in the
+following example:
+</p><div class="code-editor" id="w39"> <textarea id="w39-textarea" style="display: none;" name="code-6">define(
+    'some/namespace/my-module', 
+    function(require, exports, module) {
+        return { //Return the module definition
+            sayHello: function() {
+                console.log("Hello World!");
+            }
+        }
+    });</textarea></div></div></div></div></div><div class="section section-level-0"><h2 id="Classes">Classes</h2><div class="bd"><div class="section section-level-1"><h2 id="DefineClass">Defining a Class</h2><div class="bd"><p>A class can be defined by creating a factory function that returns a
+constructor function (with a
+<code>prototype</code> property) as shown in the following example:</p><div class="code-editor" id="w40"> <textarea id="w40-textarea" style="display: none;" name="code-7">define(
+    'some/namespace/MyClass', 
+    function(require, module, exports) {
+        var MyClass = function(message) { //Constructor function
+            this.message = message;
+        }
+
+        MyClass.prototype = {
+            sayHello: function() {
+                console.log(this.message);
+            }
+        };
+
+        return MyClass;
+    });</textarea></div></div></div><div class="section section-level-1"><h2 id="Creating_an_Instance_of_a_Class">Creating an Instance of a Class</h2><div class="bd"><p>An instance of a class can be created as shown in the following example:</p><div class="code-editor" id="w41"> <textarea id="w41-textarea" style="display: none;" name="code-8">var MyClass = require("some/namespace/MyClass");
+var myInstance = new MyClass();</textarea></div></div></div><div class="section section-level-1"><h2 id="Inheritance">Inheritance</h2><div class="bd"><p>Prototype-based class inheritance is also supported by RaptorJS when using the <code>define.Class</code> method. The signature for the <code>define.Class</code> method is the following:</p><div class="code-editor" id="w42"> <textarea id="w42-textarea" style="display: none;" name="code-9">define.Class(id, ?superclassId, ?dependencies, factory)</textarea></div><p>Example:</p><div class="code-editor" id="w43"> <textarea id="w43-textarea" style="display: none;" name="code-10">define.Class(
+    'some/namespace/Dog', 
+    'some/namespace/Animal', //Name of the superclass
+    function(require, exports, module) {
+        var Dog = function(breed) {
+            // Invoke the constructor of the superclass:
+            Dog.superclass.constructor.call(this, "dog"); 
+            this.breed = breed;
+        }
+
+        Dog.prototype = {
+            eat: function(food) {
+                // Invoke the "eat" method in the superclass:
+                Dog.superclass.eat.apply(this, food); 
+                this.bark();
+            },
+
+            bark: function() {
+                console.log("woof!");
+            }
+        };
+
+        return Dog;
+    });</textarea></div><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>The superclass argument can also be passed as part of a modifiers object as
+shown in the following
+example:</p><div class="code-editor" id="w44"> <textarea id="w44-textarea" style="display: none;" name="code-11">define.Class(
+    'some/namespace/Dog', 
+    {
+        superclass: 'some/namespace/Animal' //Name of the superclass
+    }, 
+    function(require, exports, module) {
+        ...
+    });</textarea></div><p>This allows an anonymous class with a superclass to be define:</p><div class="code-editor" id="w45"> <textarea id="w45-textarea" style="display: none;" name="code-12">define.Class( 
+    {
+        superclass: 'some/namespace/Animal' //Name of the superclass
+    }, 
+    function(require, exports, module) {
+        ...
+    });</textarea></div></div></div><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>NOTE: When defining a class that extends another class, the returned
+constructor function is populated with a "superclass" property that is a
+reference to the prototype of the superclass. In addition, the prototype of a
+class is always populated with a "constructor" property, which is a reference
+to the constructor function for the class associated with the prototype
+object.</p></div></div></div></div></div></div><div class="section section-level-0"><h2 id="Mixins">Mixins</h2><div class="bd"><div class="section section-level-1"><h2 id="Defining_a_Mixin">Defining a Mixin</h2><div class="bd"><p>RaptorJS allows mixins to be applied to an object in two different ways:</p><ol><li>As part of an object definition</li><li>External from the object being defined</li></ol></div></div><div class="section section-level-1"><h2 id="raptor_extendtarget_mixins">raptor.extend(target, mixins)</h2><div class="bd"><p>Mixins can be applied declaratively as part of an object definition as shown in
+the following
+example</p><div class="code-editor" id="w46"> <textarea id="w46-textarea" style="display: none;" name="code-13">define.Class(
+    'some/namespace/CircleButton',
+    ['raptor'],
+    function(raptor, require) {
+        var CircleButton = function() {
+        };
+        
+        CircleButton.prototype = {
+            //...
+        }
+        
+        //Apply mixins to the CircleButton's prototype:
+        raptor.extend(
+            CircleButton.prototype, 
+            require('some/namespace/CircleMixin'));
+        
+        //NOTE: raptor.extend simply copies properties from one object to another
+        
+        return CircleButton;
+    });</textarea></div></div></div><div class="section section-level-1"><h2 id="DefineExtend">define.extend(targetId, factory)</h2><div class="bd"><p>The <code>define.extend</code> method allows mixins to be lazily applied to another module when the module is
+first required. The
+<code>define.extend</code> method is used heavily to support cross-environment modules by creating
+environment specific mixins for modules.
+Example:</p><div class="code-editor" id="w47"> <textarea id="w47-textarea" style="display: none;" name="code-14">/**
+ * Extends the "raptor/files" module with Rhino/Java specific mixins so that the
+ * same module can work in multiple server-side JavaScript environments.
+ * @extension Rhino
+ */
+define.extend(
+    'raptor/files',
+    function(require) {
+        var JavaFile = Packages.java.io.File;
+
+        return {
+            exists: function(path) {
+                return new JavaFile(path).exists();
+            }
+        }
+    }
+);</textarea></div></div></div></div></div><div class="section section-level-0"><h2 id="DefineEnum">Enums</h2><div class="bd"><div class="section section-level-1"><h2 id="Defining_an_Enum">Defining an Enum</h2><div class="bd"><p>An enum type can be defined as shown in the following example:</p><div class="code-editor" id="w48"> <textarea id="w48-textarea" style="display: none;" name="code-15">define.Enum(
+    'some/namespace/Day',
+    [
+        "SUN",
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT"
+    ]
+);</textarea></div><p>Enum values as complex objects can be defined as shown in the following example:</p><div class="code-editor" id="w49"> <textarea id="w49-textarea" style="display: none;" name="code-16">define.Enum(
+    'some/namespace/Day',
+    {
+        SUN: [false, "Sunday"],
+        MON: [true, "Monday"],
+        TUE: [true, "Tuesday"],
+        WED: [true, "Wednesday"],
+        THU: [true, "Thursday"],
+        FRI: [true, "Friday"],
+        SAT: [false, "Saturday"]
+    },
+    function(require) {
+        return {
+            init: function(isWeekday, longName) {
+                this._isWeekday = isWeekday;
+                this._longName = longName;
+            },
+             
+            getLongName: function() {
+                return this._longName;
+            },
+             
+            isWeekday: function() {
+                return this._isWeekday;
+            }
+        }
+    }
+);</textarea></div></div></div><div class="section section-level-1"><h2 id="Enum_Methods">Enum Methods</h2><div class="bd"><p>Every enum class supports the following methods.</p><ul><li>valueOf(name) - Returns the constant field with the same name (case sensitive)</li></ul><p>Every enum field supports the following methods.</p><ul><li>name() - Returns the name of the enum</li><li>ordinal() - Returns the positional value of the enum (NOTE: This should only be
+used for an array of enum strings. Order is undefined for maps but it will work
+correctly in most
+browsers.)</li><li>toString() - Returns the name of the enum unless it has been overridden</li><li>compareTo(other) - Compares one enum field to another based on the ordinal value</li></ul></div></div><div class="section section-level-1"><h2 id="Enum_Usage">Enum Usage</h2><div class="bd"><p>Once you define an enum, the enum constants can be accessed as static
+properties of the class as shown in the following
+example.</p><div class="code-editor" id="w50"> <textarea id="w50-textarea" style="display: none;" name="code-17">var Day = require('some/namespace/Day');
+if (day === Day.FRI) {
+    alert("It is " + day.getLongName() + "!");
+}</textarea></div></div></div></div></div><div class="section section-level-0"><h2 id="Anonymous_Objects">Anonymous Objects</h2><div class="bd"><p>Anonymous (unnamed objects) can be defined by omitting the name argument. For
+example:</p><div class="code-editor" id="w51"> <textarea id="w51-textarea" style="display: none;" name="code-18">var myModule = define(
+    function() {
+        return {
+            sayHello: function() {
+                console.log("Hello World!");
+            }
+        }
+    });
+myModule.sayHello();</textarea></div></div></div><div class="section section-level-0"><h2 id="ModuleLogger">Logging</h2><div class="bd"><p>The module argument that is passed to a factory function supports a new logger
+method that can be used to obtain a reference to a logger for the module/class
+being defined. For
+Example:</p><p><div class="code-editor" id="w52"> <textarea id="w52-textarea" style="display: none;" name="code-19">define(
+    'some/namespace/my-module', 
+    function(require, exports, module) {
+        var logger = module.logger();
+        logger.debug("This is a debug message"); 
+        /* 
+        Console Output: 
+        DEBUG some/namespace/my-module This is a debug message
+        */
+    });</textarea></div></p><p>For more details on logging, see <a href="/logging/">RaptorJS Logging</a>.</p></div></div><div class="section section-level-0"><h2 id="Differences_from_the_AMD_Spec">Differences from the AMD Spec</h2><div class="bd"><p>The RaptorJS AMD implementation introduces some <b>backwards compatible</b> improvements to the AMD specification that are described below:</p><div class="section section-level-1"><h2 id="Module_IDs">Module IDs</h2><div class="bd"><p>Using dots as the separators instead of forward slashes is supported and module
+IDs will normalized by converting all dots to forward slashes. However, it is
+recommended to use forward slashes to be
+AMD-compliant.</p></div></div><div class="section section-level-1"><h2 id="Factory_Function_Arguments">Factory Function Arguments</h2><div class="bd"><p>For RaptorJS, the last three arguments will always be [require, exports,
+module]. If an array of dependency IDs is provided then those dependencies will
+be passed in before the three built-in arguments. For
+example:</p><div class="code-editor" id="w53"> <textarea id="w53-textarea" style="display: none;" name="code-20">define(
+    'some/namespace/my-module', 
+    ['a', 'b', 'c'],
+    function(a, b, c, require, exports, module) {
+        //...
+    });</textarea></div><p>Developer code can still explicitly reference "require", "exports" and "module"
+as shown in the following example
+code:</p><div class="code-editor" id="w54"> <textarea id="w54-textarea" style="display: none;" name="code-21">define(
+    'some/namespace/my-module', 
+    ['require', 'exports', 'module', 'a', 'b', 'c'],
+    function(require, exports, module, a, b, c) {
+        //...
+    });</textarea></div></div></div><div class="section section-level-1"><h2 id="Sync_and_Async_require">Sync and Async require</h2><div class="bd"><p>Like most AMD implementations, RaptorJS supports both a synchronous "require"
+function and an asynchronous "require"
+function:</p><ul><li><b>Synchronous:</b> <code>require(id)</code></li><li><b>Asynchronous:</b> <code>require(ids, callback)</code></li></ul><p>Asynchronous loading requires the that separate raptor/loader/require module be
+included as part of the initial page
+load.</p></div></div><div class="section section-level-1"><h2 id="Asynchronous_Package_Loading">Asynchronous Package Loading</h2><div class="bd"><p>RaptorJS will not provide any support for loader plugins. Instead, RaptorJS
+will allow any "package" of code to be downloaded asynchronously. For a given
+package to be downloaded asynchronously, the client must be provided with the
+list of required JavaScript or CSS URLs for each package/module upfront (which
+the
+<a href="/optimizer/">RaptorJS Optimizer</a> tool will do for you automatically). The RaptorJS Optimizer will generate the
+required metadata (including JavaScript and CSS urls) that is required to
+download packages asynchronously. With this approach, developers no longer have
+to worry about configuring the client with base paths and the server will
+always generate cacheable URLs that can optionally be delivered through a CDN.
+During development, URLs are generated such that each file resource has a
+unique URL that points to the original file on disk. In comparison, during a
+production build, file resources are concatenated together as part of a single
+resource/URL and resources are minified based on the optimizer's
+configuration.</p><p>Modules/packages can be downloaded using asynchronous version of the require
+function (i.e.
+<code>require(ids, callback)</code> method. For example:</p><div class="code-editor" id="w55"> <textarea id="w55-textarea" style="display: none;" name="code-22">require(['a', 'b', 'c'], function(a, b, c) {
+    //Modules a, b and c are ready to be used
+});</textarea></div></div></div><div class="section section-level-1"><h2 id="Global_require_function">Global require function</h2><div class="bd"><p>When loaded on the server or included in the browser, the "raptor" module
+introduces a global
+<code>require</code> function. This allows both the synchronous "require" function to be used
+outside the context of a define. If the "require" method is used outside the
+context of a define then absolute module names must be used (since there is
+nothing for the required module name to be relative to). This frees developers
+from having to create a "define" block just to make use of another
+module.</p></div></div><div class="section section-level-1"><h2 id="Additional_define_methods">Additional define methods</h2><div class="bd"><ul><li><a href="#DefineClass">define.Class(...)</a></li><li><a href="#DefineEnum">define.Enum(...)</a></li><li><a href="#DefineExtend">define.extend(...)</a></li></ul></div></div><div class="section section-level-1"><h2 id="Additional_module_methods">Additional module methods</h2><div class="bd"><ul><li><a href="#ModuleLogger">module.logger()</a></li></ul></div></div><div class="section section-level-1"><h2 id="Additional_require_methods">Additional require methods</h2><div class="bd"><ul><li><a href="#RequireFind">require.find(id)</a></li><li><a href="#RequireExists">require.exists(id)</a></li></ul></div></div></div></div><div class="section section-level-0"><h2 id="Node_Integration">Node Integration</h2><div class="bd"><p>Node does not natively provide the "define" function that is required by AMD.
+RaptorJS solves this problem by modifying the Node runtime to automatically add
+a "define" function to every module. This is done by modifying the Node wrapper
+code to introduce an additional "define" parameter that gets initialized with a
+"define" function provided by RaptorJS. The "define" function understands the
+context where it is being defined which allows it to create a "require"
+function that wraps the Node provided require function so that it can be used
+to load both AMD modules and CommonJS modules on the
+server.</p><p>In addition, RaptorJS modifies the Node runtime to allow the native "require"
+function to be used to load both CommonJS modules and top-level (i.e. not
+relative) AMD modules. This is done by hooking into Node's path
+resolver.</p><p>The related code can be found in the following file: <a href="https://github.com/raptorjs/raptorjs/blob/master/lib/raptor/raptor_node.js">/lib/raptor/raptor_node.js</a></p><p>The end result is a seamless integration of the AMD pattern into a Node server
+environment. The AMD functionality is enabled the first time the "raptor"
+module is required, but the "define" function will then only be available in
+modules that are subsequently loaded by Node. To manually create a "define"
+function the following code can be
+used:</p><div class="code-editor" id="w56"> <textarea id="w56-textarea" style="display: none;" name="code-23">var define = require('raptor').createDefine(module /* Node module object */);</textarea></div></div></div><div class="section section-level-0"><h2 id="Discussion">Discussion</h2><div class="bd"><div id="disqus_thread"></div></div></div></div></div><div class="docs-footer-padding"></div></div></div><script type="text/javascript" src="/static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="/static/jquery-371da524.js"></script>
+<script type="text/javascript" src="/static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="/static/modules-classes-developer-guide-02c7930e.js"></script>
+<script type="text/javascript" src="/static/code-editor-36478451.js"></script><script type="text/javascript">$rwidgets(
+["components.nav.Nav.NavItemWidget","w0",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w1",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w2",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w3",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w4",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w5",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w6",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w7",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w8",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w9",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w10",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w11",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w12",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w13",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w14",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w15",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w16",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w17",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w18",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w19",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w20",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w21",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w22",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w23",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w24",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w25",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w26",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w27",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w28",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w29",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w30",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w31",0,0,0,0]],
+["components.overlays.Popover.PopoverWidget","w32",{},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w33",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w34",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w35",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w36",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w37",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w38",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w39",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w40",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w41",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w42",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w43",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w44",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w45",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w46",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w47",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w48",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w49",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w50",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w51",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w52",{"mode":"javascript","autoResize":true,"readOnly":true,"indentUnit":4},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w53",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w54",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w55",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w56",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components.social.Disqus.DisqusWidget","disqus_thread",{"shortName":"raptor-js","id":"modules-developer-guide","title":"Getting Started with Modules, Classes, Mixins and Enums"},0,0,0]);</script></body></html>

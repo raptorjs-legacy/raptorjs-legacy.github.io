@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>RaptorJS Sample: Optimizer CLI</title>
+        <link rel="stylesheet" type="text/css" href="static/index.css">
+    </head>
+    <body>
+        <div class="title">RaptorJS Sample: Optimizer CLI</div>
+        <script type="text/javascript" src="static/index.js"></script>
+        <script type="text/javascript">
+        require('module-a').sayHello();
+        require('module-b').sayHello();
+        require('module-c').sayHello();
+        require('module-d', function(moduleD) {
+            moduleD.sayHello();
+        });
+        </script>
+    </body>
+</html>

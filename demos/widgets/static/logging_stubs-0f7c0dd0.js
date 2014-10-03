@@ -1,0 +1,1 @@
+define("raptor/logging",["raptor"],function(e){var t=function(){return!1},n={isTraceEnabled:t,isDebugEnabled:t,isInfoEnabled:t,isWarnEnabled:t,isErrorEnabled:t,isFatalEnabled:t,dump:t,trace:t,debug:t,info:t,warn:t,error:t,fatal:t};return{logger:function(e){return n},configure:t,voidLogger:n}});

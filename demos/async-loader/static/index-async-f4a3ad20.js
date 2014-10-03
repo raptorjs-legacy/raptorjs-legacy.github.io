@@ -1,0 +1,1 @@
+define("module-b",function(e){return{sayHello:function(e){var t=document.createElement("div");t.className="module-b",t.innerHTML='Hello from "module-b"!',document.body.appendChild(t)}}});

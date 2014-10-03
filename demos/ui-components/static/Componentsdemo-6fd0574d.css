@@ -1,0 +1,42 @@
+.components-demo h1 {
+    color: #5a5a5a;
+    border-bottom: 1px solid Navy;
+}
+
+.components-demo * {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.col {
+    position: absolute;
+    width: 49%;
+    background-color: #efefef;
+    padding: 5px;
+}
+
+.col:first-child {
+    left: 0px;
+}
+
+.col:last-child {
+    right: 0px;
+}
+
+.components-demo .tabs {
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.components-demo .tab-content {
+    
+}
+
+.test-template {
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #C0C0C0;
+    border-radius: 8px;
+    padding: 10px;
+}

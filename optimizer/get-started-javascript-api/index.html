@@ -1,0 +1,283 @@
+<!DOCTYPE html><html><head><title itemprop="name">RaptorJS Optimizer: Get Started with the JS API</title><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/static/font-awesome-87349705.css">
+<link rel="stylesheet" type="text/css" href="/static/optimizer-get-started-javascript-api-4e6c9ed2.css">
+<link rel="stylesheet" type="text/css" href="/static/docs-6e628a8c.css">
+<link rel="stylesheet" type="text/css" href="/static/code-editor-f1386401.css">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-33982282-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+var __insp=__insp||[];__insp.push(["wid",2568045892]),function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"==document.location.protocol?"https":"http")+"://www.inspectlet.com/inspectlet-jq.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}();</script></head><body><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"><a class="brand" href="/">RaptorJS</a><ul class="nav"><li class="divider-vertical"></li><li id="w0"><a href="/get-started/">Get Started</a></li><li class="divider-vertical"></li><li id="w1" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Learn<b class="caret"></b></a><ul class="dropdown-menu"><li id="w2"><a href="/">Overview</a></li><li id="w3"><a href="/get-started/">Get Started</a></li><li id="w4"><a href="/tutorial/">Tutorial</a></li><li id="w5"><a href="/api/">API Reference</a></li><li id="w6"><a target="_blank" href="https://github.com/raptorjs/samples">Sample Apps</a></li><li id="w7"><a href="/faq/">FAQ</a></li><li class="divider"></li><li id="w8"><a href="/modules-classes/">Modules and Classes</a></li><li id="w9"><a href="/packaging/">Packaging and Extensions</a></li><li id="w10"><a href="/module-loader/">Module Loader</a></li><li id="w11"><a href="/optimizer/">Optimizer</a></li><li id="w12"><a href="/raptor-templates/">Raptor Templates</a></li><li id="w13"><a href="/widgets/">Widget Framework</a></li><li class="divider"></li><li id="w14"><a href="/ui-components/">Building UI Components</a></li><li id="w15"><a href="/logging/">Logging</a></li><li id="w16"><a href="/resource-search-path/">Resource Search Path</a></li></ul></li><li class="divider-vertical"></li><li id="w17" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a><ul class="dropdown-menu"><li id="w18"><a href="https://github.com/raptorjs/raptorjs">Source code</a></li><li id="w19"><a href="https://github.com/raptorjs/raptorjs/issues">Issue Tracker</a></li><li id="w20"><a href="/contribute/">Contribute</a></li><li id="w21"><a href="/contributors/">Contributors</a></li><li class="divider"></li><li id="w22"><a href="http://groups.google.com/group/raptorjs">Discussion Forum</a></li><li class="divider"></li><li id="w23"><a href="http://twitter.com/raptorjs">Twitter (@raptorjs)</a></li><li id="w24"><a href="https://plus.google.com/111493691067944627473/">Google+</a></li><li class="divider"></li><li id="w25"><a href="https://github.com/raptorjs/branding">Logos</a></li></ul></li><li class="divider-vertical"></li><li id="w26" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a><ul class="dropdown-menu"><li id="w27"><a href="https://github.com/raptorjs/raptorjs/wiki/Release-Notes">Release Notes</a></li><li id="w28"><a href="/design-philosophy/">Design Philosophy</a></li><li id="w29"><a target="_blank" href="https://github.com/raptorjs/raptorjs/blob/master/LICENSE.md">License</a></li><li id="w30"><a href="/credits/">Credits</a></li><li id="w31"><a href="/creators/">Creators</a></li></ul></li><li class="divider-vertical"></li></ul></div></div></div><div class="container"><div class="docs"><div class="bd"><div class="docs-content"><h1 id="title">RaptorJS Optmizer: Get Started with the JS API</h1><div class="toc nav" id="docsNav"><div class="return">&laquo; Return to <a href="/optimizer/">RaptorJS Optimizer</a></div><ul class="toc"><li class="toc toc-level-0"><a href="#Overview">Overview</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#View_Demo">View Demo</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Demo_Source">Demo Source</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Creating_a_Package">Creating a Package</a><ul class="toc"><li class="toc toc-level-1"><a href="#Module_Directories">Module Directories</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Package_File_Format">Package File Format</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Optimizing_a_Page">Optimizing a Page</a><ul class="toc"><li class="toc toc-level-1"><a href="#Build_Script">Build Script</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Page_package_json">Page package.json</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Page_HTML">Page HTML</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Optimizer_Output">Optimizer Output</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Discussion">Discussion</a><ul class="toc"></ul></li></ul><div class="docs-nav-footer"><ul><li><span class="powered-by">Powered by <a href="/" class="raptorjs">RaptorJS</a></span></li><li><a href="/license/">License</a></li><li><a href="/credits/">Credits</a></li></ul></div></div><div class="section section-level-0"><h2 id="Overview">Overview</h2><div class="bd"><p><img src="/images/optimized-delivery.png" width="128" height="128" class="section-icon"> The RaptorJS Optimizer is a server-side tool that can be be used to build
+optimized web pages by bundling, compiling and minifying page dependencies.
+This tool makes managing complex JavaScript and CSS dependencies almost
+effortless while helping you produce extremely optimized web pages.
+</p><p>Unlike other optimizers, the RaptorJS Optimizer does not require that you write
+your code a certain way. Simply tell the optimizers which modules your page
+depends on and it will take care of the rest—including writing optimized
+JavaScript and CSS bundles to disk
+<i>and</i> generating the HTML that is required to include those bundles. All
+dependencies are described using rich packaging metadata files that are easy to
+maintain and allow you to leverage the full power of the
+<a href="/packaging/">RaptorJS Packaging</a> system.</p><p>Every application has different requirements so the RaptorJS Optimizer gives
+you full control over how resources are combined and where to include resources
+on your HTML pages. Its ease-of-use and flexibility make it perfect for any
+size application. Best of all, the RaptorJS Optimizer is designed so that it
+can easily be used at runtime—freeing you from yet another build
+tool.</p></div></div><div class="section section-level-0"><h2 id="View_Demo">View Demo</h2><div class="bd"><div class="view-demo"><h1><i class="icon-play-circle icon-large"></i> <a href="/demos/optimizer-javascript-api/" target="_blank">View Demo: /demos/optimizer-javascript-api</a></h1></div></div></div><div class="section section-level-0"><h2 id="Demo_Source">Demo Source</h2><div class="bd"><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api" target="_blank">/optimizer-javascript-api/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/build.js" target="_blank">build.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/build.xml" target="_blank">build.xml</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules" target="_blank">modules/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-a" target="_blank">module-a/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-a/module-a.css" target="_blank">module-a.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-a/module-a.js" target="_blank">module-a.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-a/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-b" target="_blank">module-b/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-b/module-b.css" target="_blank">module-b.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-b/module-b.js" target="_blank">module-b.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-b/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-c" target="_blank">module-c/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-c/module-c.css" target="_blank">module-c.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-c/module-c.js" target="_blank">module-c.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-c/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-d" target="_blank">module-d/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-d/module-d.css" target="_blank">module-d.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-d/module-d.js" target="_blank">module-d.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/module-d/package.json" target="_blank">package.json</a></b></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/pages" target="_blank">pages/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/pages/index" target="_blank">index/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/pages/index/index.css" target="_blank">index.css</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/pages/index/index.html" target="_blank">index.html</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/pages/index/index.js" target="_blank">index.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/modules/pages/index/package.json" target="_blank">package.json</a></b></li></ul></li></ul></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/optimizer-config.xml" target="_blank">optimizer-config.xml</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/package.json" target="_blank">package.json</a></b></li></ul></li></ul></div></div><div class="section section-level-0"><h2 id="Creating_a_Package">Creating a Package</h2><div class="bd"><p><img src="/images/package.png" width="128" height="128" class="section-icon"> The first step to generating optimized web pages is to create packages for all
+of your modules. A module is a collection of related resources that work
+together to provide functionality in your application. Modules can consist of
+resources of any type (JavaScript, CSS, LESS, Raptor Templates, etc.) and
+modules can have dependencies on other modules. Packages are necessary so that
+the optimizer will understand the dependencies in your application. A package
+is defined using a simple
+<code>package.json</code> file. The RaptorJS Optimizer utilizes the same format of package files
+described in the documentation for the
+<a href="/packaging/">RaptorJS Packaging System</a>. The packaging format is quickly described in this guide, but for more
+advanced usage please see the developer guide for the
+<a href="/packaging/">RaptorJS Packaging System</a>.</p> <div class="section section-level-1"><h2 id="Module_Directories">Module Directories</h2><div class="bd"><p>A <code>package.json</code> file should be placed in a directory that corresponds to a module name. For
+example, the corresponding
+<code>package.json</code> file for a module named "test.hello" should be placed in the following
+location:
+<code><nobr>&lt;modules-dir>/test/hello/package.json</nobr></code>. In order for the RaptorJS Optimizer to be able to find your modules, you need
+to add the root directory containing your modules to the
+<a href="/resource-search-path/"><nobr>RaptorJS Resource Search Path</nobr></a> as shown in the following code:</p><div class="code-editor" id="w32"> <textarea id="w32-textarea" style="display: none;" name="code-0">require('raptor/resources').addSearchPathDir("/path/to/modules");</textarea></div></div></div><div class="section section-level-1"><h2 id="Package_File_Format">Package File Format</h2><div class="bd"><p>At a minimum, a package needs to describe what is included in the package. This
+is done by adding a "raptor" » "dependencies" property to a package.json file
+that is an array of dependecies that should be included as part of the package.
+A simple
+<code>package.json</code> is shown below:</p><div class="code-editor" id="w33"> <textarea id="w33-textarea" style="display: none;" name="code-1">{
+    "raptor": {
+        "dependencies": [
+            { "module": "raptor/widgets" },
+            { "module": "raptor/templating" },
+            "my-widget.js",
+            "my-css-stylesheet.css",
+            "my-less-stylesheet.less",
+            "my-template.rhtml"
+        ]
+    }
+}</textarea></div><p>Please see the documentation for <a href="/packaging/">RaptorJS Packaging</a> for more details on packaging up code.</p></div></div></div></div><div class="section section-level-0"><h2 id="Optimizing_a_Page">Optimizing a Page</h2><div class="bd"><p>The RaptorJS Optimizer provides a simple JavaScript API that can be utitlized
+to generate optimized resource bundles for a page and then get information
+about the resulting page. The
+<code><a href="http://raptorjs.org/api/raptor/optimizer/">raptor/optimizer</a></code> module should be used to optimize pages using the RaptorJS Optimzer.</p><p>For this guide we created a simple JavaScript build script named that uses the <code><a href="http://raptorjs.org/api/raptor/optimizer/">raptor/optimizer</a></code> module to optimize a simple page with an associated <code><a href="https://github.com/raptorjs/samples/blob/master/optimizer-javascript-api/pages/index/package.json">package.json</a></code> file that defines the page dependencies. In addition, the build script uses
+information from the optimized page to update the page's static HTML file to
+include the required HTML markup that will be used to include the optimized
+resource bundles in the page. The JavaScript build script, the page
+<code>package.json</code> file and the static page HTML are shown below:</p><div class="section section-level-1"><h2 id="Build_Script">Build Script</h2><div class="bd"><div class="code-editor" id="w34"><h2 class="code-editor-title">build.js</h2> <textarea id="w34-textarea" style="display: none;" name="code-2">require('raptor');
+
+// Configure the log levels for various modules
+require('raptor/logging').configure({
+    loggers: {
+        'ROOT': {level: 'WARN'},
+        'raptor/optimizer': {level: 'INFO'}
+    }
+});
+
+var files = require('raptor/files'),
+    File = require('raptor/files/File'),
+    optimizer = require('raptor/optimizer');
+
+// Add the "modules" directory to the resource search path
+require('raptor/resources').addSearchPathDir(
+    require('path').join(__dirname, 'modules'));
+
+function onError(e) {
+    require('raptor/logging').logger('build').error(e);
+}
+
+try
+{
+    // Configure the default instance of the RaptorJS Optimizer:
+    optimizer.configure(
+        files.joinPaths(__dirname, "optimizer-config.xml"), 
+        {
+            profile: process.argv[2] === 'dev' ? 'development' : 'production'
+        });
+
+    // Optimize the page to produce the optimized resource bundles:
+    var optimizedPagePromise = optimizer.optimizePage({
+        name: 'index', // Used to name optimized resource bundles
+        module: 'pages/index', // Use the dependencies defined in the package.json file
+                               // associated with the 'pages/index' module
+                               // i.e. /modules/pages/index/package.json
+        basePath: __dirname + "/build", // Used to generate relative paths from the output 
+                                        // page  to the optimized resource bundles for 
+                                        // in-place deployment
+        enabledExtensions: ['browser', 'raptor/logging/console'] // Enable package extensions
+    });
+
+    optimizedPagePromise.then(
+        function(optimizedPage) {
+            // Use information from the optimized page to update the static HTML file 
+            // with the required markup:
+            var pageHtml = files.readAsString("modules/pages/index/index.html");
+            var outputHtml = pageHtml.replace(
+                /<!--\s*slot: ([\w]*)\s*-->/g, // Use a regular expression to find slots 
+                                               // in the HTML markup
+                function(matches, slotName) {
+                    return optimizedPage.getHtmlForSlot(slotName);
+                });
+
+            // Write the resulting HTML to a new file:
+            var outputFile = new File(__dirname + "/build/index.html");
+            outputFile.writeAsString(outputHtml);
+            console.log('Optimized HTML page written to disk:\n' + outputFile.getAbsolutePath());
+        },
+        onError);
+
+        
+}
+catch(e) {
+    onError(e);
+}
+
+
+</textarea></div></div></div><div class="section section-level-1"><h2 id="Page_package_json">Page package.json</h2><div class="bd"><div class="code-editor" id="w35"><h2 class="code-editor-title">modules/pages/index/package.json</h2> <textarea id="w35-textarea" style="display: none;" name="code-3">{
+    "dependencies": [
+        { "module": "raptor" },
+        { "module": "raptor/loader" },
+        { "type": "loader-metadata" },
+        { "module": "module-a" },
+        { "module": "module-b" },
+        { "module": "module-c" },
+        { "module": "module-d", "async": true },
+        "index.css",
+        "index.js"
+    ]
+}</textarea></div></div></div><div class="section section-level-1"><h2 id="Page_HTML">Page HTML</h2><div class="bd"><div class="code-editor" id="w36"><h2 class="code-editor-title">modules/pages/index/index.html</h2> <textarea id="w36-textarea" style="display: none;" name="code-4"><html>
+    <head>
+        <title>RaptorJS Sample: Optimizer JavaScript API</title>
+        <!-- slot: head -->
+    </head>
+    <body>
+        <div class="title">RaptorJS Sample: Optimizer JavaScript API</div>
+        <!-- slot: body -->
+        <script type="text/javascript">
+        require('module-a').sayHello();
+        require('module-b').sayHello();
+        require('module-c').sayHello();
+        require('module-d', function(moduleD) {
+            moduleD.sayHello();
+        });
+        </script>
+    </body>
+</html></textarea></div></div></div><div class="section section-level-1"><h2 id="Optimizer_Output">Optimizer Output</h2><div class="bd"><p>In addition to writing the optimized resource bundles to the <code><nobar>build/static</nobar></code> directory, the build script will update the static <code><a href="https://github.com/raptorjs/samples/blob/master/optimizer-cli/modules/pages/index/index.html"><nobr>modules/pages/index/index.html</nobr></a></code> file to include the generated HTML and then write the resulting file to <code>build/index.html</code>. The output HTML file will look similar to the following:</p><div class="code-editor" id="w37"><h2 class="code-editor-title">build/index.html</h2> <textarea id="w37-textarea" style="display: none;" name="code-5">&lt;html>
+    &lt;head>
+        &lt;title>RaptorJS Optimizer Taglib: Hello World&lt;/title>
+        &lt;link rel="stylesheet" type="text/css" href="static/bundle1-b07068b5.css">
+        &lt;link rel="stylesheet" type="text/css" href="static/bundle2-e2ceaf6a.css">
+        &lt;link rel="stylesheet" type="text/css" href="static/index-523bbe25.css">
+    &lt;/head>
+    &lt;body>
+        Hello from the RaptorJS Optimizer Taglib!
+        &lt;script type="text/javascript" src="static/index-c4359f7a.js">&lt;/script>
+        &lt;script type="text/javascript" src="static/bundle1-908f9109.js">&lt;/script>
+        &lt;script type="text/javascript" src="static/bundle2-8a5c1666.js">&lt;/script>
+        &lt;script type="text/javascript">
+        require('module-a').sayHello(); 
+        require('module-b').sayHello();
+        require('module-c').sayHello(); 
+        require('module-d', function(moduleD) {
+            moduleD.sayHello();
+        });
+        &lt;/script>
+    &lt;/body>
+&lt;/html></textarea></div><p>Bundling resources and minifying CSS and JavaScript are great when deploying
+your application to production, but those optimizations can make your
+application very difficult to debug during development. Because of this, the
+RaptorJS Optimizer supports multiple profiles so that you can easily disable
+these optimizations during development. For example, if we re-run the build
+script in development mode using the following
+command:</p><pre class="sh" style="clear: both;">node build.js dev</pre><p>When the "dev" argument is passed, the build script will enable the
+"development" profile for the optimizer instead of th "production" profile. The
+"development" profile disables bundling and minification and, instead, enables
+in-place deployment. With in-place deployment enabled, the optimizer will
+generate URLs that point to your original source files on disk instead of the
+generated optimized resources. For resources that have to be compiled (e.g.
+LESS files) the optimizer will compile those resources and generate a URL to
+the individual compiled resource. The output HTML of a development build will
+be similar to the
+following:</p><div class="code-editor" id="w38"><h2 class="code-editor-title">build/index.html</h2> <textarea id="w38-textarea" style="display: none;" name="code-6">&lt;html>
+    &lt;head>
+        &lt;title>RaptorJS Optimizer Taglib: Hello World&lt;/title>
+        &lt;link rel="stylesheet" type="text/css" href="../modules/module-a/module-a.css">
+        &lt;link rel="stylesheet" type="text/css" href="../modules/module-b/module-b.css">
+        &lt;link rel="stylesheet" type="text/css" href="../modules/module-c/module-c.css">
+        &lt;link rel="stylesheet" type="text/css" href="../modules/pages/index/index.css">
+    &lt;/head>
+    &lt;body>
+        Hello from the RaptorJS Optimizer Taglib! 
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/ecma/es5/es5.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/ecma/es6/es6.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/raptor.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/logging/logging_stubs.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/strings/StringBuilder.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/strings/strings.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/objects/objects.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/stacktraces/stacktraces_browser.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/logging/ConsoleLogger.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/logging/logging.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/listeners/listeners.js">&lt;/script>
+        &lt;script type="text/javascript" src="static/loader-metadata-30f40c1e.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/loader/require/require.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/loader/loader.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/loader/loader_browser.js">&lt;/script>
+        &lt;script type="text/javascript" src="../node_modules/raptor/lib/raptor/loader/loader_browser_raptor.js">&lt;/script>
+        &lt;script type="text/javascript" src="../modules/module-a/module-a.js">&lt;/script>
+        &lt;script type="text/javascript" src="../modules/module-b/module-b.js">&lt;/script>
+        &lt;script type="text/javascript" src="../modules/module-c/module-c.js">&lt;/script>
+        &lt;script type="text/javascript" src="../modules/pages/index/index.js">&lt;/script>
+        &lt;script type="text/javascript">
+            require('module-a').sayHello(); 
+            require('module-b').sayHello();
+            require('module-c').sayHello(); 
+            require('module-d', function(moduleD) {
+                moduleD.sayHello();
+            });
+        &lt;/script>
+    &lt;/body>
+&lt;/html></textarea></div><p>When using in-place deployment your application will work exactly the same when
+the HTML file is loaded in your web browser (i.e. server-less). However, if
+your web application is loaded behind an HTTP server then the resource URLs
+will be invalid. To enable in-place deployment when using an HTTP server,
+please see the
+<a href="/optimizer/developer-guide/">RaptorJS Optimizer Developer Guide</a>.</p></div></div></div></div><div class="section section-level-0"><h2 id="Discussion">Discussion</h2><div class="bd"><div id="disqus_thread"></div></div></div></div></div><div class="docs-footer-padding"></div></div></div><script type="text/javascript" src="/static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="/static/jquery-371da524.js"></script>
+<script type="text/javascript" src="/static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="/static/optimizer-get-started-javascript-api-02c7930e.js"></script>
+<script type="text/javascript" src="/static/code-editor-36478451.js"></script><script type="text/javascript">$rwidgets(
+["components.nav.Nav.NavItemWidget","w0",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w1",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w2",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w3",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w4",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w5",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w6",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w7",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w8",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w9",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w10",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w11",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w12",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w13",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w14",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w15",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w16",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w17",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w18",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w19",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w20",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w21",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w22",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w23",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w24",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w25",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w26",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w27",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w28",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w29",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w30",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w31",0,0,0,0]],
+["components/editors/CodeEditor/CodeEditorWidget","w32",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w33",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w34",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w35",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w36",{"mode":"htmlmixed","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w37",{"mode":"htmlmixed","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w38",{"mode":"htmlmixed","autoResize":true,"readOnly":true},0,0,0],
+["components.social.Disqus.DisqusWidget","disqus_thread",{"shortName":"raptor-js","id":"optimizer-get-started-javascript-api","title":"RaptorJS Optmizer: Get Started with the JS API"},0,0,0]);</script></body></html>

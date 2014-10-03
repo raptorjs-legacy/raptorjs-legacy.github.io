@@ -1,0 +1,203 @@
+<!DOCTYPE html><html><head><title itemprop="name">RaptorJS: Get Started</title><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/static/font-awesome-87349705.css">
+<link rel="stylesheet" type="text/css" href="/static/get-started-26dcd56c.css">
+<link rel="stylesheet" type="text/css" href="/static/docs-6e628a8c.css">
+<link rel="stylesheet" type="text/css" href="/static/code-editor-f1386401.css">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-33982282-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+var __insp=__insp||[];__insp.push(["wid",2568045892]),function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"==document.location.protocol?"https":"http")+"://www.inspectlet.com/inspectlet-jq.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}();</script></head><body data-spy="scroll"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"><a class="brand" href="/">RaptorJS</a><ul class="nav"><li class="divider-vertical"></li><li id="w0" class="active nav-item-active"><a href="/get-started/">Get Started</a></li><li class="divider-vertical"></li><li id="w1" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Learn<b class="caret"></b></a><ul class="dropdown-menu"><li id="w2"><a href="/">Overview</a></li><li id="w3" class="active nav-item-active"><a href="/get-started/">Get Started</a></li><li id="w4"><a href="/tutorial/">Tutorial</a></li><li id="w5"><a href="/api/">API Reference</a></li><li id="w6"><a target="_blank" href="https://github.com/raptorjs/samples">Sample Apps</a></li><li id="w7"><a href="/faq/">FAQ</a></li><li class="divider"></li><li id="w8"><a href="/modules-classes/">Modules and Classes</a></li><li id="w9"><a href="/packaging/">Packaging and Extensions</a></li><li id="w10"><a href="/module-loader/">Module Loader</a></li><li id="w11"><a href="/optimizer/">Optimizer</a></li><li id="w12"><a href="/raptor-templates/">Raptor Templates</a></li><li id="w13"><a href="/widgets/">Widget Framework</a></li><li class="divider"></li><li id="w14"><a href="/ui-components/">Building UI Components</a></li><li id="w15"><a href="/logging/">Logging</a></li><li id="w16"><a href="/resource-search-path/">Resource Search Path</a></li></ul></li><li class="divider-vertical"></li><li id="w17" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a><ul class="dropdown-menu"><li id="w18"><a href="https://github.com/raptorjs/raptorjs">Source code</a></li><li id="w19"><a href="https://github.com/raptorjs/raptorjs/issues">Issue Tracker</a></li><li id="w20"><a href="/contribute/">Contribute</a></li><li id="w21"><a href="/contributors/">Contributors</a></li><li class="divider"></li><li id="w22"><a href="http://groups.google.com/group/raptorjs">Discussion Forum</a></li><li class="divider"></li><li id="w23"><a href="http://twitter.com/raptorjs">Twitter (@raptorjs)</a></li><li id="w24"><a href="https://plus.google.com/111493691067944627473/">Google+</a></li><li class="divider"></li><li id="w25"><a href="https://github.com/raptorjs/branding">Logos</a></li></ul></li><li class="divider-vertical"></li><li id="w26" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a><ul class="dropdown-menu"><li id="w27"><a href="https://github.com/raptorjs/raptorjs/wiki/Release-Notes">Release Notes</a></li><li id="w28"><a href="/design-philosophy/">Design Philosophy</a></li><li id="w29"><a target="_blank" href="https://github.com/raptorjs/raptorjs/blob/master/LICENSE.md">License</a></li><li id="w30"><a href="/credits/">Credits</a></li><li id="w31"><a href="/creators/">Creators</a></li></ul></li><li class="divider-vertical"></li></ul></div></div></div><div class="container"><div class="docs"><div class="bd"><div class="docs-content"><h1 id="title">Get Started with RaptorJS</h1><div class="toc nav" id="docsNav"><ul class="toc"><li class="toc toc-level-0"><a href="#Overview">Overview</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Installing_Node_js">Installing Node.js</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Installing_the_RaptorJS_CLI">Installing the RaptorJS CLI</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Generating_a_Webapp">Generating a Webapp</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Installing_Node_Modules">Installing Node Modules</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Starting_the_Server">Starting the Server</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Testing_the_Server">Testing the Server</a><ul class="toc"><li class="toc toc-level-1"><a href="#Live_Coding">Live Coding</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Adding_a_New_Page">Adding a New Page</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Adding_a_New_Component">Adding a New Component</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Further_Reading">Further Reading</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Discussion">Discussion</a><ul class="toc"></ul></li></ul><div class="docs-nav-footer"><ul><li><span class="powered-by">Powered by <a href="/" class="raptorjs">RaptorJS</a></span></li><li><a href="/license/">License</a></li><li><a href="/credits/">Credits</a></li></ul></div></div><div class="section section-level-0"><h2 id="Overview">Overview</h2><div class="bd"><p>This guide will help you quickly (less than 10 minutes) get started building a
+production-ready web application using RaptorJS, Node.js, Express and various
+other open source modules for
+Node.js.</p><p>RaptorJS includes a powerful command line interface that supports scaffolding
+so that you can quickly generate applications, pages, UI components and
+shareable libraries. For this guide we will be using this RaptorJS command line
+interface to build a web application from scratch. The basic commands are the
+following:</p><pre class="sh">npm install raptor --global
+mkdir my-app
+cd my-app
+raptor create webapp
+raptor create page test
+raptor create component test/MyComponent
+npm install
+node server.js</pre><p>Each of these commands and additional setup tasks are described in more detail
+in the sections
+below.</p></div></div><div class="section section-level-0"><h2 id="Installing_Node_js">Installing Node.js</h2><div class="bd"><p>The first step to using RaptorJS is to install the latest version of Node.js.
+If you have not yet installed Node.js then head over to the
+<a href="http://nodejs.org/">Node.js website</a> and download and install the appropriate version of Node.js for your operating
+system.</p></div></div><div class="section section-level-0"><h2 id="Installing_the_RaptorJS_CLI">Installing the RaptorJS CLI</h2><div class="bd"><p>To install the command line interface for RaptorJS run the following command in
+your
+terminal:</p><pre class="sh">$ npm install raptor --global</pre><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>NOTE: You will need to give administrative rights when installing a Node
+package globally so typically the above command will be used with the
+<code>sudo</code> command on Mac and Linux:</p><pre class="sh">$ sudo npm install raptor --global</pre></div></div></div></div><div class="section section-level-0"><h2 id="Generating_a_Webapp">Generating a Webapp</h2><div class="bd"><p>Now that the RaptorJS command line interface has been install via the Node.js
+package manager (npm), you can now use the
+<code>raptor</code> command to create a new webapp as shown in the following command line code:</p><pre class="sh">$ mkdir my-app
+$ cd my-app
+$ raptor create webapp</pre><p>You will see output similar to the following in your console:</p><pre class="sh" style="height: 200px; overflow-y: auto;">Running command "create webapp" (stack: raptorjs)...
+<span style="color: green;">[create]</span> .gitignore
+<span style="color: green;">[create]</span> .jshintignore
+<span style="color: green;">[create]</span> .jshintrc
+<span style="color: green;">[create]</span> README.md
+<span style="color: green;">[create]</span> my-app.sublime-project
+<span style="color: green;">[create]</span> config/config.json
+<span style="color: green;">[create]</span> config/optimizer-config.xml
+<span style="color: green;">[create]</span> package.json
+<span style="color: green;">[create]</span> rapido.json
+<span style="color: green;">[create]</span> routes.js
+<span style="color: green;">[create]</span> server.js
+<span style="color: green;">[create]</span> src/app.rtld
+<span style="color: green;">[create]</span> src/ebay-api/finding/finding.js
+<span style="color: green;">[create]</span> src/ebay-api/finding/finding_jquery.js
+<span style="color: green;">[create]</span> src/ebay-api/finding/finding_node.js
+<span style="color: green;">[create]</span> src/ebay-api/finding/package.json
+<span style="color: green;">[create]</span> src/ui/components/buttons/SimpleButton/SimpleButton.css
+<span style="color: green;">[create]</span> src/ui/components/buttons/SimpleButton/SimpleButton.rhtml
+<span style="color: green;">[create]</span> src/ui/components/buttons/SimpleButton/SimpleButton.rtld
+<span style="color: green;">[create]</span> src/ui/components/buttons/SimpleButton/SimpleButtonRenderer.js
+<span style="color: green;">[create]</span> src/ui/components/buttons/SimpleButton/SimpleButtonWidget.js
+<span style="color: green;">[create]</span> src/ui/components/buttons/SimpleButton/package.json
+<span style="color: green;">[create]</span> src/ui/components/demo/Simple/Simple.css
+<span style="color: green;">[create]</span> src/ui/components/demo/Simple/Simple.rhtml
+<span style="color: green;">[create]</span> src/ui/components/demo/Simple/Simple.rtld
+<span style="color: green;">[create]</span> src/ui/components/demo/Simple/SimpleRenderer.js
+<span style="color: green;">[create]</span> src/ui/components/demo/Simple/SimpleWidget.js
+<span style="color: green;">[create]</span> src/ui/components/demo/Simple/package.json
+<span style="color: green;">[create]</span> src/ui/components/demo/Simple/render-package.json
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResults/SearchResults.css
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResults/SearchResults.rhtml
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResults/SearchResults.rtld
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResults/SearchResultsRenderer.js
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResults/SearchResultsWidget.js
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResults/package.json
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResultsContainer/SearchResultsContainer.css
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResultsContainer/SearchResultsContainer.rhtml
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResultsContainer/SearchResultsContainer.rtld
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResultsContainer/SearchResultsContainerRenderer.js
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResultsContainer/SearchResultsContainerWidget.js
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResultsContainer/package.json
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResultsContainer/sample-data.json
+<span style="color: green;">[create]</span> src/ui/components/ebay/search/SearchResultsContainer/wait-indicator.gif
+<span style="color: green;">[create]</span> src/ui/components/nav/TopNav/TopNav.css
+<span style="color: green;">[create]</span> src/ui/components/nav/TopNav/TopNav.rhtml
+<span style="color: green;">[create]</span> src/ui/components/nav/TopNav/TopNav.rtld
+<span style="color: green;">[create]</span> src/ui/components/nav/TopNav/TopNavRenderer.js
+<span style="color: green;">[create]</span> src/ui/components/nav/TopNav/package.json
+<span style="color: green;">[create]</span> src/ui/components/nav/TopNav/render-package.json
+<span style="color: green;">[create]</span> src/ui/components/style/variables.less
+<span style="color: green;">[create]</span> src/ui/pages/async-fragments/async-fragment.css
+<span style="color: green;">[create]</span> src/ui/pages/async-fragments/async-fragments.rhtml
+<span style="color: green;">[create]</span> src/ui/pages/async-fragments/index.js
+<span style="color: green;">[create]</span> src/ui/pages/hello/index.js
+<span style="color: green;">[create]</span> src/ui/pages/index/index.js
+<span style="color: green;">[create]</span> src/ui/pages/index/index.less
+<span style="color: green;">[create]</span> src/ui/pages/index/index.rhtml
+<span style="color: green;">[create]</span> src/ui/pages/search-results/index.js
+<span style="color: green;">[create]</span> src/ui/pages/search-results/search-results.css
+<span style="color: green;">[create]</span> src/ui/pages/search-results/search-results.rhtml
+<span style="color: green;">[create]</span> src/ui/pages/ui-components/index.js
+<span style="color: green;">[create]</span> src/ui/pages/ui-components/ui-components.css
+<span style="color: green;">[create]</span> src/ui/pages/ui-components/ui-components.rhtml
+<span style="color: green;">[create]</span> src/ui/style/global/global.less
+<span style="color: green;">[create]</span> src/ui/style/global/package.json
+<span style="color: green;">[create]</span> src/ui/style/variables.less
+[finished] Webapp written to "/Users/psteeleidem/temp/my-app"
+All that is left is to run the following command:
+<span style="color: cyan;">npm install</span>
+
+Use the following command to start the server:
+<span style="color: cyan;">node server.js --dev</span></pre><p>After running the above command a project with a structure similar to the
+following will be
+generated:</p><ul><li><b>config</b> - Configuration files directory <ul><li>optimizer-config.xml - Web resource optimization configuration (minification,
+bundling,
+etc.)</li><li>config.json - Application-specific configuration options</li></ul></li><li><b>src</b> - Source code and application modules directory <ul><li><b>my-module</b> - A module directory</li><li><b>ui</b> - UI modules directory (UI components and pages) <ul><li><b>components</b> - UI components directory <ul><li><b>MyComponent</b><ul><li>MyComponentRenderer.js - HTML renderer</li><li>MyComponentWidget.js - Client-side behavior</li><li>MyComponent.css - StyleSheet</li><li>MyComponent.rhtml - HTML template (used by the renderer)</li><li>MyComponent.rtld - Custom tag definition</li><li>package.json - UI component dependencies</li></ul></li></ul></li><li><b>pages</b> - Pages directory <ul><li><b>my-page</b><ul><li>index.js - Page module (exports controller)</li><li>my-page.css - Page-specific CSS</li><li>my-page.rhtml - Page template</li></ul></li></ul></li><li><b>style</b><ul><li><b>global</b> - global style module</li><li>variables.less - Variables used to define the Twitter Bootstrap theme</li></ul></li></ul></li><li>app.rtld - Application-spcific custom tags for Raptor Templates</li></ul></li><li><b>work</b> - Temporary directory for compiled templates and optimized resources (can
+safely be
+deleted)</li><li>package.json- Node.js module dependencies for application (used by
+[npm](https://npmjs.org/))</li><li>rapido.json- Configuration file used by `raptor` (built on top of
+[Rápido](https://github.com/raptorjs/rapido))</li><li>routes.js - Registers all application routes (i.e. URL patterns)</li><li>server.js - Starts the Express HTTP server (or cluster)</li></ul></div></div><div class="section section-level-0"><h2 id="Installing_Node_Modules">Installing Node Modules</h2><div class="bd"><p>The generated web application depends on other open source modules to function
+correctly. These dependencies must be downloaded and installed using
+<code>npm</code> as shown in the following command line code:</p><pre class="sh">$ npm install</pre><p>After less than a minute all of the dependencies will be downloaded and
+installed to the
+<code>node_modules</code> directory.</p></div></div><div class="section section-level-0"><h2 id="Starting_the_Server">Starting the Server</h2><div class="bd"><p>Now that all of the Node module dependencies have been downloaded and
+installed, the HTTP server for the generated web application can be started
+using the following
+command:</p><pre class="sh">$ node server.js</pre></div></div><div class="section section-level-0"><h2 id="Testing_the_Server">Testing the Server</h2><div class="bd"><p>Now that the server has been started, we can test it out by loading the
+following URL in your web browser:
+<a href="http://localhost:8080/"><nobr>http://localhost:8080/</nobr></a></p><div class="section section-level-1"><h2 id="Live_Coding">Live Coding</h2><div class="bd"><p>Without restarting the server and with the index page still loaded in your web
+browser, open up the following file in the editor of your
+choice:<br><code><nobr>src/ui/pages/index/index.rhtml</nobr></code></p><p>Make some changes to the "index" page by adding some additional text into the
+body of the page. After saving your changes, go back to your web browser and
+you will notice that the changes you made are
+<i>already</i> reflected on the previously loaded page.</p><p>Out-of-the-box, the generated RaptorJS application includes support for
+watching project source directories for changes. When a file modification is
+detected (via an instant notification from the operating system), the
+server-side environment is refreshed by unloading all previously loaded
+modules. In addition, a push notification is immediately sent down to any
+connected clients to let them know that files on the server were modified and
+that the page should be reloaded. The end result is
+<i>live coding</i>, regardless of which editor/IDE or web browser you choose to use (awesome!).</p></div></div></div></div><div class="section section-level-0"><h2 id="Adding_a_New_Page">Adding a New Page</h2><div class="bd"><p>A new page and the associated URL route can be added to the generated
+application by running the following
+command:</p><pre class="sh">$ raptor create page test</pre><p>Running the above command will result in a new page directory named "test"
+being added to the
+<code>src/ui/pages</code> directory. In addition, a new route for path "/test" will be added to the <code>routes.js</code> file.</p><p>To test the new page load the following URL in your browser: <a href="http://localhost:8080/test"><nobr>http://localhost:8080/test</nobr></a></p><p>NOTE: Because the generated web application includes code that watches for
+changes in the source directories for the application. Therefore, a restart of
+the server is
+<i>not</i> required in order to test the newly added page.</p></div></div><div class="section section-level-0"><h2 id="Adding_a_New_Component">Adding a New Component</h2><div class="bd"><p>A new UI component can easily be added to the generated application by running
+the following
+command:</p><pre class="sh">$ raptor create component test/MyComponent</pre><p>Running the above command will result in a new UI component directory being
+added to the following location:
+<code><nobr>src/ui/components/test/MyComponent</nobr></code>.</p><p>The newly created UI component can be tested by embedding the UI component in
+an existing page. Raptor Templates supports "custom tags" and every generated
+UI component will also include a custom tag definition. To embed the newly
+created component in the previously created page named "test", add the
+following code into the
+<code><nobr>src/ui/pages/test/test.rhtml</nobr></code> file:</p><div class="code-editor" id="w32"> <textarea id="w32-textarea" style="display: none;" name="code-0">&lt;app:my-component name="Frank" count="30"/></textarea></div><p>In addition, the newly created UI component also includes a <code>package.json</code> that describes the dependencies for the UI component (i.e., CSS and JavaScript
+files and other resources that are required for the UI component to function
+correctly in the web browser). For the required resources for the UI component
+to be included on the page you must add the module associated with the newly
+created UI component into the &lt;optimizer:dependencies> section of the page
+as shown in teh following
+code:</p><div class="code-editor" id="w33"> <textarea id="w33-textarea" style="display: none;" name="code-1">&lt;optimizer:page ...>
+    &lt;dependencies>
+        ...
+        &lt;module name="ui/components/test/MyComponent"/>
+    &lt;/dependencies>
+&lt;/optimizer:page></textarea></div></div></div><div class="section section-level-0"><h2 id="Further_Reading">Further Reading</h2><div class="bd"><p>Now that you have Node configured and a working web application built using
+RaptorJS, you are now more ready to start learning about the features of
+RaptorJS. To continue learning about RaptorJS, please use the following
+links:</p><ul><li><a href="/modules-classes/">Modules &amp; Classes</a></li><li><a href="/packaging/">Packaging &amp; Extensions</a></li><li><a href="/module-loader/">Module Loader</a></li><li><a href="/optimizer/">Optimizer</a></li><li><a href="/raptor-templates/">Raptor Templates</a></li><li><a href="/widgets/">Widget Framework</a></li></ul></div></div><div class="section section-level-0"><h2 id="Discussion">Discussion</h2><div class="bd"><div id="disqus_thread"></div></div></div></div></div><div class="docs-footer-padding"></div></div></div><script type="text/javascript" src="/static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="/static/jquery-371da524.js"></script>
+<script type="text/javascript" src="/static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="/static/get-started-02c7930e.js"></script>
+<script type="text/javascript" src="/static/code-editor-36478451.js"></script><script type="text/javascript">$rwidgets(
+["components.nav.Nav.NavItemWidget","w0",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w1",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w2",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w3",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w4",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w5",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w6",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w7",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w8",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w9",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w10",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w11",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w12",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w13",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w14",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w15",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w16",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w17",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w18",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w19",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w20",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w21",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w22",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w23",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w24",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w25",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w26",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w27",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w28",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w29",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w30",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w31",0,0,0,0]],
+["components/editors/CodeEditor/CodeEditorWidget","w32",{"mode":"xml","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w33",{"mode":"xml","autoResize":true,"readOnly":true},0,0,0],
+["components.social.Disqus.DisqusWidget","disqus_thread",{"shortName":"raptor-js","id":"get-started","title":"Get Started with RaptorJS"},0,0,0]);</script></body></html>

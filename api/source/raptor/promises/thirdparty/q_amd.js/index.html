@@ -1,0 +1,1733 @@
+<!DOCTYPE html><html><head><base href="../../../../.."></base><title>Source for /raptor/promises/thirdparty/q_amd.js — RaptorJS API</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="static/jsdoc-64998f32.css">
+<link rel="stylesheet" type="text/css" href="static/type-f3fd1b7a.css"></head></html><body><body><div id="nav"><div class="nav jstree-classic" style="visibility: hidden;" id="w0"><div id="search-form"><div class="body"><input type="text" id="searchInput" size="20" value="Search API docs" autocomplete="off" class="ac_input"></div></div><div id="navTree" class="jstree-no-dots"><ul><li id="nav_package_json" class="package"><a href="./source/package.json/">package.json</a> </li><li id="nav_raptor" class="raptor-module"><a href="./raptor/">raptor</a><ul><li id="nav_raptor_package_json" class="package"><a href="./source/raptor/package.json/">package.json</a> </li><li id="nav_raptor_arrays" class="raptor-module"><a href="./raptor/arrays/">arrays</a><ul><li id="nav_raptor_arrays_package_json" class="package"><a href="./source/raptor/arrays/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_caching" class="raptor-module"><a href="./raptor/caching/">caching</a><ul><li id="nav_raptor_caching_package_json" class="package"><a href="./source/raptor/caching/package.json/">package.json</a> </li><li id="nav_raptor_caching_BaseCache" class="raptor-class"><a href="./raptor/caching/BaseCache/">BaseCache</a> </li><li id="nav_raptor_caching_SimpleCache" class="raptor-class"><a href="./raptor/caching/SimpleCache/">SimpleCache</a> </li><li id="nav_raptor_caching_SimpleCacheProvider" class="raptor-class"><a href="./raptor/caching/SimpleCacheProvider/">SimpleCacheProvider</a> </li></ul> </li><li id="nav_raptor_component-renderer" class="raptor-module"><a href="./raptor/component-renderer/">component-renderer</a><ul><li id="nav_raptor_component-renderer_package_json" class="package"><a href="./source/raptor/component-renderer/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_config" class="raptor-module"><a href="./raptor/config/">config</a><ul><li id="nav_raptor_config_package_json" class="package"><a href="./source/raptor/config/package.json/">package.json</a> </li><li id="nav_raptor_config_Config" class="class"><a href="./raptor/config/Config/">configConfig</a> </li></ul> </li><li id="nav_raptor_console" class="folder"><a href="#">console</a><ul><li id="nav_raptor_console_package_json" class="package"><a href="./source/raptor/console/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_cookies" class="raptor-module"><a href="./raptor/cookies/">cookies</a><ul><li id="nav_raptor_cookies_package_json" class="package"><a href="./source/raptor/cookies/package.json/">package.json</a> </li><li id="nav_raptor_cookies_Cookie" class="raptor-class"><a href="./raptor/cookies/Cookie/">Cookie</a> </li><li id="nav_raptor_cookies_CookieManager" class="raptor-class"><a href="./raptor/cookies/CookieManager/">CookieManager</a> </li></ul> </li><li id="nav_raptor_css-minifier" class="raptor-module"><a href="./raptor/css-minifier/">css-minifier</a><ul><li id="nav_raptor_css-minifier_package_json" class="package"><a href="./source/raptor/css-minifier/package.json/">package.json</a> </li><li id="nav_raptor_css-minifier_Node" class="object extension"><a href="./raptor/css-minifier_Node/">Node Extension</a> </li></ul> </li><li id="nav_raptor_css-parser" class="raptor-module"><a href="./raptor/css-parser/">css-parser</a> </li><li id="nav_raptor_data-providers" class="raptor-module"><a href="./raptor/data-providers/">data-providers</a><ul><li id="nav_raptor_data-providers_package_json" class="package"><a href="./source/raptor/data-providers/package.json/">package.json</a> </li><li id="nav_raptor_data-providers_DataProviders" class="raptor-class"><a href="./raptor/data-providers/DataProviders/">DataProviders</a> </li></ul> </li><li id="nav_raptor_debug" class="raptor-module"><a href="./raptor/debug/">debug</a><ul><li id="nav_raptor_debug_package_json" class="package"><a href="./source/raptor/debug/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_dom" class="raptor-module"><a href="./raptor/dom/">dom</a><ul><li id="nav_raptor_dom_package_json" class="package"><a href="./source/raptor/dom/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_ecma" class="folder"><a href="#">ecma</a><ul><li id="nav_raptor_ecma_es5" class="folder"><a href="#">es5</a><ul><li id="nav_raptor_ecma_es5_package_json" class="package"><a href="./source/raptor/ecma/es5/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_ecma_es6" class="folder"><a href="#">es6</a><ul><li id="nav_raptor_ecma_es6_package_json" class="package"><a href="./source/raptor/ecma/es6/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_ecma_JSON" class="folder"><a href="#">JSON</a><ul><li id="nav_raptor_ecma_JSON_package_json" class="package"><a href="./source/raptor/ecma/JSON/package.json/">package.json</a> </li></ul> </li></ul> </li><li id="nav_raptor_file-watcher" class="raptor-module"><a href="./raptor/file-watcher/">file-watcher</a><ul><li id="nav_raptor_file-watcher_package_json" class="package"><a href="./source/raptor/file-watcher/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_files" class="raptor-module"><a href="./raptor/files/">files</a><ul><li id="nav_raptor_files_package_json" class="package"><a href="./source/raptor/files/package.json/">package.json</a> </li><li id="nav_raptor_files_Node" class="object extension"><a href="./raptor/files_Node/">Node Extension</a> </li><li id="nav_raptor_files_Rhino" class="object extension"><a href="./raptor/files_Rhino/">Rhino Extension</a> </li><li id="nav_raptor_files_FileMixins" class="raptor-module"><a href="./raptor/files/FileMixins/">FileMixins</a> </li><li id="nav_raptor_files_walker" class="raptor-module"><a href="./raptor/files/walker/">walker</a><ul><li id="nav_raptor_files_walker_package_json" class="package"><a href="./source/raptor/files/walker/package.json/">package.json</a> </li><li id="nav_raptor_files_walker_DirWalker" class="raptor-class"><a href="./raptor/files/walker/DirWalker/">DirWalker</a> </li></ul> </li><li id="nav_raptor_files_File_Node" class="raptor-class"><a href="./raptor/files/File_Node/">File (Node Extension)</a> </li><li id="nav_raptor_files_File_Rhino" class="raptor-class"><a href="./raptor/files/File_Rhino/">File (Rhino Extension)</a> </li></ul> </li><li id="nav_raptor_i18n" class="raptor-module"><a href="./raptor/i18n/">i18n</a><ul><li id="nav_raptor_i18n_package_json" class="package"><a href="./source/raptor/i18n/package.json/">package.json</a> </li><li id="nav_raptor_i18n_Dictionaries" class="raptor-class"><a href="./raptor/i18n/Dictionaries/">Dictionaries</a> </li><li id="nav_raptor_i18n_Dictionary" class="raptor-class"><a href="./raptor/i18n/Dictionary/">Dictionary</a> </li></ul> </li><li id="nav_raptor_java" class="raptor-module"><a href="./raptor/java/">java</a><ul><li id="nav_raptor_java_package_json" class="package"><a href="./source/raptor/java/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_js-minifier" class="raptor-module"><a href="./raptor/js-minifier/">js-minifier</a><ul><li id="nav_raptor_js-minifier_package_json" class="package"><a href="./source/raptor/js-minifier/package.json/">package.json</a> </li><li id="nav_raptor_js-minifier_Node" class="object extension"><a href="./raptor/js-minifier_Node/">Node Extension</a> </li></ul> </li><li id="nav_raptor_jsdoc" class="raptor-module"><a href="./raptor/jsdoc/">jsdoc</a><ul><li id="nav_raptor_jsdoc_package_json" class="package"><a href="./source/raptor/jsdoc/package.json/">package.json</a> </li><li id="nav_raptor_jsdoc_raptor-plugin" class="raptor-module"><a href="./raptor/jsdoc/raptor-plugin/">raptor-plugin</a> </li><li id="nav_raptor_jsdoc_ASTWalker" class="raptor-class"><a href="./raptor/jsdoc/ASTWalker/">ASTWalker</a> </li><li id="nav_raptor_jsdoc_BorrowTag" class="raptor-class"><a href="./raptor/jsdoc/BorrowTag/">BorrowTag</a> </li><li id="nav_raptor_jsdoc_Comment" class="raptor-class"><a href="./raptor/jsdoc/Comment/">Comment</a> </li><li id="nav_raptor_jsdoc_CommentParser" class="raptor-class"><a href="./raptor/jsdoc/CommentParser/">CommentParser</a> </li><li id="nav_raptor_jsdoc_Environment" class="raptor-class"><a href="./raptor/jsdoc/Environment/">Environment</a> </li><li id="nav_raptor_jsdoc_ParamTag" class="raptor-class"><a href="./raptor/jsdoc/ParamTag/">ParamTag</a> </li><li id="nav_raptor_jsdoc_ReturnTag" class="raptor-class"><a href="./raptor/jsdoc/ReturnTag/">ReturnTag</a> </li><li id="nav_raptor_jsdoc_SymbolSet" class="raptor-class"><a href="./raptor/jsdoc/SymbolSet/">SymbolSet</a> </li><li id="nav_raptor_jsdoc_Tag" class="raptor-class"><a href="./raptor/jsdoc/Tag/">Tag</a> </li><li id="nav_raptor_jsdoc_Type" class="raptor-class"><a href="./raptor/jsdoc/Type/">Type</a> </li></ul> </li><li id="nav_raptor_json" class="raptor-module"><a href="./raptor/json/">json</a><ul><li id="nav_raptor_json_package_json" class="package"><a href="./source/raptor/json/package.json/">package.json</a> </li><li id="nav_raptor_json_jQuery_Parse" class="object extension"><a href="./raptor/json_jQuery_Parse/">jQuery Parse Extension</a> </li><li id="nav_raptor_json_Raptor_Parse" class="object extension"><a href="./raptor/json_Raptor_Parse/">Raptor Parse Extension</a> </li><li id="nav_raptor_json_Raptor_Stringify" class="object extension"><a href="./raptor/json_Raptor_Stringify/">Raptor Stringify Extension</a> </li><li id="nav_raptor_json_parse" class="raptor-module"><a href="./raptor/json/parse/">parse</a><ul><li id="nav_raptor_json_parse_package_json" class="package"><a href="./source/raptor/json/parse/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_json_stringify" class="raptor-module"><a href="./raptor/json/stringify/">stringify</a><ul><li id="nav_raptor_json_stringify_package_json" class="package"><a href="./source/raptor/json/stringify/package.json/">package.json</a> </li></ul> </li></ul> </li><li id="nav_raptor_listeners" class="raptor-module"><a href="./raptor/listeners/">listeners</a><ul><li id="nav_raptor_listeners_package_json" class="package"><a href="./source/raptor/listeners/package.json/">package.json</a> </li><li id="nav_raptor_listeners_ListenerHandle" class="object"><a href="./raptor/listeners/ListenerHandle/">ListenerHandle</a> </li><li id="nav_raptor_listeners_Listeners" class="class"><a href="./raptor/listeners/Listeners/">Listeners</a> </li><li id="nav_raptor_listeners_Message" class="class"><a href="./raptor/listeners/Message/">Message</a> </li><li id="nav_raptor_listeners_Observable" class="class"><a href="./raptor/listeners/Observable/">Observable</a> </li></ul> </li><li id="nav_raptor_loader" class="raptor-module"><a href="./raptor/loader/">loader</a><ul><li id="nav_raptor_loader_package_json" class="package"><a href="./source/raptor/loader/package.json/">package.json</a> </li><li id="nav_raptor_loader_Browser" class="object extension"><a href="./raptor/loader_Browser/">Browser Extension</a> </li><li id="nav_raptor_loader_jQuery" class="object extension"><a href="./raptor/loader_jQuery/">jQuery Extension</a> </li><li id="nav_raptor_loader_Module_Loader" class="object extension"><a href="./raptor/loader_Module_Loader/">Module Loader Extension</a> </li><li id="nav_raptor_loader_Raptor" class="object extension"><a href="./raptor/loader_Raptor/">Raptor Extension</a> </li><li id="nav_raptor_loader_require" class="folder"><a href="#">require</a><ul><li id="nav_raptor_loader_require_package_json" class="package"><a href="./source/raptor/loader/require/package.json/">package.json</a> </li></ul> </li></ul> </li><li id="nav_raptor_locale" class="folder"><a href="#">locale</a><ul><li id="nav_raptor_locale_formatting" class="folder"><a href="#">formatting</a><ul><li id="nav_raptor_locale_formatting_numbers" class="raptor-module"><a href="./raptor/locale/formatting/numbers/">numbers</a><ul><li id="nav_raptor_locale_formatting_numbers_package_json" class="package"><a href="./source/raptor/locale/formatting/numbers/package.json/">package.json</a> </li><li id="nav_raptor_locale_formatting_numbers_NumberFormatter" class="class"><a href="./raptor/locale/formatting/numbers/NumberFormatter/">NumberFormatter</a> </li></ul> </li></ul> </li></ul> </li><li id="nav_raptor_logging" class="raptor-module"><a href="./raptor/logging/">logging</a><ul><li id="nav_raptor_logging_package_json" class="package"><a href="./source/raptor/logging/package.json/">package.json</a> </li><li id="nav_raptor_logging_Console" class="object extension"><a href="./raptor/logging_Console/">Console Extension</a> </li><li id="nav_raptor_logging_ConsoleAppender" class="raptor-class"><a href="./raptor/logging/ConsoleAppender/">ConsoleAppender</a> </li><li id="nav_raptor_logging_Logger" class="raptor-class"><a href="./raptor/logging/Logger/">Logger</a> </li><li id="nav_raptor_logging_voidLogger" class="object"><a href="./raptor/logging/voidLogger/">voidLogger</a> </li></ul> </li><li id="nav_raptor_lookup" class="raptor-module"><a href="./raptor/lookup/">lookup</a><ul><li id="nav_raptor_lookup_package_json" class="package"><a href="./source/raptor/lookup/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_mime" class="raptor-module"><a href="./raptor/mime/">mime</a><ul><li id="nav_raptor_mime_package_json" class="package"><a href="./source/raptor/mime/package.json/">package.json</a> </li><li id="nav_raptor_mime_Node" class="object extension"><a href="./raptor/mime_Node/">Node Extension</a> </li></ul> </li><li id="nav_raptor_objects" class="raptor-module"><a href="./raptor/objects/">objects</a><ul><li id="nav_raptor_objects_package_json" class="package"><a href="./source/raptor/objects/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_optimizer" class="raptor-module"><a href="./raptor/optimizer/">optimizer</a><ul><li id="nav_raptor_optimizer_cli" class="raptor-module"><a href="./raptor/optimizer/cli/">cli</a><ul><li id="nav_raptor_optimizer_cli_package_json" class="package"><a href="./source/raptor/optimizer/cli/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_optimizer_i18n" class="raptor-module"><a href="./raptor/optimizer/i18n/">i18n</a><ul><li id="nav_raptor_optimizer_i18n_i18n-compiler" class="raptor-module"><a href="./raptor/optimizer/i18n/i18n-compiler/">i18n-compiler</a> </li><li id="nav_raptor_optimizer_i18n_I18nContext" class="raptor-class"><a href="./raptor/optimizer/i18n/I18nContext/">I18nContext</a> </li></ul> </li><li id="nav_raptor_optimizer_MinifyCSSFilter" class="raptor-module"><a href="./raptor/optimizer/MinifyCSSFilter/">MinifyCSSFilter</a> </li><li id="nav_raptor_optimizer_MinifyJSFilter" class="raptor-module"><a href="./raptor/optimizer/MinifyJSFilter/">MinifyJSFilter</a> </li><li id="nav_raptor_optimizer_ResolveCSSUrlsFilter" class="raptor-module"><a href="./raptor/optimizer/ResolveCSSUrlsFilter/">ResolveCSSUrlsFilter</a> </li><li id="nav_raptor_optimizer_Bundle" class="raptor-class"><a href="./raptor/optimizer/Bundle/">Bundle</a> </li><li id="nav_raptor_optimizer_BundleConfig" class="raptor-class"><a href="./raptor/optimizer/BundleConfig/">BundleConfig</a> </li><li id="nav_raptor_optimizer_BundleMappings" class="raptor-class"><a href="./raptor/optimizer/BundleMappings/">BundleMappings</a> </li><li id="nav_raptor_optimizer_BundleSetConfig" class="raptor-class"><a href="./raptor/optimizer/BundleSetConfig/">BundleSetConfig</a> </li><li id="nav_raptor_optimizer_Cache" class="raptor-class"><a href="./raptor/optimizer/Cache/">Cache</a> </li><li id="nav_raptor_optimizer_Config" class="raptor-class"><a href="./raptor/optimizer/Config/">Config</a> </li><li id="nav_raptor_optimizer_ConfigXmlParser" class="raptor-class"><a href="./raptor/optimizer/ConfigXmlParser/">ConfigXmlParser</a> </li><li id="nav_raptor_optimizer_FileUrlBuilder" class="raptor-class"><a href="./raptor/optimizer/FileUrlBuilder/">FileUrlBuilder</a> </li><li id="nav_raptor_optimizer_HtmlInjector" class="raptor-class"><a href="./raptor/optimizer/HtmlInjector/">HtmlInjector</a> </li><li id="nav_raptor_optimizer_OptimizedPage" class="raptor-class"><a href="./raptor/optimizer/OptimizedPage/">OptimizedPage</a> </li><li id="nav_raptor_optimizer_OptimizerFileWriter" class="raptor-class"><a href="./raptor/optimizer/OptimizerFileWriter/">OptimizerFileWriter</a> </li><li id="nav_raptor_optimizer_OptimizerRenderContext" class="raptor-class"><a href="./raptor/optimizer/OptimizerRenderContext/">OptimizerRenderContext</a> </li><li id="nav_raptor_optimizer_OptimizerWriterMixins" class="raptor-class"><a href="./raptor/optimizer/OptimizerWriterMixins/">OptimizerWriterMixins</a> </li><li id="nav_raptor_optimizer_PageBundles" class="raptor-class"><a href="./raptor/optimizer/PageBundles/">PageBundles</a><ul><li id="nav_raptor_optimizer_PageBundles_AsyncRequire" class="class"><a href="./raptor/optimizer/PageBundles/AsyncRequire/">AsyncRequire</a> </li></ul> </li><li id="nav_raptor_optimizer_PageConfig" class="raptor-class"><a href="./raptor/optimizer/PageConfig/">PageConfig</a> </li><li id="nav_raptor_optimizer_PageOptimizer" class="raptor-class"><a href="./raptor/optimizer/PageOptimizer/">PageOptimizer</a> </li><li id="nav_raptor_optimizer_Slot" class="raptor-class"><a href="./raptor/optimizer/Slot/">Slot</a> </li><li id="nav_raptor_optimizer_SlotTracker" class="raptor-class"><a href="./raptor/optimizer/SlotTracker/">SlotTracker</a> </li></ul> </li><li id="nav_raptor_packaging" class="raptor-module"><a href="./raptor/packaging/">packaging</a><ul><li id="nav_raptor_packaging_Rhino" class="object extension"><a href="./raptor/packaging_Rhino/">Rhino Extension</a> </li><li id="nav_raptor_packaging_DependencyWalker" class="raptor-module"><a href="./raptor/packaging/DependencyWalker/">DependencyWalker</a> </li><li id="nav_raptor_packaging_Dependency" class="raptor-class"><a href="./raptor/packaging/Dependency/">Dependency</a> </li><li id="nav_raptor_packaging_Dependency_coffee" class="raptor-class"><a href="./raptor/packaging/Dependency_coffee/">Dependency_coffee</a> </li><li id="nav_raptor_packaging_Dependency_css" class="raptor-class"><a href="./raptor/packaging/Dependency_css/">Dependency_css</a> </li><li id="nav_raptor_packaging_Dependency_define" class="raptor-class"><a href="./raptor/packaging/Dependency_define/">Dependency_define</a> </li><li id="nav_raptor_packaging_Dependency_dust" class="raptor-class"><a href="./raptor/packaging/Dependency_dust/">Dependency_dust</a> </li><li id="nav_raptor_packaging_Dependency_i18n" class="raptor-class"><a href="./raptor/packaging/Dependency_i18n/">Dependency_i18n</a> </li><li id="nav_raptor_packaging_Dependency_i18n-module" class="raptor-class"><a href="./raptor/packaging/Dependency_i18n-module/">Dependency_i18n-module</a> </li><li id="nav_raptor_packaging_Dependency_js" class="raptor-class"><a href="./raptor/packaging/Dependency_js/">Dependency_js</a> </li><li id="nav_raptor_packaging_Dependency_less" class="raptor-class"><a href="./raptor/packaging/Dependency_less/">Dependency_less</a> </li><li id="nav_raptor_packaging_Dependency_loader-metadata" class="raptor-class"><a href="./raptor/packaging/Dependency_loader-metadata/">Dependency_loader-metadata</a> </li><li id="nav_raptor_packaging_Dependency_module" class="raptor-class"><a href="./raptor/packaging/Dependency_module/">Dependency_module</a> </li><li id="nav_raptor_packaging_Dependency_package" class="raptor-class"><a href="./raptor/packaging/Dependency_package/">Dependency_package</a> </li><li id="nav_raptor_packaging_Dependency_resource" class="raptor-class"><a href="./raptor/packaging/Dependency_resource/">Dependency_resource</a> </li><li id="nav_raptor_packaging_Dependency_rhtml" class="raptor-class"><a href="./raptor/packaging/Dependency_rhtml/">Dependency_rhtml</a> </li><li id="nav_raptor_packaging_Dependency_rtld" class="raptor-class"><a href="./raptor/packaging/Dependency_rtld/">Dependency_rtld</a> </li><li id="nav_raptor_packaging_ExtensionCollection" class="raptor-class"><a href="./raptor/packaging/ExtensionCollection/">ExtensionCollection</a> </li><li id="nav_raptor_packaging_PackageLoader" class="raptor-class"><a href="./raptor/packaging/PackageLoader/">PackageLoader</a> </li><li id="nav_raptor_packaging_PackageManifest" class="raptor-class"><a href="./raptor/packaging/PackageManifest/">PackageManifest</a> </li></ul> </li><li id="nav_raptor_paths" class="raptor-module"><a href="./raptor/paths/">paths</a><ul><li id="nav_raptor_paths_package_json" class="package"><a href="./source/raptor/paths/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_process" class="raptor-module"><a href="./raptor/process/">process</a><ul><li id="nav_raptor_process_package_json" class="package"><a href="./source/raptor/process/package.json/">package.json</a> </li><li id="nav_raptor_process__Node" class="object extension"><a href="./raptor/process__Node/"> Node Extension</a> </li></ul> </li><li id="nav_raptor_promises" class="raptor-module"><a href="./raptor/promises/">promises</a><ul><li id="nav_raptor_promises_package_json" class="package"><a href="./source/raptor/promises/package.json/">package.json</a> </li><li id="nav_raptor_promises_Node" class="object extension"><a href="./raptor/promises_Node/">Node Extension</a> </li></ul> </li><li id="nav_raptor_pubsub" class="raptor-module"><a href="./raptor/pubsub/">pubsub</a><ul><li id="nav_raptor_pubsub_package_json" class="package"><a href="./source/raptor/pubsub/package.json/">package.json</a> </li><li id="nav_raptor_pubsub_Channel" class="raptor-class"><a href="./raptor/pubsub/Channel/">Channel</a> </li><li id="nav_raptor_pubsub_Message" class="raptor-class"><a href="./raptor/pubsub/Message/">Message</a> </li></ul> </li><li id="nav_raptor_regexp" class="raptor-module"><a href="./raptor/regexp/">regexp</a><ul><li id="nav_raptor_regexp_package_json" class="package"><a href="./source/raptor/regexp/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_render-context" class="raptor-module"><a href="./raptor/render-context/">render-context</a><ul><li id="nav_raptor_render-context_async-package_json" class="package"><a href="./source/raptor/render-context/async-package.json/">async-package.json</a> </li><li id="nav_raptor_render-context_package_json" class="package"><a href="./source/raptor/render-context/package.json/">package.json</a> </li><li id="nav_raptor_render-context_Context" class="raptor-class"><a href="./raptor/render-context/Context/">Context</a> </li></ul> </li><li id="nav_raptor_renderer" class="raptor-module"><a href="./raptor/renderer/">renderer</a><ul><li id="nav_raptor_renderer_package_json" class="package"><a href="./source/raptor/renderer/package.json/">package.json</a> </li><li id="nav_raptor_renderer_RenderResult" class="raptor-class"><a href="./raptor/renderer/RenderResult/">RenderResult</a> </li></ul> </li><li id="nav_raptor_resources" class="raptor-module"><a href="./raptor/resources/">resources</a><ul><li id="nav_raptor_resources_package_json" class="package"><a href="./source/raptor/resources/package.json/">package.json</a> </li><li id="nav_raptor_resources_Browser" class="object extension"><a href="./raptor/resources_Browser/">Browser Extension</a> </li><li id="nav_raptor_resources_Server" class="object extension"><a href="./raptor/resources_Server/">Server Extension</a> </li><li id="nav_raptor_resources_walker" class="raptor-module"><a href="./raptor/resources/walker/">walker</a><ul><li id="nav_raptor_resources_walker_package_json" class="package"><a href="./source/raptor/resources/walker/package.json/">package.json</a> </li><li id="nav_raptor_resources_walker_DirWalker" class="raptor-class"><a href="./raptor/resources/walker/DirWalker/">DirWalker</a> </li></ul> </li><li id="nav_raptor_resources_BrowserResource" class="raptor-class"><a href="./raptor/resources/BrowserResource/">BrowserResource</a> </li><li id="nav_raptor_resources_DirSearchPathEntry" class="raptor-class"><a href="./raptor/resources/DirSearchPathEntry/">DirSearchPathEntry</a> </li><li id="nav_raptor_resources_FileResource" class="raptor-class"><a href="./raptor/resources/FileResource/">FileResource</a> </li><li id="nav_raptor_resources_MissingResource" class="raptor-class"><a href="./raptor/resources/MissingResource/">MissingResource</a> </li><li id="nav_raptor_resources_Resource" class="raptor-class"><a href="./raptor/resources/Resource/">Resource</a> </li><li id="nav_raptor_resources_RhinoResMgrSearchPathEntryAdapter" class="raptor-class"><a href="./raptor/resources/RhinoResMgrSearchPathEntryAdapter/">RhinoResMgrSearchPathEntryAdapter</a> </li><li id="nav_raptor_resources_RhinoResourceAdapter" class="raptor-class"><a href="./raptor/resources/RhinoResourceAdapter/">RhinoResourceAdapter</a><ul><li id="nav_raptor_resources_RhinoResourceAdapter_Watcher" class="class"><a href="./raptor/resources/RhinoResourceAdapter/Watcher/">Watcher</a> </li></ul> </li><li id="nav_raptor_resources_RhinoSearchPathEntryAdapter" class="raptor-class"><a href="./raptor/resources/RhinoSearchPathEntryAdapter/">RhinoSearchPathEntryAdapter</a> </li><li id="nav_raptor_resources_SearchPath" class="raptor-class"><a href="./raptor/resources/SearchPath/">SearchPath</a> </li><li id="nav_raptor_resources_SearchPathEntry" class="raptor-class"><a href="./raptor/resources/SearchPathEntry/">SearchPathEntry</a> </li></ul> </li><li id="nav_raptor_runtime" class="raptor-module"><a href="./raptor/runtime/">runtime</a><ul><li id="nav_raptor_runtime_package_json" class="package"><a href="./source/raptor/runtime/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_stacktraces" class="folder"><a href="#">stacktraces</a><ul><li id="nav_raptor_stacktraces_package_json" class="package"><a href="./source/raptor/stacktraces/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_stacktraces_Browser" class="raptor-module"><a href="./raptor/stacktraces_Browser/">stacktraces (Browser Extension)</a> </li><li id="nav_raptor_stacktraces_Node" class="raptor-module"><a href="./raptor/stacktraces_Node/">stacktraces (Node Extension)</a> </li><li id="nav_raptor_stacktraces_Rhino" class="raptor-module"><a href="./raptor/stacktraces_Rhino/">stacktraces (Rhino Extension)</a> </li><li id="nav_raptor_strings" class="raptor-module"><a href="./raptor/strings/">strings</a><ul><li id="nav_raptor_strings_package_json" class="package"><a href="./source/raptor/strings/package.json/">package.json</a> </li><li id="nav_raptor_strings_StringBuilder" class="raptor-class"><a href="./raptor/strings/StringBuilder/">StringBuilder</a> </li></ul> </li><li id="nav_raptor_temp" class="raptor-module"><a href="./raptor/temp/">temp</a><ul><li id="nav_raptor_temp_package_json" class="package"><a href="./source/raptor/temp/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_templating" class="raptor-module"><a href="./raptor/templating/">templating</a><ul><li id="nav_raptor_templating_async-package_json" class="package"><a href="./source/raptor/templating/async-package.json/">async-package.json</a> </li><li id="nav_raptor_templating_package_json" class="package"><a href="./source/raptor/templating/package.json/">package.json</a> </li><li id="nav_raptor_templating_Async" class="object extension"><a href="./raptor/templating_Async/">Async Extension</a> </li><li id="nav_raptor_templating_Rhino" class="object extension"><a href="./raptor/templating_Rhino/">Rhino Extension</a> </li><li id="nav_raptor_templating_Server" class="object extension"><a href="./raptor/templating_Server/">Server Extension</a> </li><li id="nav_raptor_templating_compiler" class="raptor-module"><a href="./raptor/templating/compiler/">compiler</a><ul><li id="nav_raptor_templating_compiler_package_json" class="package"><a href="./source/raptor/templating/compiler/package.json/">package.json</a> </li><li id="nav_raptor_templating_compiler_Rhino" class="object extension"><a href="./raptor/templating/compiler_Rhino/">Rhino Extension</a> </li><li id="nav_raptor_templating_compiler_Server" class="object extension"><a href="./raptor/templating/compiler_Server/">Server Extension</a> </li><li id="nav_raptor_templating_compiler_AttributeSplitter" class="raptor-class"><a href="./raptor/templating/compiler/AttributeSplitter/">AttributeSplitter</a> </li><li id="nav_raptor_templating_compiler_ElementNode" class="raptor-class"><a href="./raptor/templating/compiler/ElementNode/">ElementNode</a> </li><li id="nav_raptor_templating_compiler_Expression" class="raptor-class"><a href="./raptor/templating/compiler/Expression/">Expression</a> </li><li id="nav_raptor_templating_compiler_ExpressionParser" class="raptor-class"><a href="./raptor/templating/compiler/ExpressionParser/">ExpressionParser</a><ul><li id="nav_raptor_templating_compiler_ExpressionParser_ExpressionParserHelper" class="raptor-class"><a href="./raptor/templating/compiler/ExpressionParser/ExpressionParserHelper/">ExpressionParserHelper</a> </li></ul> </li><li id="nav_raptor_templating_compiler_Node" class="raptor-class"><a href="./raptor/templating/compiler/Node/">Node</a> </li><li id="nav_raptor_templating_compiler_ParseTreeBuilder" class="raptor-class"><a href="./raptor/templating/compiler/ParseTreeBuilder/">ParseTreeBuilder</a> </li><li id="nav_raptor_templating_compiler_Taglib" class="raptor-class"><a href="./raptor/templating/compiler/Taglib/">Taglib</a> </li><li id="nav_raptor_templating_compiler_TaglibCollection" class="raptor-class"><a href="./raptor/templating/compiler/TaglibCollection/">TaglibCollection</a><ul><li id="nav_raptor_templating_compiler_TaglibCollection_Imports" class="class"><a href="./raptor/templating/compiler/TaglibCollection/Imports/">Imports</a> </li></ul> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/">TaglibXmlLoader</a><ul><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Attribute" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Attribute/">Attribute</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Function" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Function/">Function</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_HelperObject" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/HelperObject/">HelperObject</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_ImportedVariable" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/ImportedVariable/">ImportedVariable</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_NestedVariable" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/NestedVariable/">NestedVariable</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Property" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Property/">Property</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Tag" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Tag/">Tag</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Transformer" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Transformer/">Transformer</a> </li></ul> </li><li id="nav_raptor_templating_compiler_TemplateBuilder" class="raptor-class"><a href="./raptor/templating/compiler/TemplateBuilder/">TemplateBuilder</a><ul><li id="nav_raptor_templating_compiler_TemplateBuilder_CodeWriter" class="class"><a href="./raptor/templating/compiler/TemplateBuilder/CodeWriter/">CodeWriter</a> </li></ul> </li><li id="nav_raptor_templating_compiler_TemplateCompiler" class="raptor-class"><a href="./raptor/templating/compiler/TemplateCompiler/">TemplateCompiler</a> </li><li id="nav_raptor_templating_compiler_TextNode" class="raptor-class"><a href="./raptor/templating/compiler/TextNode/">TextNode</a> </li><li id="nav_raptor_templating_compiler_TypeConverter" class="raptor-class"><a href="./raptor/templating/compiler/TypeConverter/">TypeConverter</a> </li></ul> </li><li id="nav_raptor_templating_taglibs" class="folder"><a href="#">taglibs</a><ul><li id="nav_raptor_templating_taglibs_async" class="folder"><a href="#">async</a><ul><li id="nav_raptor_templating_taglibs_async_package_json" class="package"><a href="./source/raptor/templating/taglibs/async/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_async_AsyncFragmentTag" class="raptor-module"><a href="./raptor/templating/taglibs/async/AsyncFragmentTag/">AsyncFragmentTag</a> </li><li id="nav_raptor_templating_taglibs_async_AsyncFragmentTagTransformer" class="raptor-module"><a href="./raptor/templating/taglibs/async/AsyncFragmentTagTransformer/">AsyncFragmentTagTransformer</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_caching" class="folder"><a href="#">caching</a><ul><li id="nav_raptor_templating_taglibs_caching_package_json" class="package"><a href="./source/raptor/templating/taglibs/caching/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_caching_CachedFragmentTag" class="raptor-module"><a href="./raptor/templating/taglibs/caching/CachedFragmentTag/">CachedFragmentTag</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_core" class="folder"><a href="#">core</a><ul><li id="nav_raptor_templating_taglibs_core_compile-time-package_json" class="package"><a href="./source/raptor/templating/taglibs/core/compile-time-package.json/">compile-time-package.json</a> </li><li id="nav_raptor_templating_taglibs_core_AssignNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/AssignNode/">AssignNode</a> </li><li id="nav_raptor_templating_taglibs_core_ChooseNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ChooseNode/">ChooseNode</a> </li><li id="nav_raptor_templating_taglibs_core_CoreTagTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/core/CoreTagTransformer/">CoreTagTransformer</a> </li><li id="nav_raptor_templating_taglibs_core_CoreTextTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/core/CoreTextTransformer/">CoreTextTransformer</a> </li><li id="nav_raptor_templating_taglibs_core_DefNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/DefNode/">DefNode</a> </li><li id="nav_raptor_templating_taglibs_core_ElseIfNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ElseIfNode/">ElseIfNode</a> </li><li id="nav_raptor_templating_taglibs_core_ElseNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ElseNode/">ElseNode</a> </li><li id="nav_raptor_templating_taglibs_core_ElseTagTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/core/ElseTagTransformer/">ElseTagTransformer</a> </li><li id="nav_raptor_templating_taglibs_core_ForNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ForNode/">ForNode</a> </li><li id="nav_raptor_templating_taglibs_core_IfNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/IfNode/">IfNode</a> </li><li id="nav_raptor_templating_taglibs_core_IncludeNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/IncludeNode/">IncludeNode</a> </li><li id="nav_raptor_templating_taglibs_core_InvokeNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/InvokeNode/">InvokeNode</a> </li><li id="nav_raptor_templating_taglibs_core_OtherwiseNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/OtherwiseNode/">OtherwiseNode</a> </li><li id="nav_raptor_templating_taglibs_core_ScriptletNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ScriptletNode/">ScriptletNode</a> </li><li id="nav_raptor_templating_taglibs_core_TagHandlerNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/TagHandlerNode/">TagHandlerNode</a> </li><li id="nav_raptor_templating_taglibs_core_TemplateNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/TemplateNode/">TemplateNode</a> </li><li id="nav_raptor_templating_taglibs_core_VarNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/VarNode/">VarNode</a> </li><li id="nav_raptor_templating_taglibs_core_WhenNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/WhenNode/">WhenNode</a> </li><li id="nav_raptor_templating_taglibs_core_WithNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/WithNode/">WithNode</a> </li><li id="nav_raptor_templating_taglibs_core_WriteNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/WriteNode/">WriteNode</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_html" class="folder"><a href="#">html</a><ul><li id="nav_raptor_templating_taglibs_html_compile-time-package_json" class="package"><a href="./source/raptor/templating/taglibs/html/compile-time-package.json/">compile-time-package.json</a> </li><li id="nav_raptor_templating_taglibs_html_CommentTag" class="raptor-module"><a href="./raptor/templating/taglibs/html/CommentTag/">CommentTag</a> </li><li id="nav_raptor_templating_taglibs_html_DocTypeNode" class="raptor-class"><a href="./raptor/templating/taglibs/html/DocTypeNode/">DocTypeNode</a> </li><li id="nav_raptor_templating_taglibs_html_HtmlTagTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/html/HtmlTagTransformer/">HtmlTagTransformer</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_layout" class="folder"><a href="#">layout</a><ul><li id="nav_raptor_templating_taglibs_layout_package_json" class="package"><a href="./source/raptor/templating/taglibs/layout/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_layout_PlaceholderTag" class="raptor-module"><a href="./raptor/templating/taglibs/layout/PlaceholderTag/">PlaceholderTag</a> </li><li id="nav_raptor_templating_taglibs_layout_PutTag" class="raptor-module"><a href="./raptor/templating/taglibs/layout/PutTag/">PutTag</a> </li><li id="nav_raptor_templating_taglibs_layout_UseTag" class="raptor-module"><a href="./raptor/templating/taglibs/layout/UseTag/">UseTag</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_optimizer" class="folder"><a href="#">optimizer</a><ul><li id="nav_raptor_templating_taglibs_optimizer_package_json" class="package"><a href="./source/raptor/templating/taglibs/optimizer/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_optimizer_DependenciesTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/DependenciesTag/">DependenciesTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_DependencyTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/DependencyTag/">DependencyTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_DisableExtensionTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/DisableExtensionTag/">DisableExtensionTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_EnableExtensionTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/EnableExtensionTag/">EnableExtensionTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_ImgTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/ImgTag/">ImgTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_PageTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/PageTag/">PageTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_PageTagTransformer" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/PageTagTransformer/">PageTagTransformer</a> </li><li id="nav_raptor_templating_taglibs_optimizer_SlotTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/SlotTag/">SlotTag</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_widgets" class="folder"><a href="#">widgets</a><ul><li id="nav_raptor_templating_taglibs_widgets_compile-time-package_json" class="package"><a href="./source/raptor/templating/taglibs/widgets/compile-time-package.json/">compile-time-package.json</a> </li><li id="nav_raptor_templating_taglibs_widgets_package_json" class="package"><a href="./source/raptor/templating/taglibs/widgets/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_widgets_WidgetFunctions" class="raptor-module"><a href="./raptor/templating/taglibs/widgets/WidgetFunctions/">WidgetFunctions</a> </li><li id="nav_raptor_templating_taglibs_widgets_InitWidgetsTag" class="raptor-class"><a href="./raptor/templating/taglibs/widgets/InitWidgetsTag/">InitWidgetsTag</a> </li><li id="nav_raptor_templating_taglibs_widgets_WidgetsTagTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/widgets/WidgetsTagTransformer/">WidgetsTagTransformer</a> </li><li id="nav_raptor_templating_taglibs_widgets_WidgetTag" class="raptor-class"><a href="./raptor/templating/taglibs/widgets/WidgetTag/">WidgetTag</a> </li></ul> </li></ul> </li></ul> </li><li id="nav_raptor_widgets" class="raptor-module"><a href="./raptor/widgets/">widgets</a><ul><li id="nav_raptor_widgets_package_json" class="package"><a href="./source/raptor/widgets/package.json/">package.json</a> </li><li id="nav_raptor_widgets_Browser" class="object extension"><a href="./raptor/widgets_Browser/">Browser Extension</a> </li><li id="nav_raptor_widgets_Server" class="object extension"><a href="./raptor/widgets_Server/">Server Extension</a> </li><li id="nav_raptor_widgets_Widget" class="raptor-class"><a href="./raptor/widgets/Widget/">Widget</a><ul><li id="nav_raptor_widgets_Widget_jQuery" class="object extension"><a href="./raptor/widgets/Widget_jQuery/">jQuery Extension</a> </li><li id="nav_raptor_widgets_Widget_Legacy" class="object extension"><a href="./raptor/widgets/Widget_Legacy/">Legacy Extension</a> </li></ul> </li><li id="nav_raptor_widgets_WidgetDef" class="raptor-class"><a href="./raptor/widgets/WidgetDef/">WidgetDef</a> </li><li id="nav_raptor_widgets_WidgetsContext" class="raptor-class"><a href="./raptor/widgets/WidgetsContext/">WidgetsContext</a> </li></ul> </li><li id="nav_raptor_xml" class="folder"><a href="#">xml</a><ul><li id="nav_raptor_xml_dom" class="raptor-module"><a href="./raptor/xml/dom/">dom</a><ul><li id="nav_raptor_xml_dom_package_json" class="package"><a href="./source/raptor/xml/dom/package.json/">package.json</a> </li><li id="nav_raptor_xml_dom_DomParser_jQuery" class="raptor-class"><a href="./raptor/xml/dom/DomParser_jQuery/">DomParser (jQuery Extension)</a> </li></ul> </li><li id="nav_raptor_xml_dom-to-sax" class="raptor-module"><a href="./raptor/xml/dom-to-sax/">dom-to-sax</a><ul><li id="nav_raptor_xml_dom-to-sax_package_json" class="package"><a href="./source/raptor/xml/dom-to-sax/package.json/">package.json</a> </li><li id="nav_raptor_xml_dom-to-sax_Attribute" class="class"><a href="./raptor/xml/dom-to-sax/Attribute/">Attribute</a> </li><li id="nav_raptor_xml_dom-to-sax_Element" class="class"><a href="./raptor/xml/dom-to-sax/Element/">Element</a> </li></ul> </li><li id="nav_raptor_xml_sax" class="raptor-module"><a href="./raptor/xml/sax/">sax</a><ul><li id="nav_raptor_xml_sax_package_json" class="package"><a href="./source/raptor/xml/sax/package.json/">package.json</a> </li><li id="nav_raptor_xml_sax_object-mapper" class="raptor-module"><a href="./raptor/xml/sax/object-mapper/">object-mapper</a><ul><li id="nav_raptor_xml_sax_object-mapper_package_json" class="package"><a href="./source/raptor/xml/sax/object-mapper/package.json/">package.json</a> </li><li id="nav_raptor_xml_sax_object-mapper_Reader" class="class"><a href="./raptor/xml/sax/object-mapper/Reader/">Reader</a> </li></ul> </li><li id="nav_raptor_xml_sax_BaseSaxParser" class="raptor-class"><a href="./raptor/xml/sax/BaseSaxParser/">BaseSaxParser</a> </li><li id="nav_raptor_xml_sax_SaxParserDom" class="raptor-class"><a href="./raptor/xml/sax/SaxParserDom/">SaxParserDom</a> </li></ul> </li><li id="nav_raptor_xml_utils" class="raptor-module"><a href="./raptor/xml/utils/">utils</a><ul><li id="nav_raptor_xml_utils_package_json" class="package"><a href="./source/raptor/xml/utils/package.json/">package.json</a> </li><li id="nav_raptor_xml_utils_" class="object extension"><a href="./raptor/xml/utils_/">null Extension</a> </li></ul> </li><li id="nav_raptor_xml_Attribute" class="raptor-class"><a href="./raptor/xml/Attribute/">Attribute</a> </li><li id="nav_raptor_xml_Element" class="raptor-class"><a href="./raptor/xml/Element/">Element</a> </li><li id="nav_raptor_xml_SaxParser_Node" class="raptor-class"><a href="./raptor/xml/SaxParser_Node/">SaxParser (Node Extension)</a><ul><li id="nav_raptor_xml_SaxParser_Node_Attribute" class="class"><a href="./raptor/xml/SaxParser_Node/Attribute/">Attribute (Node Extension)</a> </li><li id="nav_raptor_xml_SaxParser_Node_Element" class="class"><a href="./raptor/xml/SaxParser_Node/Element/">Element (Node Extension)</a> </li></ul> </li><li id="nav_raptor_xml_SaxParser_Rhino" class="raptor-class"><a href="./raptor/xml/SaxParser_Rhino/">SaxParser (Rhino Extension)</a><ul><li id="nav_raptor_xml_SaxParser_Rhino_Attribute" class="class"><a href="./raptor/xml/SaxParser_Rhino/Attribute/">Attribute (Rhino Extension)</a> </li><li id="nav_raptor_xml_SaxParser_Rhino_Element" class="class"><a href="./raptor/xml/SaxParser_Rhino/Element/">Element (Rhino Extension)</a> </li></ul> </li></ul> </li><li id="nav_raptor_configConfig" class="class"><a href="./raptor/configConfig/">configConfig</a> </li><li id="nav_raptor_loaderTransaction" class="object"><a href="./raptor/loaderTransaction/">loaderTransaction</a> </li></ul> </li><li id="nav_raptor-legacy" class="folder"><a href="#">raptor-legacy</a><ul><li id="nav_raptor-legacy_package_json" class="package"><a href="./source/raptor-legacy/package.json/">package.json</a> </li></ul> </li><li id="nav_JSON" class="object"><a href="./JSON/">JSON</a> </li><li id="nav_global" class="global"><a href="./global/">Global</a> </li></ul></div></div></div><div id="main"><div class="header"><h1><a href="./"><span class="title">RaptorJS API Docs</span></a><span class="version">2.6.16</span><div class="powered-by">Powered by <a href="http://raptorjs.org/">RaptorJS</a></div></h1></div><div id="mainContent"><h1>/raptor/promises/thirdparty/q_amd.js</h1><pre class="code sh_javascript_dom">// vim:ts=4:sts=4:sw=4:
+/*!
+ * 
+ * Copyright 2009-2012 Kris Kowal under the terms of the MIT
+ * license found at http://github.com/kriskowal/q/raw/master/LICENSE
+ *
+ * With parts by Tyler Close
+ * Copyright 2007-2009 Tyler Close under the terms of the MIT X license found
+ * at http://www.opensource.org/licenses/mit-license.html
+ * Forked at ref_send.js version: 2009-05-11
+ *
+ * With parts by Mark Miller
+ * Copyright (C) 2011 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * 
+ * NOTE: Modifications were made to register the "q" module by name
+ *       based on AMD specification. Original version of "q" is "0.9.6"
+ *       -- Patrick Steele-Idem
+ */
+
+(function (definition) {
+    define("q", definition);
+})(function () {
+"use strict";
+
+var hasStacks = false;
+try {
+    throw new Error();
+} catch (e) {
+    hasStacks = !!e.stack;
+}
+
+// All code after this point will be filtered from stack traces reported
+// by Q.
+var qStartingLine = captureLine();
+var qFileName;
+
+// shims
+
+// used for fallback in "allResolved"
+var noop = function () {};
+
+// Use the fastest possible means to execute a task in a future turn
+// of the event loop.
+var nextTick =(function () {
+    // linked list of tasks (single, with head node)
+    var head = {task: void 0, next: null};
+    var tail = head;
+    var flushing = false;
+    var requestTick = void 0;
+    var isNodeJS = false;
+
+    function flush() {
+        while (head.next) {
+            head = head.next;
+            var task = head.task;
+            head.task = void 0;
+            var domain = head.domain;
+
+            if (domain) {
+                head.domain = void 0;
+                domain.enter();
+            }
+
+            try {
+                task();
+
+            } catch (e) {
+                if (isNodeJS) {
+                    // In node, uncaught exceptions are considered fatal errors.
+                    // Re-throw them synchronously to interrupt flushing!
+
+                    // Ensure continuation if the uncaught exception is suppressed
+                    // listening "uncaughtException" events (as domains does).
+                    // Continue in next event to avoid tick recursion.
+                    domain &amp;&amp; domain.exit();
+                    setTimeout(flush, 0);
+                    domain &amp;&amp; domain.enter();
+
+                    throw e;
+
+                } else {
+                    // In browsers, uncaught exceptions are not fatal.
+                    // Re-throw them asynchronously to avoid slow-downs.
+                    setTimeout(function() {
+                       throw e;
+                    }, 0);
+                }
+            }
+
+            if (domain) {
+                domain.exit();
+            }
+        }
+
+        flushing = false;
+    }
+
+    nextTick = function (task) {
+        tail = tail.next = {
+            task: task,
+            domain: isNodeJS &amp;&amp; process.domain,
+            next: null
+        };
+
+        if (!flushing) {
+            flushing = true;
+            requestTick();
+        }
+    };
+
+    if (typeof process !== "undefined" &amp;&amp; process.nextTick) {
+        // Node.js before 0.9. Note that some fake-Node environments, like the
+        // Mocha test runner, introduce a `process` global without a `nextTick`.
+        isNodeJS = true;
+
+        requestTick = function () {
+            process.nextTick(flush);
+        };
+
+    } else if (typeof setImmediate === "function") {
+        // In IE10, Node.js 0.9+, or https://github.com/NobleJS/setImmediate
+        if (typeof window !== "undefined") {
+            requestTick = setImmediate.bind(window, flush);
+        } else {
+            requestTick = function () {
+                setImmediate(flush);
+            };
+        }
+
+    } else if (typeof MessageChannel !== "undefined") {
+        // modern browsers
+        // http://www.nonblocking.io/2011/06/windownexttick.html
+        var channel = new MessageChannel();
+        channel.port1.onmessage = flush;
+        requestTick = function () {
+            channel.port2.postMessage(0);
+        };
+
+    } else {
+        // old browsers
+        requestTick = function () {
+            setTimeout(flush, 0);
+        };
+    }
+
+    return nextTick;
+})();
+
+// Attempt to make generics safe in the face of downstream
+// modifications.
+// There is no situation where this is necessary.
+// If you need a security guarantee, these primordials need to be
+// deeply frozen anyway, and if you don’t need a security guarantee,
+// this is just plain paranoid.
+// However, this does have the nice side-effect of reducing the size
+// of the code by reducing x.call() to merely x(), eliminating many
+// hard-to-minify characters.
+// See Mark Miller’s explanation of what this does.
+// http://wiki.ecmascript.org/doku.php?id=conventions:safe_meta_programming
+function uncurryThis(f) {
+    var call = Function.call;
+    return function () {
+        return call.apply(f, arguments);
+    };
+}
+// This is equivalent, but slower:
+// uncurryThis = Function_bind.bind(Function_bind.call);
+// http://jsperf.com/uncurrythis
+
+var array_slice = uncurryThis(Array.prototype.slice);
+
+var array_reduce = uncurryThis(
+    Array.prototype.reduce || function (callback, basis) {
+        var index = 0,
+            length = this.length;
+        // concerning the initial value, if one is not provided
+        if (arguments.length === 1) {
+            // seek to the first value in the array, accounting
+            // for the possibility that is is a sparse array
+            do {
+                if (index in this) {
+                    basis = this[index++];
+                    break;
+                }
+                if (++index >= length) {
+                    throw new TypeError();
+                }
+            } while (1);
+        }
+        // reduce
+        for (; index &lt; length; index++) {
+            // account for the possibility that the array is sparse
+            if (index in this) {
+                basis = callback(basis, this[index], index);
+            }
+        }
+        return basis;
+    }
+);
+
+var array_indexOf = uncurryThis(
+    Array.prototype.indexOf || function (value) {
+        // not a very good shim, but good enough for our one use of it
+        for (var i = 0; i &lt; this.length; i++) {
+            if (this[i] === value) {
+                return i;
+            }
+        }
+        return -1;
+    }
+);
+
+var array_map = uncurryThis(
+    Array.prototype.map || function (callback, thisp) {
+        var self = this;
+        var collect = [];
+        array_reduce(self, function (undefined, value, index) {
+            collect.push(callback.call(thisp, value, index, self));
+        }, void 0);
+        return collect;
+    }
+);
+
+var object_create = Object.create || function (prototype) {
+    function Type() { }
+    Type.prototype = prototype;
+    return new Type();
+};
+
+var object_hasOwnProperty = uncurryThis(Object.prototype.hasOwnProperty);
+
+var object_keys = Object.keys || function (object) {
+    var keys = [];
+    for (var key in object) {
+        if (object_hasOwnProperty(object, key)) {
+            keys.push(key);
+        }
+    }
+    return keys;
+};
+
+var object_toString = uncurryThis(Object.prototype.toString);
+
+function isObject(value) {
+    return value === Object(value);
+}
+
+// generator related shims
+
+// FIXME: Remove this function once ES6 generators are in SpiderMonkey.
+function isStopIteration(exception) {
+    return (
+        object_toString(exception) === "[object StopIteration]" ||
+        exception instanceof QReturnValue
+    );
+}
+
+// FIXME: Remove this helper and Q.return once ES6 generators are in
+// SpiderMonkey.
+var QReturnValue;
+if (typeof ReturnValue !== "undefined") {
+    QReturnValue = ReturnValue;
+} else {
+    QReturnValue = function (value) {
+        this.value = value;
+    };
+}
+
+// Until V8 3.19 / Chromium 29 is released, SpiderMonkey is the only
+// engine that has a deployed base of browsers that support generators.
+// However, SM's generators use the Python-inspired semantics of
+// outdated ES6 drafts.  We would like to support ES6, but we'd also
+// like to make it possible to use generators in deployed browsers, so
+// we also support Python-style generators.  At some point we can remove
+// this block.
+var hasES6Generators;
+try {
+    /* jshint evil: true, nonew: false */
+    new Function("(function* (){ yield 1; })");
+    hasES6Generators = true;
+} catch (e) {
+    hasES6Generators = false;
+}
+
+// long stack traces
+
+var STACK_JUMP_SEPARATOR = "From previous event:";
+
+function makeStackTraceLong(error, promise) {
+    // If possible, transform the error stack trace by removing Node and Q
+    // cruft, then concatenating with the stack trace of `promise`. See #57.
+    if (hasStacks &amp;&amp;
+        promise.stack &amp;&amp;
+        typeof error === "object" &amp;&amp;
+        error !== null &amp;&amp;
+        error.stack &amp;&amp;
+        error.stack.indexOf(STACK_JUMP_SEPARATOR) === -1
+    ) {
+        var stacks = [];
+        for (var p = promise; !!p; p = p.source) {
+            if (p.stack) {
+                stacks.unshift(p.stack);
+            }
+        }
+        stacks.unshift(error.stack);
+
+        var concatedStacks = stacks.join("\n" + STACK_JUMP_SEPARATOR + "\n");
+        error.stack = filterStackString(concatedStacks);
+    }
+}
+
+function filterStackString(stackString) {
+    var lines = stackString.split("\n");
+    var desiredLines = [];
+    for (var i = 0; i &lt; lines.length; ++i) {
+        var line = lines[i];
+
+        if (!isInternalFrame(line) &amp;&amp; !isNodeFrame(line) &amp;&amp; line) {
+            desiredLines.push(line);
+        }
+    }
+    return desiredLines.join("\n");
+}
+
+function isNodeFrame(stackLine) {
+    return stackLine.indexOf("(module.js:") !== -1 ||
+           stackLine.indexOf("(node.js:") !== -1;
+}
+
+function getFileNameAndLineNumber(stackLine) {
+    // Named functions: "at functionName (filename:lineNumber:columnNumber)"
+    // In IE10 function name can have spaces ("Anonymous function") O_o
+    var attempt1 = /at .+ \((.+):(\d+):(?:\d+)\)$/.exec(stackLine);
+    if (attempt1) {
+        return [attempt1[1], Number(attempt1[2])];
+    }
+
+    // Anonymous functions: "at filename:lineNumber:columnNumber"
+    var attempt2 = /at ([^ ]+):(\d+):(?:\d+)$/.exec(stackLine);
+    if (attempt2) {
+        return [attempt2[1], Number(attempt2[2])];
+    }
+
+    // Firefox style: "function@filename:lineNumber or @filename:lineNumber"
+    var attempt3 = /.*@(.+):(\d+)$/.exec(stackLine);
+    if (attempt3) {
+        return [attempt3[1], Number(attempt3[2])];
+    }
+}
+
+function isInternalFrame(stackLine) {
+    var fileNameAndLineNumber = getFileNameAndLineNumber(stackLine);
+
+    if (!fileNameAndLineNumber) {
+        return false;
+    }
+
+    var fileName = fileNameAndLineNumber[0];
+    var lineNumber = fileNameAndLineNumber[1];
+
+    return fileName === qFileName &amp;&amp;
+        lineNumber >= qStartingLine &amp;&amp;
+        lineNumber &lt;= qEndingLine;
+}
+
+// discover own file name and line number range for filtering stack
+// traces
+function captureLine() {
+    if (!hasStacks) {
+        return;
+    }
+
+    try {
+        throw new Error();
+    } catch (e) {
+        var lines = e.stack.split("\n");
+        var firstLine = lines[0].indexOf("@") > 0 ? lines[1] : lines[2];
+        var fileNameAndLineNumber = getFileNameAndLineNumber(firstLine);
+        if (!fileNameAndLineNumber) {
+            return;
+        }
+
+        qFileName = fileNameAndLineNumber[0];
+        return fileNameAndLineNumber[1];
+    }
+}
+
+function deprecate(callback, name, alternative) {
+    return function () {
+        if (typeof console !== "undefined" &amp;&amp;
+            typeof console.warn === "function") {
+            console.warn(name + " is deprecated, use " + alternative +
+                         " instead.", new Error("").stack);
+        }
+        return callback.apply(callback, arguments);
+    };
+}
+
+// end of shims
+// beginning of real work
+
+/**
+ * Creates fulfilled promises from non-thenables,
+ * Passes Q promises through,
+ * Coerces other thenables to Q promises.
+ */
+function Q(value) {
+    return resolve(value);
+}
+
+/**
+ * Performs a task in a future turn of the event loop.
+ * @param {Function} task
+ */
+Q.nextTick = nextTick;
+
+/**
+ * Controls whether or not long stack traces will be on
+ */
+Q.longStackSupport = false;
+
+/**
+ * Constructs a {promise, resolve, reject} object.
+ *
+ * `resolve` is a callback to invoke with a more resolved value for the
+ * promise. To fulfill the promise, invoke `resolve` with any value that is
+ * not a thenable. To reject the promise, invoke `resolve` with a rejected
+ * thenable, or invoke `reject` with the reason directly. To resolve the
+ * promise to another thenable, thus putting it in the same state, invoke
+ * `resolve` with that other thenable.
+ */
+Q.defer = defer;
+function defer() {
+    // if "messages" is an "Array", that indicates that the promise has not yet
+    // been resolved.  If it is "undefined", it has been resolved.  Each
+    // element of the messages array is itself an array of complete arguments to
+    // forward to the resolved promise.  We coerce the resolution value to a
+    // promise using the `resolve` function because it handles both fully
+    // non-thenable values and other thenables gracefully.
+    var messages = [], progressListeners = [], resolvedPromise;
+
+    var deferred = object_create(defer.prototype);
+    var promise = object_create(Promise.prototype);
+
+    promise.promiseDispatch = function (resolve, op, operands) {
+        var args = array_slice(arguments);
+        if (messages) {
+            messages.push(args);
+            if (op === "when" &amp;&amp; operands[1]) { // progress operand
+                progressListeners.push(operands[1]);
+            }
+        } else {
+            nextTick(function () {
+                resolvedPromise.promiseDispatch.apply(resolvedPromise, args);
+            });
+        }
+    };
+
+    // XXX deprecated
+    promise.valueOf = deprecate(function () {
+        if (messages) {
+            return promise;
+        }
+        var nearerValue = nearer(resolvedPromise);
+        if (isPromise(nearerValue)) {
+            resolvedPromise = nearerValue; // shorten chain
+        }
+        return nearerValue;
+    }, "valueOf", "inspect");
+
+    promise.inspect = function () {
+        if (!resolvedPromise) {
+            return { state: "pending" };
+        }
+        return resolvedPromise.inspect();
+    };
+
+    if (Q.longStackSupport &amp;&amp; hasStacks) {
+        try {
+            throw new Error();
+        } catch (e) {
+            // NOTE: don't try to use `Error.captureStackTrace` or transfer the
+            // accessor around; that causes memory leaks as per GH-111. Just
+            // reify the stack trace as a string ASAP.
+            //
+            // At the same time, cut off the first line; it's always just
+            // "[object Promise]\n", as per the `toString`.
+            promise.stack = e.stack.substring(e.stack.indexOf("\n") + 1);
+        }
+    }
+
+    // NOTE: we do the checks for `resolvedPromise` in each method, instead of
+    // consolidating them into `become`, since otherwise we'd create new
+    // promises with the lines `become(whatever(value))`. See e.g. GH-252.
+
+    function become(newPromise) {
+        resolvedPromise = newPromise;
+        promise.source = newPromise;
+
+        array_reduce(messages, function (undefined, message) {
+            nextTick(function () {
+                newPromise.promiseDispatch.apply(newPromise, message);
+            });
+        }, void 0);
+
+        messages = void 0;
+        progressListeners = void 0;
+    }
+
+    deferred.promise = promise;
+    deferred.resolve = function (value) {
+        if (resolvedPromise) {
+            return;
+        }
+
+        become(resolve(value));
+    };
+
+    deferred.fulfill = function (value) {
+        if (resolvedPromise) {
+            return;
+        }
+
+        become(fulfill(value));
+    };
+    deferred.reject = function (reason) {
+        if (resolvedPromise) {
+            return;
+        }
+
+        become(reject(reason));
+    };
+    deferred.notify = function (progress) {
+        if (resolvedPromise) {
+            return;
+        }
+
+        array_reduce(progressListeners, function (undefined, progressListener) {
+            nextTick(function () {
+                progressListener(progress);
+            });
+        }, void 0);
+    };
+
+    return deferred;
+}
+
+/**
+ * Creates a Node-style callback that will resolve or reject the deferred
+ * promise.
+ * @returns a nodeback
+ */
+defer.prototype.makeNodeResolver = function () {
+    var self = this;
+    return function (error, value) {
+        if (error) {
+            self.reject(error);
+        } else if (arguments.length > 2) {
+            self.resolve(array_slice(arguments, 1));
+        } else {
+            self.resolve(value);
+        }
+    };
+};
+
+/**
+ * @param resolver {Function} a function that returns nothing and accepts
+ * the resolve, reject, and notify functions for a deferred.
+ * @returns a promise that may be resolved with the given resolve and reject
+ * functions, or rejected by a thrown exception in resolver
+ */
+Q.promise = promise;
+function promise(resolver) {
+    if (typeof resolver !== "function") {
+        throw new TypeError("resolver must be a function.");
+    }
+
+    var deferred = defer();
+    fcall(
+        resolver,
+        deferred.resolve,
+        deferred.reject,
+        deferred.notify
+    ).fail(deferred.reject);
+    return deferred.promise;
+}
+
+/**
+ * Constructs a Promise with a promise descriptor object and optional fallback
+ * function.  The descriptor contains methods like when(rejected), get(name),
+ * set(name, value), post(name, args), and delete(name), which all
+ * return either a value, a promise for a value, or a rejection.  The fallback
+ * accepts the operation name, a resolver, and any further arguments that would
+ * have been forwarded to the appropriate method above had a method been
+ * provided with the proper name.  The API makes no guarantees about the nature
+ * of the returned object, apart from that it is usable whereever promises are
+ * bought and sold.
+ */
+Q.makePromise = Promise;
+function Promise(descriptor, fallback, inspect) {
+    if (fallback === void 0) {
+        fallback = function (op) {
+            return reject(new Error(
+                "Promise does not support operation: " + op
+            ));
+        };
+    }
+    if (inspect === void 0) {
+        inspect = function () {
+            return {state: "unknown"};
+        };
+    }
+
+    var promise = object_create(Promise.prototype);
+
+    promise.promiseDispatch = function (resolve, op, args) {
+        var result;
+        try {
+            if (descriptor[op]) {
+                result = descriptor[op].apply(promise, args);
+            } else {
+                result = fallback.call(promise, op, args);
+            }
+        } catch (exception) {
+            result = reject(exception);
+        }
+        if (resolve) {
+            resolve(result);
+        }
+    };
+
+    promise.inspect = inspect;
+
+    // XXX deprecated `valueOf` and `exception` support
+    if (inspect) {
+        var inspected = inspect();
+        if (inspected.state === "rejected") {
+            promise.exception = inspected.reason;
+        }
+
+        promise.valueOf = deprecate(function () {
+            var inspected = inspect();
+            if (inspected.state === "pending" ||
+                inspected.state === "rejected") {
+                return promise;
+            }
+            return inspected.value;
+        });
+    }
+
+    return promise;
+}
+
+Promise.prototype.then = function (fulfilled, rejected, progressed) {
+    var self = this;
+    var deferred = defer();
+    var done = false;   // ensure the untrusted promise makes at most a
+                        // single call to one of the callbacks
+
+    function _fulfilled(value) {
+        try {
+            return typeof fulfilled === "function" ? fulfilled(value) : value;
+        } catch (exception) {
+            return reject(exception);
+        }
+    }
+
+    function _rejected(exception) {
+        if (typeof rejected === "function") {
+            makeStackTraceLong(exception, self);
+            try {
+                return rejected(exception);
+            } catch (newException) {
+                return reject(newException);
+            }
+        }
+        return reject(exception);
+    }
+
+    function _progressed(value) {
+        return typeof progressed === "function" ? progressed(value) : value;
+    }
+
+    nextTick(function () {
+        self.promiseDispatch(function (value) {
+            if (done) {
+                return;
+            }
+            done = true;
+
+            deferred.resolve(_fulfilled(value));
+        }, "when", [function (exception) {
+            if (done) {
+                return;
+            }
+            done = true;
+
+            deferred.resolve(_rejected(exception));
+        }]);
+    });
+
+    // Progress propagator need to be attached in the current tick.
+    self.promiseDispatch(void 0, "when", [void 0, function (value) {
+        var newValue;
+        var threw = false;
+        try {
+            newValue = _progressed(value);
+        } catch (e) {
+            threw = true;
+            if (Q.onerror) {
+                Q.onerror(e);
+            } else {
+                throw e;
+            }
+        }
+
+        if (!threw) {
+            deferred.notify(newValue);
+        }
+    }]);
+
+    return deferred.promise;
+};
+
+Promise.prototype.thenResolve = function (value) {
+    return when(this, function () { return value; });
+};
+
+Promise.prototype.thenReject = function (reason) {
+    return when(this, function () { throw reason; });
+};
+
+// Chainable methods
+array_reduce(
+    [
+        "isFulfilled", "isRejected", "isPending",
+        "dispatch",
+        "when", "spread",
+        "get", "set", "del", "delete",
+        "post", "send", "mapply", "invoke", "mcall",
+        "keys",
+        "fapply", "fcall", "fbind",
+        "all", "allResolved",
+        "timeout", "delay",
+        "catch", "finally", "fail", "fin", "progress", "done",
+        "nfcall", "nfapply", "nfbind", "denodeify", "nbind",
+        "npost", "nsend", "nmapply", "ninvoke", "nmcall",
+        "nodeify"
+    ],
+    function (undefined, name) {
+        Promise.prototype[name] = function () {
+            return Q[name].apply(
+                Q,
+                [this].concat(array_slice(arguments))
+            );
+        };
+    },
+    void 0
+);
+
+Promise.prototype.toSource = function () {
+    return this.toString();
+};
+
+Promise.prototype.toString = function () {
+    return "[object Promise]";
+};
+
+/**
+ * If an object is not a promise, it is as "near" as possible.
+ * If a promise is rejected, it is as "near" as possible too.
+ * If it’s a fulfilled promise, the fulfillment value is nearer.
+ * If it’s a deferred promise and the deferred has been resolved, the
+ * resolution is "nearer".
+ * @param object
+ * @returns most resolved (nearest) form of the object
+ */
+
+// XXX should we re-do this?
+Q.nearer = nearer;
+function nearer(value) {
+    if (isPromise(value)) {
+        var inspected = value.inspect();
+        if (inspected.state === "fulfilled") {
+            return inspected.value;
+        }
+    }
+    return value;
+}
+
+/**
+ * @returns whether the given object is a promise.
+ * Otherwise it is a fulfilled value.
+ */
+Q.isPromise = isPromise;
+function isPromise(object) {
+    return isObject(object) &amp;&amp;
+        typeof object.promiseDispatch === "function" &amp;&amp;
+        typeof object.inspect === "function";
+}
+
+Q.isPromiseAlike = isPromiseAlike;
+function isPromiseAlike(object) {
+    return isObject(object) &amp;&amp; typeof object.then === "function";
+}
+
+/**
+ * @returns whether the given object is a pending promise, meaning not
+ * fulfilled or rejected.
+ */
+Q.isPending = isPending;
+function isPending(object) {
+    return isPromise(object) &amp;&amp; object.inspect().state === "pending";
+}
+
+/**
+ * @returns whether the given object is a value or fulfilled
+ * promise.
+ */
+Q.isFulfilled = isFulfilled;
+function isFulfilled(object) {
+    return !isPromise(object) || object.inspect().state === "fulfilled";
+}
+
+/**
+ * @returns whether the given object is a rejected promise.
+ */
+Q.isRejected = isRejected;
+function isRejected(object) {
+    return isPromise(object) &amp;&amp; object.inspect().state === "rejected";
+}
+
+//// BEGIN UNHANDLED REJECTION TRACKING
+
+// This promise library consumes exceptions thrown in handlers so they can be
+// handled by a subsequent promise.  The exceptions get added to this array when
+// they are created, and removed when they are handled.  Note that in ES6 or
+// shimmed environments, this would naturally be a `Set`.
+var unhandledReasons = [];
+var unhandledRejections = [];
+var unhandledReasonsDisplayed = false;
+var trackUnhandledRejections = true;
+function displayUnhandledReasons() {
+    if (
+        !unhandledReasonsDisplayed &amp;&amp;
+        typeof window !== "undefined" &amp;&amp;
+        !window.Touch &amp;&amp;
+        window.console
+    ) {
+        console.warn("[Q] Unhandled rejection reasons (should be empty):",
+                     unhandledReasons);
+    }
+
+    unhandledReasonsDisplayed = true;
+}
+
+function logUnhandledReasons() {
+    for (var i = 0; i &lt; unhandledReasons.length; i++) {
+        var reason = unhandledReasons[i];
+        if (reason &amp;&amp; typeof reason.stack !== "undefined") {
+            console.warn("Unhandled rejection reason:", reason.stack);
+        } else {
+            console.warn("Unhandled rejection reason (no stack):", reason);
+        }
+    }
+}
+
+function resetUnhandledRejections() {
+    unhandledReasons.length = 0;
+    unhandledRejections.length = 0;
+    unhandledReasonsDisplayed = false;
+
+    if (!trackUnhandledRejections) {
+        trackUnhandledRejections = true;
+
+        // Show unhandled rejection reasons if Node exits without handling an
+        // outstanding rejection.  (Note that Browserify presently produces a
+        // `process` global without the `EventEmitter` `on` method.)
+        if (typeof process !== "undefined" &amp;&amp; process.on) {
+            process.on("exit", logUnhandledReasons);
+        }
+    }
+}
+
+function trackRejection(promise, reason) {
+    if (!trackUnhandledRejections) {
+        return;
+    }
+
+    unhandledRejections.push(promise);
+    unhandledReasons.push(reason);
+    displayUnhandledReasons();
+}
+
+function untrackRejection(promise) {
+    if (!trackUnhandledRejections) {
+        return;
+    }
+
+    var at = array_indexOf(unhandledRejections, promise);
+    if (at !== -1) {
+        unhandledRejections.splice(at, 1);
+        unhandledReasons.splice(at, 1);
+    }
+}
+
+Q.resetUnhandledRejections = resetUnhandledRejections;
+
+Q.getUnhandledReasons = function () {
+    // Make a copy so that consumers can't interfere with our internal state.
+    return unhandledReasons.slice();
+};
+
+Q.stopUnhandledRejectionTracking = function () {
+    resetUnhandledRejections();
+    if (typeof process !== "undefined" &amp;&amp; process.on) {
+        process.removeListener("exit", logUnhandledReasons);
+    }
+    trackUnhandledRejections = false;
+};
+
+resetUnhandledRejections();
+
+//// END UNHANDLED REJECTION TRACKING
+
+/**
+ * Constructs a rejected promise.
+ * @param reason value describing the failure
+ */
+Q.reject = reject;
+function reject(reason) {
+    var rejection = Promise({
+        "when": function (rejected) {
+            // note that the error has been handled
+            if (rejected) {
+                untrackRejection(this);
+            }
+            return rejected ? rejected(reason) : this;
+        }
+    }, function fallback() {
+        return this;
+    }, function inspect() {
+        return { state: "rejected", reason: reason };
+    });
+
+    // Note that the reason has not been handled.
+    trackRejection(rejection, reason);
+
+    return rejection;
+}
+
+/**
+ * Constructs a fulfilled promise for an immediate reference.
+ * @param value immediate reference
+ */
+Q.fulfill = fulfill;
+function fulfill(value) {
+    return Promise({
+        "when": function () {
+            return value;
+        },
+        "get": function (name) {
+            return value[name];
+        },
+        "set": function (name, rhs) {
+            value[name] = rhs;
+        },
+        "delete": function (name) {
+            delete value[name];
+        },
+        "post": function (name, args) {
+            // Mark Miller proposes that post with no name should apply a
+            // promised function.
+            if (name === null || name === void 0) {
+                return value.apply(void 0, args);
+            } else {
+                return value[name].apply(value, args);
+            }
+        },
+        "apply": function (thisP, args) {
+            return value.apply(thisP, args);
+        },
+        "keys": function () {
+            return object_keys(value);
+        }
+    }, void 0, function inspect() {
+        return { state: "fulfilled", value: value };
+    });
+}
+
+/**
+ * Constructs a promise for an immediate reference, passes promises through, or
+ * coerces promises from different systems.
+ * @param value immediate reference or promise
+ */
+Q.resolve = resolve;
+function resolve(value) {
+    // If the object is already a Promise, return it directly.  This enables
+    // the resolve function to both be used to created references from objects,
+    // but to tolerably coerce non-promises to promises.
+    if (isPromise(value)) {
+        return value;
+    }
+
+    // assimilate thenables
+    if (isPromiseAlike(value)) {
+        return coerce(value);
+    } else {
+        return fulfill(value);
+    }
+}
+
+/**
+ * Converts thenables to Q promises.
+ * @param promise thenable promise
+ * @returns a Q promise
+ */
+function coerce(promise) {
+    var deferred = defer();
+    nextTick(function () {
+        try {
+            promise.then(deferred.resolve, deferred.reject, deferred.notify);
+        } catch (exception) {
+            deferred.reject(exception);
+        }
+    });
+    return deferred.promise;
+}
+
+/**
+ * Annotates an object such that it will never be
+ * transferred away from this process over any promise
+ * communication channel.
+ * @param object
+ * @returns promise a wrapping of that object that
+ * additionally responds to the "isDef" message
+ * without a rejection.
+ */
+Q.master = master;
+function master(object) {
+    return Promise({
+        "isDef": function () {}
+    }, function fallback(op, args) {
+        return dispatch(object, op, args);
+    }, function () {
+        return resolve(object).inspect();
+    });
+}
+
+/**
+ * Registers an observer on a promise.
+ *
+ * Guarantees:
+ *
+ * 1. that fulfilled and rejected will be called only once.
+ * 2. that either the fulfilled callback or the rejected callback will be
+ *    called, but not both.
+ * 3. that fulfilled and rejected will not be called in this turn.
+ *
+ * @param value      promise or immediate reference to observe
+ * @param fulfilled  function to be called with the fulfilled value
+ * @param rejected   function to be called with the rejection exception
+ * @param progressed function to be called on any progress notifications
+ * @return promise for the return value from the invoked callback
+ */
+Q.when = when;
+function when(value, fulfilled, rejected, progressed) {
+    return Q(value).then(fulfilled, rejected, progressed);
+}
+
+/**
+ * Spreads the values of a promised array of arguments into the
+ * fulfillment callback.
+ * @param fulfilled callback that receives variadic arguments from the
+ * promised array
+ * @param rejected callback that receives the exception if the promise
+ * is rejected.
+ * @returns a promise for the return value or thrown exception of
+ * either callback.
+ */
+Q.spread = spread;
+function spread(promise, fulfilled, rejected) {
+    return when(promise, function (valuesOrPromises) {
+        return all(valuesOrPromises).then(function (values) {
+            return fulfilled.apply(void 0, values);
+        }, rejected);
+    }, rejected);
+}
+
+/**
+ * The async function is a decorator for generator functions, turning
+ * them into asynchronous generators.  Although generators are only part
+ * of the newest ECMAScript 6 drafts, this code does not cause syntax
+ * errors in older engines.  This code should continue to work and will
+ * in fact improve over time as the language improves.
+ *
+ * ES6 generators are currently part of V8 version 3.19 with the
+ * --harmony-generators runtime flag enabled.  SpiderMonkey has had them
+ * for longer, but under an older Python-inspired form.  This function
+ * works on both kinds of generators.
+ *
+ * Decorates a generator function such that:
+ *  - it may yield promises
+ *  - execution will continue when that promise is fulfilled
+ *  - the value of the yield expression will be the fulfilled value
+ *  - it returns a promise for the return value (when the generator
+ *    stops iterating)
+ *  - the decorated function returns a promise for the return value
+ *    of the generator or the first rejected promise among those
+ *    yielded.
+ *  - if an error is thrown in the generator, it propagates through
+ *    every following yield until it is caught, or until it escapes
+ *    the generator function altogether, and is translated into a
+ *    rejection for the promise returned by the decorated generator.
+ */
+Q.async = async;
+function async(makeGenerator) {
+    return function () {
+        // when verb is "send", arg is a value
+        // when verb is "throw", arg is an exception
+        function continuer(verb, arg) {
+            var result;
+            if (hasES6Generators) {
+                try {
+                    result = generator[verb](arg);
+                } catch (exception) {
+                    return reject(exception);
+                }
+                if (result.done) {
+                    return result.value;
+                } else {
+                    return when(result.value, callback, errback);
+                }
+            } else {
+                // FIXME: Remove this case when SM does ES6 generators.
+                try {
+                    result = generator[verb](arg);
+                } catch (exception) {
+                    if (isStopIteration(exception)) {
+                        return exception.value;
+                    } else {
+                        return reject(exception);
+                    }
+                }
+                return when(result, callback, errback);
+            }
+        }
+        var generator = makeGenerator.apply(this, arguments);
+        var callback = continuer.bind(continuer, "send");
+        var errback = continuer.bind(continuer, "throw");
+        return callback();
+    };
+}
+
+/**
+ * The spawn function is a small wrapper around async that immediately
+ * calls the generator and also ends the promise chain, so that any
+ * unhandled errors are thrown instead of forwarded to the error
+ * handler. This is useful because it's extremely common to run
+ * generators at the top-level to work with libraries.
+ */
+Q.spawn = spawn;
+function spawn(makeGenerator) {
+    Q.done(Q.async(makeGenerator)());
+}
+
+// FIXME: Remove this interface once ES6 generators are in SpiderMonkey.
+/**
+ * Throws a ReturnValue exception to stop an asynchronous generator.
+ *
+ * This interface is a stop-gap measure to support generator return
+ * values in older Firefox/SpiderMonkey.  In browsers that support ES6
+ * generators like Chromium 29, just use "return" in your generator
+ * functions.
+ *
+ * @param value the return value for the surrounding generator
+ * @throws ReturnValue exception with the value.
+ * @example
+ * // ES6 style
+ * Q.async(function* () {
+ *      var foo = yield getFooPromise();
+ *      var bar = yield getBarPromise();
+ *      return foo + bar;
+ * })
+ * // Older SpiderMonkey style
+ * Q.async(function () {
+ *      var foo = yield getFooPromise();
+ *      var bar = yield getBarPromise();
+ *      Q.return(foo + bar);
+ * })
+ */
+Q["return"] = _return;
+function _return(value) {
+    throw new QReturnValue(value);
+}
+
+/**
+ * The promised function decorator ensures that any promise arguments
+ * are settled and passed as values (`this` is also settled and passed
+ * as a value).  It will also ensure that the result of a function is
+ * always a promise.
+ *
+ * @example
+ * var add = Q.promised(function (a, b) {
+ *     return a + b;
+ * });
+ * add(Q.resolve(a), Q.resolve(B));
+ *
+ * @param {function} callback The function to decorate
+ * @returns {function} a function that has been decorated.
+ */
+Q.promised = promised;
+function promised(callback) {
+    return function () {
+        return spread([this, all(arguments)], function (self, args) {
+            return callback.apply(self, args);
+        });
+    };
+}
+
+/**
+ * sends a message to a value in a future turn
+ * @param object* the recipient
+ * @param op the name of the message operation, e.g., "when",
+ * @param args further arguments to be forwarded to the operation
+ * @returns result {Promise} a promise for the result of the operation
+ */
+Q.dispatch = dispatch;
+function dispatch(object, op, args) {
+    var deferred = defer();
+    nextTick(function () {
+        resolve(object).promiseDispatch(deferred.resolve, op, args);
+    });
+    return deferred.promise;
+}
+
+/**
+ * Constructs a promise method that can be used to safely observe resolution of
+ * a promise for an arbitrarily named method like "propfind" in a future turn.
+ *
+ * "dispatcher" constructs methods like "get(promise, name)" and "set(promise)".
+ */
+Q.dispatcher = dispatcher;
+function dispatcher(op) {
+    return function (object) {
+        var args = array_slice(arguments, 1);
+        return dispatch(object, op, args);
+    };
+}
+
+/**
+ * Gets the value of a property in a future turn.
+ * @param object    promise or immediate reference for target object
+ * @param name      name of property to get
+ * @return promise for the property value
+ */
+Q.get = dispatcher("get");
+
+/**
+ * Sets the value of a property in a future turn.
+ * @param object    promise or immediate reference for object object
+ * @param name      name of property to set
+ * @param value     new value of property
+ * @return promise for the return value
+ */
+Q.set = dispatcher("set");
+
+/**
+ * Deletes a property in a future turn.
+ * @param object    promise or immediate reference for target object
+ * @param name      name of property to delete
+ * @return promise for the return value
+ */
+Q["delete"] = // XXX experimental
+Q.del = dispatcher("delete");
+
+/**
+ * Invokes a method in a future turn.
+ * @param object    promise or immediate reference for target object
+ * @param name      name of method to invoke
+ * @param value     a value to post, typically an array of
+ *                  invocation arguments for promises that
+ *                  are ultimately backed with `resolve` values,
+ *                  as opposed to those backed with URLs
+ *                  wherein the posted value can be any
+ *                  JSON serializable object.
+ * @return promise for the return value
+ */
+// bound locally because it is used by other methods
+var post = Q.post = dispatcher("post");
+Q.mapply = post; // experimental
+
+/**
+ * Invokes a method in a future turn.
+ * @param object    promise or immediate reference for target object
+ * @param name      name of method to invoke
+ * @param ...args   array of invocation arguments
+ * @return promise for the return value
+ */
+Q.send = send;
+Q.invoke = send; // synonyms
+Q.mcall = send; // experimental
+function send(value, name) {
+    var args = array_slice(arguments, 2);
+    return post(value, name, args);
+}
+
+/**
+ * Applies the promised function in a future turn.
+ * @param object    promise or immediate reference for target function
+ * @param args      array of application arguments
+ */
+Q.fapply = fapply;
+function fapply(value, args) {
+    return dispatch(value, "apply", [void 0, args]);
+}
+
+/**
+ * Calls the promised function in a future turn.
+ * @param object    promise or immediate reference for target function
+ * @param ...args   array of application arguments
+ */
+Q["try"] = fcall; // XXX experimental
+Q.fcall = fcall;
+function fcall(value) {
+    var args = array_slice(arguments, 1);
+    return fapply(value, args);
+}
+
+/**
+ * Binds the promised function, transforming return values into a fulfilled
+ * promise and thrown errors into a rejected one.
+ * @param object    promise or immediate reference for target function
+ * @param ...args   array of application arguments
+ */
+Q.fbind = fbind;
+function fbind(value) {
+    var args = array_slice(arguments, 1);
+    return function fbound() {
+        var allArgs = args.concat(array_slice(arguments));
+        return dispatch(value, "apply", [this, allArgs]);
+    };
+}
+
+/**
+ * Requests the names of the owned properties of a promised
+ * object in a future turn.
+ * @param object    promise or immediate reference for target object
+ * @return promise for the keys of the eventually settled object
+ */
+Q.keys = dispatcher("keys");
+
+/**
+ * Turns an array of promises into a promise for an array.  If any of
+ * the promises gets rejected, the whole array is rejected immediately.
+ * @param {Array*} an array (or promise for an array) of values (or
+ * promises for values)
+ * @returns a promise for an array of the corresponding values
+ */
+// By Mark Miller
+// http://wiki.ecmascript.org/doku.php?id=strawman:concurrency&amp;rev=1308776521#allfulfilled
+Q.all = all;
+function all(promises) {
+    return when(promises, function (promises) {
+        var countDown = 0;
+        var deferred = defer();
+        array_reduce(promises, function (undefined, promise, index) {
+            var snapshot;
+            if (
+                isPromise(promise) &amp;&amp;
+                (snapshot = promise.inspect()).state === "fulfilled"
+            ) {
+                promises[index] = snapshot.value;
+            } else {
+                ++countDown;
+                when(promise, function (value) {
+                    promises[index] = value;
+                    if (--countDown === 0) {
+                        deferred.resolve(promises);
+                    }
+                }, deferred.reject);
+            }
+        }, void 0);
+        if (countDown === 0) {
+            deferred.resolve(promises);
+        }
+        return deferred.promise;
+    });
+}
+
+/**
+ * Waits for all promises to be settled, either fulfilled or
+ * rejected.  This is distinct from `all` since that would stop
+ * waiting at the first rejection.  The promise returned by
+ * `allResolved` will never be rejected.
+ * @param promises a promise for an array (or an array) of promises
+ * (or values)
+ * @return a promise for an array of promises
+ */
+Q.allResolved = deprecate(allResolved, "allResolved", "allSettled");
+function allResolved(promises) {
+    return when(promises, function (promises) {
+        promises = array_map(promises, resolve);
+        return when(all(array_map(promises, function (promise) {
+            return when(promise, noop, noop);
+        })), function () {
+            return promises;
+        });
+    });
+}
+
+Q.allSettled = allSettled;
+function allSettled(values) {
+    return when(values, function (values) {
+        return all(array_map(values, function (value, i) {
+            return when(
+                value,
+                function (fulfillmentValue) {
+                    values[i] = { state: "fulfilled", value: fulfillmentValue };
+                    return values[i];
+                },
+                function (reason) {
+                    values[i] = { state: "rejected", reason: reason };
+                    return values[i];
+                }
+            );
+        })).thenResolve(values);
+    });
+}
+
+/**
+ * Captures the failure of a promise, giving an oportunity to recover
+ * with a callback.  If the given promise is fulfilled, the returned
+ * promise is fulfilled.
+ * @param {Any*} promise for something
+ * @param {Function} callback to fulfill the returned promise if the
+ * given promise is rejected
+ * @returns a promise for the return value of the callback
+ */
+Q["catch"] = // XXX experimental
+Q.fail = fail;
+function fail(promise, rejected) {
+    return when(promise, void 0, rejected);
+}
+
+/**
+ * Attaches a listener that can respond to progress notifications from a
+ * promise's originating deferred. This listener receives the exact arguments
+ * passed to ``deferred.notify``.
+ * @param {Any*} promise for something
+ * @param {Function} callback to receive any progress notifications
+ * @returns the given promise, unchanged
+ */
+Q.progress = progress;
+function progress(promise, progressed) {
+    return when(promise, void 0, void 0, progressed);
+}
+
+/**
+ * Provides an opportunity to observe the settling of a promise,
+ * regardless of whether the promise is fulfilled or rejected.  Forwards
+ * the resolution to the returned promise when the callback is done.
+ * The callback can return a promise to defer completion.
+ * @param {Any*} promise
+ * @param {Function} callback to observe the resolution of the given
+ * promise, takes no arguments.
+ * @returns a promise for the resolution of the given promise when
+ * ``fin`` is done.
+ */
+Q["finally"] = // XXX experimental
+Q.fin = fin;
+function fin(promise, callback) {
+    return when(promise, function (value) {
+        return when(callback(), function () {
+            return value;
+        });
+    }, function (exception) {
+        return when(callback(), function () {
+            return reject(exception);
+        });
+    });
+}
+
+/**
+ * Terminates a chain of promises, forcing rejections to be
+ * thrown as exceptions.
+ * @param {Any*} promise at the end of a chain of promises
+ * @returns nothing
+ */
+Q.done = done;
+function done(promise, fulfilled, rejected, progress) {
+    var stack = new Error().stack;
+    
+    var onUnhandledError = function (error) {
+        console.error("Q - UNHANDLED ERROR - ", stack);
+        // forward to a future turn so that ``when``
+        // does not catch it and turn it into a rejection.
+        nextTick(function () {
+            makeStackTraceLong(error, promise);
+
+            if (Q.onerror) {
+                Q.onerror(error);
+            } else {
+                throw error;
+            }
+        });
+    };
+
+    // Avoid unnecessary `nextTick`ing via an unnecessary `when`.
+    var promiseToHandle = fulfilled || rejected || progress ?
+        when(promise, fulfilled, rejected, progress) :
+        promise;
+
+    if (typeof process === "object" &amp;&amp; process &amp;&amp; process.domain) {
+        onUnhandledError = process.domain.bind(onUnhandledError);
+    }
+    fail(promiseToHandle, onUnhandledError);
+}
+
+/**
+ * Causes a promise to be rejected if it does not get fulfilled before
+ * some milliseconds time out.
+ * @param {Any*} promise
+ * @param {Number} milliseconds timeout
+ * @param {String} custom error message (optional)
+ * @returns a promise for the resolution of the given promise if it is
+ * fulfilled before the timeout, otherwise rejected.
+ */
+Q.timeout = timeout;
+function timeout(promise, ms, msg) {
+    var deferred = defer();
+    var timeoutId = setTimeout(function () {
+        deferred.reject(new Error(msg || "Timed out after " + ms + " ms"));
+    }, ms);
+
+    when(promise, function (value) {
+        clearTimeout(timeoutId);
+        deferred.resolve(value);
+    }, function (exception) {
+        clearTimeout(timeoutId);
+        deferred.reject(exception);
+    }, deferred.notify);
+
+    return deferred.promise;
+}
+
+/**
+ * Returns a promise for the given value (or promised value) after some
+ * milliseconds.
+ * @param {Any*} promise
+ * @param {Number} milliseconds
+ * @returns a promise for the resolution of the given promise after some
+ * time has elapsed.
+ */
+Q.delay = delay;
+function delay(promise, timeout) {
+    if (timeout === void 0) {
+        timeout = promise;
+        promise = void 0;
+    }
+
+    var deferred = defer();
+
+    when(promise, undefined, undefined, deferred.notify);
+    setTimeout(function () {
+        deferred.resolve(promise);
+    }, timeout);
+
+    return deferred.promise;
+}
+
+/**
+ * Passes a continuation to a Node function, which is called with the given
+ * arguments provided as an array, and returns a promise.
+ *
+ *      Q.nfapply(FS.readFile, [__filename])
+ *      .then(function (content) {
+ *      })
+ *
+ */
+Q.nfapply = nfapply;
+function nfapply(callback, args) {
+    var nodeArgs = array_slice(args);
+    var deferred = defer();
+    nodeArgs.push(deferred.makeNodeResolver());
+
+    fapply(callback, nodeArgs).fail(deferred.reject);
+    return deferred.promise;
+}
+
+/**
+ * Passes a continuation to a Node function, which is called with the given
+ * arguments provided individually, and returns a promise.
+ *
+ *      Q.nfcall(FS.readFile, __filename)
+ *      .then(function (content) {
+ *      })
+ *
+ */
+Q.nfcall = nfcall;
+function nfcall(callback/*, ...args */) {
+    var nodeArgs = array_slice(arguments, 1);
+    var deferred = defer();
+    nodeArgs.push(deferred.makeNodeResolver());
+
+    fapply(callback, nodeArgs).fail(deferred.reject);
+    return deferred.promise;
+}
+
+/**
+ * Wraps a NodeJS continuation passing function and returns an equivalent
+ * version that returns a promise.
+ *
+ *      Q.nfbind(FS.readFile, __filename)("utf-8")
+ *      .then(console.log)
+ *      .done()
+ *
+ */
+Q.nfbind = nfbind;
+Q.denodeify = Q.nfbind; // synonyms
+function nfbind(callback/*, ...args */) {
+    var baseArgs = array_slice(arguments, 1);
+    return function () {
+        var nodeArgs = baseArgs.concat(array_slice(arguments));
+        var deferred = defer();
+        nodeArgs.push(deferred.makeNodeResolver());
+
+        fapply(callback, nodeArgs).fail(deferred.reject);
+        return deferred.promise;
+    };
+}
+
+Q.nbind = nbind;
+function nbind(callback, thisArg /*, ... args*/) {
+    var baseArgs = array_slice(arguments, 2);
+    return function () {
+        var nodeArgs = baseArgs.concat(array_slice(arguments));
+        var deferred = defer();
+        nodeArgs.push(deferred.makeNodeResolver());
+
+        function bound() {
+            return callback.apply(thisArg, arguments);
+        }
+
+        fapply(bound, nodeArgs).fail(deferred.reject);
+        return deferred.promise;
+    };
+}
+
+/**
+ * Calls a method of a Node-style object that accepts a Node-style
+ * callback with a given array of arguments, plus a provided callback.
+ * @param object an object that has the named method
+ * @param {String} name name of the method of object
+ * @param {Array} args arguments to pass to the method; the callback
+ * will be provided by Q and appended to these arguments.
+ * @returns a promise for the value or error
+ */
+Q.npost = npost;
+Q.nmapply = npost; // synonyms
+function npost(object, name, args) {
+    var nodeArgs = array_slice(args || []);
+    var deferred = defer();
+    nodeArgs.push(deferred.makeNodeResolver());
+
+    post(object, name, nodeArgs).fail(deferred.reject);
+    return deferred.promise;
+}
+
+/**
+ * Calls a method of a Node-style object that accepts a Node-style
+ * callback, forwarding the given variadic arguments, plus a provided
+ * callback argument.
+ * @param object an object that has the named method
+ * @param {String} name name of the method of object
+ * @param ...args arguments to pass to the method; the callback will
+ * be provided by Q and appended to these arguments.
+ * @returns a promise for the value or error
+ */
+Q.nsend = nsend;
+Q.ninvoke = Q.nsend; // synonyms
+Q.nmcall = Q.nsend; // synonyms
+function nsend(object, name /*, ...args*/) {
+    var nodeArgs = array_slice(arguments, 2);
+    var deferred = defer();
+    nodeArgs.push(deferred.makeNodeResolver());
+    post(object, name, nodeArgs).fail(deferred.reject);
+    return deferred.promise;
+}
+
+Q.nodeify = nodeify;
+function nodeify(promise, nodeback) {
+    if (nodeback) {
+        promise.then(function (value) {
+            nextTick(function () {
+                nodeback(null, value);
+            });
+        }, function (error) {
+            nextTick(function () {
+                nodeback(error);
+            });
+        });
+    } else {
+        return promise;
+    }
+}
+
+// All code before this point will be filtered from stack traces.
+var qEndingLine = captureLine();
+
+return Q;
+
+});
+</pre> </div></div><div id="footer"><div class="fineprint" style="clear:both">&copy; Documentation generated by <a href="http://raptorjs.org/jsdoc" target="_blank">Raptor JSDoc</a></div></div><script type="text/javascript" src="static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="static/jquery-371da524.js"></script>
+<script type="text/javascript" src="static/jsdoc-ff81c58a.js"></script>
+<script type="text/javascript" src="static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="static/type-b348694c.js"></script><script type="text/javascript">$rwidgets(
+["components.jsdoc.Nav.NavWidget","w0",{},0,0,0]);</script><script type="text/javascript">sh_highlightDocument();</script></body></body>

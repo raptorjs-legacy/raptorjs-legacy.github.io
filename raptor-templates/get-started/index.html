@@ -1,0 +1,151 @@
+<!DOCTYPE html><html><head><title itemprop="name">Raptor Templates: Get Started</title><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/static/font-awesome-87349705.css">
+<link rel="stylesheet" type="text/css" href="/static/raptor-templates-get-started-969a1b92.css">
+<link rel="stylesheet" type="text/css" href="/static/docs-6e628a8c.css">
+<link rel="stylesheet" type="text/css" href="/static/code-editor-f1386401.css">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-33982282-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+var __insp=__insp||[];__insp.push(["wid",2568045892]),function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"==document.location.protocol?"https":"http")+"://www.inspectlet.com/inspectlet-jq.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}();</script></head><body data-spy="scroll"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"><a class="brand" href="/">RaptorJS</a><ul class="nav"><li class="divider-vertical"></li><li id="w0"><a href="/get-started/">Get Started</a></li><li class="divider-vertical"></li><li id="w1" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Learn<b class="caret"></b></a><ul class="dropdown-menu"><li id="w2"><a href="/">Overview</a></li><li id="w3"><a href="/get-started/">Get Started</a></li><li id="w4"><a href="/tutorial/">Tutorial</a></li><li id="w5"><a href="/api/">API Reference</a></li><li id="w6"><a target="_blank" href="https://github.com/raptorjs/samples">Sample Apps</a></li><li id="w7"><a href="/faq/">FAQ</a></li><li class="divider"></li><li id="w8"><a href="/modules-classes/">Modules and Classes</a></li><li id="w9"><a href="/packaging/">Packaging and Extensions</a></li><li id="w10"><a href="/module-loader/">Module Loader</a></li><li id="w11"><a href="/optimizer/">Optimizer</a></li><li id="w12"><a href="/raptor-templates/">Raptor Templates</a></li><li id="w13"><a href="/widgets/">Widget Framework</a></li><li class="divider"></li><li id="w14"><a href="/ui-components/">Building UI Components</a></li><li id="w15"><a href="/logging/">Logging</a></li><li id="w16"><a href="/resource-search-path/">Resource Search Path</a></li></ul></li><li class="divider-vertical"></li><li id="w17" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a><ul class="dropdown-menu"><li id="w18"><a href="https://github.com/raptorjs/raptorjs">Source code</a></li><li id="w19"><a href="https://github.com/raptorjs/raptorjs/issues">Issue Tracker</a></li><li id="w20"><a href="/contribute/">Contribute</a></li><li id="w21"><a href="/contributors/">Contributors</a></li><li class="divider"></li><li id="w22"><a href="http://groups.google.com/group/raptorjs">Discussion Forum</a></li><li class="divider"></li><li id="w23"><a href="http://twitter.com/raptorjs">Twitter (@raptorjs)</a></li><li id="w24"><a href="https://plus.google.com/111493691067944627473/">Google+</a></li><li class="divider"></li><li id="w25"><a href="https://github.com/raptorjs/branding">Logos</a></li></ul></li><li class="divider-vertical"></li><li id="w26" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a><ul class="dropdown-menu"><li id="w27"><a href="https://github.com/raptorjs/raptorjs/wiki/Release-Notes">Release Notes</a></li><li id="w28"><a href="/design-philosophy/">Design Philosophy</a></li><li id="w29"><a target="_blank" href="https://github.com/raptorjs/raptorjs/blob/master/LICENSE.md">License</a></li><li id="w30"><a href="/credits/">Credits</a></li><li id="w31"><a href="/creators/">Creators</a></li></ul></li><li class="divider-vertical"></li></ul></div></div></div><div class="container"><div class="docs"><div class="bd"><div class="docs-content"><h1 id="title">Raptor Templates: Get Started</h1><div class="toc nav" id="docsNav"><div class="return">&laquo; Return to <a href="/raptor-templates/">Raptor Templates</a></div><ul class="toc"><li class="toc toc-level-0"><a href="#Overview">Overview</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#View_Demo">View Demo</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Demo_Source">Demo Source</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Sample_Template">Sample Template</a><ul class="toc"><li class="toc toc-level-1"><a href="#Input_Template">Input Template</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Compiled_Output">Compiled Output</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#HTML_Output">HTML Output</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Rendering_a_Raptor_Template">Rendering a Raptor Template</a><ul class="toc"><li class="toc toc-level-1"><a href="#Serverside_Rendering">Server-side Rendering</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Clientside_Rendering">Client-side Rendering</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Discussion">Discussion</a><ul class="toc"></ul></li></ul><div class="docs-nav-footer"><ul><li><span class="powered-by">Powered by <a href="/" class="raptorjs">RaptorJS</a></span></li><li><a href="/license/">License</a></li><li><a href="/credits/">Credits</a></li></ul></div></div><div class="message message-warning"><div class="icon"><i class="icon-warning-sign" style="font-size: 30px;"></i></div><div class="bd">Documentation In-Progress</div></div><div class="section section-level-0"><h2 id="Overview">Overview</h2><div class="bd"><p>Raptor Templates is a JavaScript-based templating language that beautifully
+blends powerful templating directives with HTML markup. The cornerstone of
+Raptor Templates is its extensibility—allowing custom tag handlers, compilers
+and helper functions. Raptor Templates elegantly combines UI layout with
+traditional templating. Equally effective in both the browser and on the
+server, use Raptor Templates
+<i>wherever</i> you want to produce HTML.</p><p>All Raptor templates are required to be well-formed XML. This constraint allows
+the template language to use the structure of the XML document to its
+advantage. For example, a template directive that controls structural logic can
+be applied as an attribute of the element that it controls. In addition, unlike
+in non-XML-based templating languages, whitespace removal rules are based on
+the XML structure and not a string language directives. Despite a template
+being well-formed XML, the output does not have to be well-formed XML which
+makes the Raptor Templating Language flexible enough for using in all types of
+web
+applications.</p><p>The Raptor Templating Language aims to be easy to understand by utilizing
+concepts that front-end developers are already familiar with such as XML/HTML
+and JavaScript. While the Raptor Templating Language introduces a new grammar
+on top of XHTML, it is not an entirely new language which reduces the learning
+curve.</p><p>This guide will walk you through rendering templates on the server and in the
+browser. In addition, it will illustrate how to create a custom taglib that
+consists of custom tags and helper
+functions.</p></div></div><div class="section section-level-0"><h2 id="View_Demo">View Demo</h2><div class="bd"><div class="view-demo"><h1><i class="icon-play-circle icon-large"></i> <a href="/demos/raptor-templates/" target="_blank">View Demo: /demos/raptor-templates</a></h1></div></div></div><div class="section section-level-0"><h2 id="Demo_Source">Demo Source</h2><div class="bd"><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates" target="_blank">/raptor-templates/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/README.md" target="_blank">README.md</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/build.js" target="_blank">build.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/build.xml" target="_blank">build.xml</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/modules" target="_blank">modules/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/modules/pages" target="_blank">pages/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/modules/pages/index" target="_blank">index/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/modules/pages/index/index.js" target="_blank">index.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/modules/pages/index/index.rhtml" target="_blank">index.rhtml</a></b></li></ul></li></ul></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/optimizer-config.xml" target="_blank">optimizer-config.xml</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/package.json" target="_blank">package.json</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/taglibs" target="_blank">taglibs/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/taglibs/app" target="_blank">app/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/taglibs/app/AppFunctions.js" target="_blank">AppFunctions.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/taglibs/app/HelloTag.js" target="_blank">HelloTag.js</a></b></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/taglibs/app/app.rtld" target="_blank">app.rtld</a></b></li></ul></li></ul></li><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/templates" target="_blank">templates/</a></b><ul><li><b><a href="https://github.com/raptorjs/samples/blob/master/raptor-templates/templates/colors.rhtml" target="_blank">colors.rhtml</a></b></li></ul></li></ul></li></ul></div></div><div class="section section-level-0"><h2 id="Sample_Template">Sample Template</h2><div class="bd"><div class="section section-level-1"><h2 id="Input_Template">Input Template</h2><div class="bd"><div class="code-editor" id="w32"><h2 class="code-editor-title">templates/colors.rhtml</h2> <textarea id="w32-textarea" style="display: none;" name="code-0"><c:template xmlns:c="core" 
+    name="colors"
+    params="colors">
+
+    <ul c:if="notEmpty(colors)">
+        <li style="color: $color" c:for="color in colors">
+            $color
+        </li>
+    </ul>
+    <div c:else="">
+        No colors!
+    </div>
+    
+</c:template></textarea></div></div></div><div class="section section-level-1"><h2 id="Compiled_Output">Compiled Output</h2><div class="bd"><div class="code-editor" id="w33"><h2 class="code-editor-title">Unminified</h2> <textarea id="w33-textarea" style="display: none;" name="code-1">$rset("rhtml", "colors", function(helpers) {
+  var empty = helpers.e,
+      notEmpty = helpers.ne,
+      forEach = helpers.f,
+      escapeXmlAttr = helpers.xa,
+      escapeXml = helpers.x;
+
+  return function(data, context) {
+    var colors = data.colors;
+
+    if (notEmpty(colors)) {
+      context.w('&lt;ul>');
+
+      forEach(colors, function(color) {
+        context.w('&lt;li style="color: ')
+          .w(escapeXmlAttr(color))
+          .w('">')
+          .w(escapeXml(color))
+          .w('&lt;/li>');
+      });
+
+      context.w('&lt;/ul>');
+    }
+    else {
+      context.w('&lt;div>No colors!&lt;/div>');
+    }
+  }
+});</textarea></div><div class="code-editor" id="w34"><h2 class="code-editor-title">Minified (188 bytes gzipped)</h2> <textarea id="w34-textarea" style="display: none;" name="code-2">$rset("rhtml","/templates/colors.rhtml",function(a){var d=a.ne,e=a.f,f=a.xa,g=a.x;return function(a,b){var c=a.colors;d(c)?(b.w("&lt;ul>"),e(c,function(a){b.w('&lt;li style="color: ').w(f(a)).w('">').w(g(a)).w("&lt;/li>")}),b.w("&lt;/ul>")):b.w("&lt;div>No colors!&lt;/div>")}});</textarea></div></div></div><div class="section section-level-1"><h2 id="HTML_Output">HTML Output</h2><div class="bd"><p>Given the following input data:</p><div class="code-editor" id="w35"> <textarea id="w35-textarea" style="display: none;" name="code-3">{
+    colors: ['red', 'green', 'blue']
+}</textarea></div><p>The output will be then be the following:</p><div class="code-editor" id="w36"> <textarea id="w36-textarea" style="display: none;" name="code-4">&lt;ul>
+    &lt;li style="color: red">red&lt;/li>
+    &lt;li style="color: green">green&lt;/li>
+    &lt;li style="color: blue">blue&lt;/li>
+&lt;/ul></textarea></div></div></div></div></div><div class="section section-level-0"><h2 id="Rendering_a_Raptor_Template">Rendering a Raptor Template</h2><div class="bd"><p>The <a href="http://raptorjs.org/api/raptor/templating/">raptor/templating</a> provides the Raptor Templates runtime API that can be used to render
+templates. On the server, templates will be compiled to JavaScript and loaded
+automatically if the template has not already been compiled and loaded. To
+render templates on the client, the required templates must be included as page
+dependencies so that the
+<a href="/optimizer/">RaptorJS Optimizer</a> will pre-compile the required templates to JavaScript on the server so that
+they can be easily rendered in the
+browser.</p><div class="section section-level-1"><h2 id="Serverside_Rendering">Server-side Rendering</h2><div class="bd"><p>In order to render templates on the server, the Raptor Templates runtime needs
+to be able to find the templates. This means that the Raptor Template files
+need to be available on the RaptorJS
+<a href="/resource-search-path/">resource search path</a>. A root directory containing templates can be added to the resource search
+path as shown in the following sample
+code:</p><div class="code-editor" id="w37"> <textarea id="w37-textarea" style="display: none;" name="code-5">require('raptor/resources').addSearchPathDir(__dirname);</textarea></div><p>After the RaptorJS resource search path has been updated to include the base
+directory for a template, the relative template path can be used to render a
+template using the
+<a href="http://raptorjs.org/api/raptor/templating/#renderToString">renderToString</a> method of the <a href="http://raptorjs.org/api/raptor/templating/">raptor/templating</a> module as shown in the following code:</p><div class="code-editor" id="w38"> <textarea id="w38-textarea" style="display: none;" name="code-6">var templating = require('raptor/templating');
+var html = templating.renderToString(
+    '/templates/colors.rhtml', //OR: 'templates/colors'
+    {
+        colors: ['red', 'green', 'blue']
+    });
+// Do something with the rendered HTML...</textarea></div></div></div><div class="section section-level-1"><h2 id="Clientside_Rendering">Client-side Rendering</h2><div class="bd"><p>In order to render templates on the client, the JavaScript code for the
+compiled template and the code for the
+<a href="http://raptorjs.org/api/raptor/templating/">raptor/templating</a> must be included on the page.</p><div class="code-editor" id="w39"> <textarea id="w39-textarea" style="display: none;" name="code-7">require('raptor/resources').addSearchPathDir(__dirname);</textarea></div><p>The name defined in the template's <code>rhtml</code> file can then be used to render the template by calling the The template can
+then be compiled by passing the template name (defined in the
+<code>rhtml</code> file) and the template data as arguments to the <a href="http://raptorjs.org/api/raptor/templating/#renderToString">renderToString</a> method of the <a href="http://raptorjs.org/api/raptor/templating/">raptor/templating</a> module as shown in the following code:</p><div class="code-editor" id="w40"> <textarea id="w40-textarea" style="display: none;" name="code-8">var templating = require('raptor/templating');
+var html = templating.renderToString(
+    'colors', //OR: 'templates/colors'
+    {
+        colors: ['red', 'green', 'blue']
+    });
+// Do something with the rendered HTML...</textarea></div></div></div></div></div><div class="section section-level-0"><h2 id="Discussion">Discussion</h2><div class="bd"><div id="disqus_thread"></div></div></div></div></div><div class="docs-footer-padding"></div></div></div><script type="text/javascript" src="/static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="/static/jquery-371da524.js"></script>
+<script type="text/javascript" src="/static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="/static/raptor-templates-get-started-02c7930e.js"></script>
+<script type="text/javascript" src="/static/code-editor-36478451.js"></script><script type="text/javascript">$rwidgets(
+["components.nav.Nav.NavItemWidget","w0",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w1",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w2",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w3",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w4",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w5",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w6",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w7",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w8",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w9",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w10",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w11",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w12",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w13",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w14",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w15",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w16",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w17",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w18",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w19",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w20",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w21",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w22",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w23",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w24",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w25",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w26",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w27",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w28",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w29",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w30",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w31",0,0,0,0]],
+["components/editors/CodeEditor/CodeEditorWidget","w32",{"mode":"xml","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w33",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w34",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w35",{"mode":"htmlmixed","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w36",{"mode":"htmlmixed","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w37",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w38",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w39",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w40",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components.social.Disqus.DisqusWidget","disqus_thread",{"shortName":"raptor-js","id":"raptor-templates-get-started","title":"Raptor Templates: Get Started"},0,0,0]);</script></body></html>

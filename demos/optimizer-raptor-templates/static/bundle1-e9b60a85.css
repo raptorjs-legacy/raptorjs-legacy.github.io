@@ -1,0 +1,12 @@
+.module-a {
+    background-color: #FFFFCC;
+    border: 1px solid Black;
+    padding: 10px;
+    margin: 10px;
+}
+.module-b {
+    background-color: #FF9966;
+    border: 1px solid Black;
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,0 +1,1 @@
+(function(){var e=String.prototype;e.startsWith||(e.startsWith=function(e,t){var n=this;return t&&(n=n.substring(t)),n.length<e.length?!1:n.substring(0,e.length)==e}),e.endsWith||(e.endsWith=function(e,t){var n=this;return t&&(n=n.substring(t)),n.length<e.length?!1:n.slice(0-e.length)==e})})();

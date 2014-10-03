@@ -1,0 +1,190 @@
+<!DOCTYPE html><html><head><title itemprop="name">Raptor Templates: Developer Guide</title><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/static/font-awesome-87349705.css">
+<link rel="stylesheet" type="text/css" href="/static/raptor-templates-developer-guide-969a1b92.css">
+<link rel="stylesheet" type="text/css" href="/static/docs-6e628a8c.css">
+<link rel="stylesheet" type="text/css" href="/static/code-editor-f1386401.css">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-33982282-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+var __insp=__insp||[];__insp.push(["wid",2568045892]),function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"==document.location.protocol?"https":"http")+"://www.inspectlet.com/inspectlet-jq.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}();</script></head><body data-spy="scroll"><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"><a class="brand" href="/">RaptorJS</a><ul class="nav"><li class="divider-vertical"></li><li id="w0"><a href="/get-started/">Get Started</a></li><li class="divider-vertical"></li><li id="w1" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Learn<b class="caret"></b></a><ul class="dropdown-menu"><li id="w2"><a href="/">Overview</a></li><li id="w3"><a href="/get-started/">Get Started</a></li><li id="w4"><a href="/tutorial/">Tutorial</a></li><li id="w5"><a href="/api/">API Reference</a></li><li id="w6"><a target="_blank" href="https://github.com/raptorjs/samples">Sample Apps</a></li><li id="w7"><a href="/faq/">FAQ</a></li><li class="divider"></li><li id="w8"><a href="/modules-classes/">Modules and Classes</a></li><li id="w9"><a href="/packaging/">Packaging and Extensions</a></li><li id="w10"><a href="/module-loader/">Module Loader</a></li><li id="w11"><a href="/optimizer/">Optimizer</a></li><li id="w12"><a href="/raptor-templates/">Raptor Templates</a></li><li id="w13"><a href="/widgets/">Widget Framework</a></li><li class="divider"></li><li id="w14"><a href="/ui-components/">Building UI Components</a></li><li id="w15"><a href="/logging/">Logging</a></li><li id="w16"><a href="/resource-search-path/">Resource Search Path</a></li></ul></li><li class="divider-vertical"></li><li id="w17" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a><ul class="dropdown-menu"><li id="w18"><a href="https://github.com/raptorjs/raptorjs">Source code</a></li><li id="w19"><a href="https://github.com/raptorjs/raptorjs/issues">Issue Tracker</a></li><li id="w20"><a href="/contribute/">Contribute</a></li><li id="w21"><a href="/contributors/">Contributors</a></li><li class="divider"></li><li id="w22"><a href="http://groups.google.com/group/raptorjs">Discussion Forum</a></li><li class="divider"></li><li id="w23"><a href="http://twitter.com/raptorjs">Twitter (@raptorjs)</a></li><li id="w24"><a href="https://plus.google.com/111493691067944627473/">Google+</a></li><li class="divider"></li><li id="w25"><a href="https://github.com/raptorjs/branding">Logos</a></li></ul></li><li class="divider-vertical"></li><li id="w26" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a><ul class="dropdown-menu"><li id="w27"><a href="https://github.com/raptorjs/raptorjs/wiki/Release-Notes">Release Notes</a></li><li id="w28"><a href="/design-philosophy/">Design Philosophy</a></li><li id="w29"><a target="_blank" href="https://github.com/raptorjs/raptorjs/blob/master/LICENSE.md">License</a></li><li id="w30"><a href="/credits/">Credits</a></li><li id="w31"><a href="/creators/">Creators</a></li></ul></li><li class="divider-vertical"></li></ul></div></div></div><div class="container"><div class="docs"><div class="bd"><div class="docs-content"><h1 id="title">Raptor Templates: Developer Guide</h1><div class="toc nav" id="docsNav"><div class="return">&laquo; Return to <a href="/raptor-templates/">Raptor Templates</a></div><ul class="toc"><li class="toc toc-level-0"><a href="#Overview">Overview</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Features_at_a_Glance">Features at a Glance</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Language_Overview">Language Overview</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#JavaScript_API">JavaScript API</a><ul class="toc"><li class="toc toc-level-1"><a href="#Template_Rendering">Template Rendering</a><ul class="toc"><li class="toc toc-level-2"><a href="#Rendering_to_a_String">Rendering to a String</a><ul class="toc"></ul></li><li class="toc toc-level-2"><a href="#Rendering_to_a_Context">Rendering to a Context</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-1"><a href="#Template_Compilation">Template Compilation</a><ul class="toc"><li class="toc toc-level-2"><a href="#Compiling_a_Template">Compiling a Template</a><ul class="toc"></ul></li><li class="toc toc-level-2"><a href="#Loading_a_Compiled_Template">Loading a Compiled Template</a><ul class="toc"></ul></li></ul></li></ul></li><li class="toc toc-level-0"><a href="#Performance">Performance</a><ul class="toc"><li class="toc toc-level-1"><a href="#Sample_Compiled_Template">Sample Compiled Template</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Advanced">Advanced</a><ul class="toc"><li class="toc toc-level-1"><a href="#Creating_Taglibs">Creating Taglibs</a><ul class="toc"></ul></li><li class="toc toc-level-1"><a href="#Raptor_Templates_Compilation">Raptor Templates Compilation</a><ul class="toc"></ul></li></ul></li><li class="toc toc-level-0"><a href="#Discussion">Discussion</a><ul class="toc"></ul></li></ul><div class="docs-nav-footer"><ul><li><span class="powered-by">Powered by <a href="/" class="raptorjs">RaptorJS</a></span></li><li><a href="/license/">License</a></li><li><a href="/credits/">Credits</a></li></ul></div></div><div class="message message-warning"><div class="icon"><i class="icon-warning-sign" style="font-size: 30px;"></i></div><div class="bd">Documentation In-Progress</div></div><div class="section section-level-0"><h2 id="Overview">Overview</h2><div class="bd"><div class="try-it"><h1><i class="icon-play-circle icon-large"></i> <a href="/raptor-templates/try-online/" target="_blank">Try Raptor Templates Online</a></h1><div class="desc">Edit Raptor Templates in your browser with instant results!</div></div><p>The Raptor Templating Language is heavily inspired by <a href="http://genshi.edgewall.org/wiki/Documentation/xml-templates.html">Genshi XML Template Language</a> (an XML-based templating language for Python) with the good parts of JSP mixed
+in. The Raptor Templating Language borrows most of the same features from
+Genshi and includes a JavaScript compiler so that a template can be compiled to
+native JavaScript code. The templating language is XML-based so that the XML
+structure of an HTML document can be used to its full advantage to make it
+easier for developers write easily readable templates and to provide optimal
+output—including improved readability and optimized
+output.</p><p>The Raptor Templating language is a proven templating language that is being
+used at eBay in applications where every millisecond and byte counts. eBay will
+continue to invest in Raptor Templates to ensure that it has a very healthy
+ecosystem.</p></div></div><div class="section section-level-0"><h2 id="Features_at_a_Glance">Features at a Glance</h2><div class="bd"><ul><li>Not dogmatic—the decision to be logic-less, less-logic or more-logic is left to
+the
+users</li><li>Easily extensible <ul><li>Taglibs for easy extensibility</li><li>Allows full control over compiled output</li><li>Custom tag handlers with support for both compile-time tag handlers and runtime
+tag
+handlers</li><li>Custom helper functions</li><li>Custom compile-time template transformers</li></ul></li><li>Works in any JavaScript environment—including on the server (Node and Rhino)
+and in all web browsers
+</li><li>XML-based <ul><li>Smarter compiler that leverages the structure of HTML documents</li><li>Easy to validate</li><li>Extensible</li><li>Easily parseable with any off-the-shelf XML parser</li></ul></li><li>Designed with readability and code maintenance in mind</li><li>Optimized compiled output <ul><li>Templates are compiled to native JavaScript functions</li><li>Compiled code generated with minification in mind</li><li>Smart compiler and optimizer</li></ul></li><li>Optimized runtime <ul><li>Lightweight runtime</li><li>Optimized for performance and scalability</li></ul></li><li>Leverages the full power of JavaScript <ul><li>All expressions are JavaScript expressions (<code>eval</code> is <i>never</i> used)</li><li>Templates and macros compile down to native JavaScript functions</li><li>Conditional directives compile down to native JavaScript if-statements and
+similar for most other
+directives</li><li>Function closures utilized for scoped variables and nesting</li></ul></li><li><span class="popover-target" id="w32" title="Smart Whitespace Removal" data-content="&lt;p&gt;The compiler understands that whitespace inside &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; tags should be preserved.&lt;/p&gt;&lt;p&gt;Since templats are XML-based, the compiler knows that extra whitespace between XML elements can be removed and that extra whitespace in body text can be removed.&lt;/p&gt;">Smart whitespace removal</span></li><li>Helpful error messages that provide friendly messages and line/column numbers.</li><li>Compiled code is nicely formatted and easy to debug</li></ul> </div></div><div class="section section-level-0"><h2 id="Language_Overview">Language Overview</h2><div class="bd"><p>All Raptor templates are required to be well-formed XML. This constraint allows
+the template language to use the structure of the XML document to its
+advantage. For example, a template directive that controls structural logic can
+be applied as an attribute of the element that it controls. In addition, unlike
+in non-XML-based templating languages, whitespace removal rules are based on
+the XML structure and not a string language directives. Despite a template
+being well-formed XML, the output does not have to be well-formed XML which
+makes the Raptor Templating Language flexible enough for using in all types of
+web
+applications.</p><p>The Raptor Templating Language aims to be easy to understand by utilizing
+concepts that front-end developers are already familiar with such as XML/HTML
+and JavaScript. While the Raptor Templating Language introduces a new grammar
+on top of XHTML, it is not an entirely new language which reduces the learning
+curve.</p><p>For more information on the Raptor Templates language please see the following
+documentation:
+<a href="/raptor-templates/language-guide/">Raptor Templates: Language Guide</a></p></div></div><div class="section section-level-0"><h2 id="JavaScript_API">JavaScript API</h2><div class="bd"><p></p><div class="section section-level-1"><h2 id="Template_Rendering">Template Rendering</h2><div class="bd"><p></p><div class="section section-level-2"><h2 id="Rendering_to_a_String">Rendering to a String</h2><div class="bd"><p>The <code>template.renderToString(templateName, template-data)</code> method can be used to render a template to a string.</p><div class="code-editor" id="w33"> <textarea id="w33-textarea" style="display: none;" name="code-0">var templating = require('raptor/templating');
+var output = templating.renderToString(
+    "test/Person", 
+    {
+        person: person
+    });</textarea></div><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>NOTE: On the server, if the template cannot be found then the templating module
+will convert the template name to a path and try to load the template. The
+templating module actually checks two paths as illustrated by the
+following:</p> Input template name: <code>"test/Person"</code><br> Paths checked: <ol><li><code>/test/Person.rhtml</code></li><li><code>/test/Person/Person.rhtml</code></li></ol></div></div></div></div><div class="section section-level-2"><h2 id="Rendering_to_a_Context">Rendering to a Context</h2><div class="bd"><p>Instead of rendering a template to a new string, the output of rendering a
+template can be added to an existing "context". A context is an object that
+gets created every time a template is rendered if a context is not provided. At
+a minimum, a context should contain a
+<code>write(str)</code> method that is used to add output to an output buffer and a <code>getOutput()</code> method that is used to get the string output.</p><p>The following code illustrates how to render a template to an existing context:</p><div class="code-editor" id="w34"> <textarea id="w34-textarea" style="display: none;" name="code-1">var templating = require('raptor/templating');
+var context = templating.createContext();
+templating.render("test/Person", {person: person}, context);
+var output = context.getOutput();</textarea></div></div></div></div></div><div class="section section-level-1"><h2 id="Template_Compilation">Template Compilation</h2><div class="bd"><p></p><div class="section section-level-2"><h2 id="Compiling_a_Template">Compiling a Template</h2><div class="bd"><p>If you prefer to only compile a code to JavaScript then the following code can
+be
+used:</p><div class="code-editor" id="w35"> <textarea id="w35-textarea" style="display: none;" name="code-2">var compiler = require('raptor/templating/compiler');
+var compilerOptions = {
+    preserveWhitespace: true
+};
+var jsSource = compiler.compile('&lt;c:template \
+        xmlns:c="core"> \
+        name="greeting" \
+        params="name"> \
+            Hello ${name}! \
+        &lt;/c:template>', 
+        compilerOptions);</textarea></div><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd">The the <code>compilerOptions</code> argument is optional but allows additional options to be passed to the
+compiler to control the compiled output. The default options are the following:
+<div class="code-editor" id="w36"> <textarea id="w36-textarea" style="display: none;" name="code-3">{
+    minify: false,
+    preserveWhitespace: {
+        'pre': true,
+        'textarea': true
+    },
+    allowSelfClosing: {
+        'script': false,
+        'div': false,
+        'textarea': false,
+        'li': false,
+        'b': false,
+        'a': false,
+        'i': false
+    },
+    startTagOnly: {
+        'img': true,
+        'br': true,
+        'input': true
+    }
+}</textarea></div><p>For more details on the supported compiler options please see the following
+sub-page:</p><ul><li><a href="/raptor-templates/compilation/">Advanced &raquo; Raptor Templates Compilation</a></li></ul></div></div></div></div><div class="section section-level-2"><h2 id="Loading_a_Compiled_Template">Loading a Compiled Template</h2><div class="bd"><p></p> </div></div></div></div></div></div><div class="section section-level-0"><h2 id="Performance">Performance</h2><div class="bd"><p>Raptor Templates were designed for optimal performance for use in applications
+with the toughest constraints by producing compiled templates with the minimal
+amount of code while also focusing on runtime
+performance.</p><p>The compiled output of Raptor Templates is kept minimal to reduce the amount of
+bytes that need to be sent over the wire and to reduce the amount of time that
+is required for a template's compiled code to be parsed and executed by a
+JavaScript environment. Local variables are used wherever possible to improve
+minification and short method names are used to keep the compiled size to a
+minimum.</p><p>The rendering time of Raptor Templates is kept to a minimum by fine-tuning the
+compiler. In addition, developers have complete flexibility to control how the
+compiled output is generated to allow for the most demanding performance
+constraints.
+</p><div class="section section-level-1"><h2 id="Sample_Compiled_Template">Sample Compiled Template</h2><div class="bd"><div class="code-editor" id="w37"><h2 class="code-editor-title">Input Template</h2> <textarea id="w37-textarea" style="display: none;" name="code-4">&lt;c:template 
+    xmlns:c="core" 
+    params="name,colors">
+    
+    Hello $name!
+
+    &lt;c:choose>
+        &lt;ul c:when="notEmpty(colors)">
+            &lt;li c:for="color in colors">
+                $color
+            &lt;/li>
+        &lt;/ul>
+        &lt;div c:otherwise="">
+            No colors!
+        &lt;/div>
+    &lt;/c:choose>
+    
+&lt;/c:template></textarea></div><div class="code-editor" id="w38"><h2 class="code-editor-title">Unminified Compiled Output</h2> <textarea id="w38-textarea" style="display: none;" name="code-5">$rset("rhtml", "test", function(helpers){
+  var empty=helpers.e,
+      notEmpty=helpers.ne,
+      escapeXml=helpers.x,
+      forEach=helpers.f;
+
+  return function(data, context){
+    var name=data.name,
+        colors=data.colors;
+
+    context.w('Hello ')
+      .w(escapeXml(name))
+      .w('!');
+    if (notEmpty(colors)) {
+      context.w('&lt;ul>');
+      forEach(colors, function(color) {
+        context.w('&lt;li>')
+          .w(escapeXml(color))
+          .w('&lt;/li>');
+      });
+
+      context.w('&lt;/ul>');
+    } else {
+      context.w('&lt;div>No colors!&lt;/div>');
+    }
+
+  }
+});</textarea></div><div class="code-editor" id="w39"><h2 class="code-editor-title">Minified Compiled Output</h2> <textarea id="w39-textarea" style="display: none;" name="code-6">$rset("rhtml","test",function(a){var e=a.ne,c=a.x,f=a.f;return function(a,b){var g=a.name,d=a.colors;b.w("Hello ").w(c(g)).w("!");e(d)?(b.w("&lt;ul>"),f(d,function(a){b.w("&lt;li>").w(c(a)).w("&lt;/li>")}),b.w("&lt;/ul>")):b.w("&lt;div>No colors!&lt;/div>")}});</textarea></div><table class="sizes table table-bordered"><thead><tr><th></th><th>Uncompressed</th><th>Gzipped</th></tr></thead><tbody><tr><td>Original Size:</td><td>454 bytes</td><td>248 bytes</td></tr><tr><td>Compiled Size:</td><td>243 bytes</td><td>178 bytes</td></tr></tbody></table> Saved 46.48% off the original size (28.23% off the gzipped size)</div></div></div></div><div class="section section-level-0"><h2 id="Advanced">Advanced</h2><div class="bd"><p></p><div class="section section-level-1"><h2 id="Creating_Taglibs">Creating Taglibs</h2><div class="bd"><p>Please see the sub-page, <a href="/raptor-templates/taglibs/">Creating Taglibs</a>, for more details.</p></div></div><div class="section section-level-1"><h2 id="Raptor_Templates_Compilation">Raptor Templates Compilation</h2><div class="bd"><p>Please see the sub-page, <a href="/raptor-templates/compilation/">Raptor Templates Compilation</a>, for more details.</p></div></div></div></div><div class="section section-level-0"><h2 id="Discussion">Discussion</h2><div class="bd"><div id="disqus_thread"></div></div></div></div></div><div class="docs-footer-padding"></div></div></div><script type="text/javascript" src="/static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="/static/jquery-371da524.js"></script>
+<script type="text/javascript" src="/static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="/static/raptor-templates-developer-guide-02c7930e.js"></script>
+<script type="text/javascript" src="/static/code-editor-36478451.js"></script><script type="text/javascript">$rwidgets(
+["components.nav.Nav.NavItemWidget","w0",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w1",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w2",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w3",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w4",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w5",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w6",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w7",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w8",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w9",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w10",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w11",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w12",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w13",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w14",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w15",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w16",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w17",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w18",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w19",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w20",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w21",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w22",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w23",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w24",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w25",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w26",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w27",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w28",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w29",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w30",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w31",0,0,0,0]],
+["components.overlays.Popover.PopoverWidget","w32",{},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w33",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w34",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w35",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w36",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w37",{"mode":"xml","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w38",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components/editors/CodeEditor/CodeEditorWidget","w39",{"mode":"javascript","autoResize":true,"readOnly":true},0,0,0],
+["components.social.Disqus.DisqusWidget","disqus_thread",{"shortName":"raptor-js","id":"raptor-templates-developer-guide","title":"Raptor Templates: Developer Guide"},0,0,0]);</script></body></html>

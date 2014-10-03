@@ -1,0 +1,1 @@
+$rset("rhtml","widgets-test",function(e,t){var n=e.e,r=e.ne,i=e.t,s=i("ui/demo/ColorChangeButton/ColorChangeButtonRenderer");return function(e,t){t.t(s,{colors:"red,green,blue",label:"Click me (Red, Green and Blue)"})}});

@@ -1,0 +1,1 @@
+define.extend("raptor/widgets",function(e){"use strict";return{onReady:function(e,t){$(function(){e.call(t)})}}});

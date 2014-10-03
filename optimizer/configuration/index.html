@@ -1,0 +1,81 @@
+<!DOCTYPE html><html><head><title itemprop="name">RaptorJS Optimizer: Configuration</title><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/static/font-awesome-87349705.css">
+<link rel="stylesheet" type="text/css" href="/static/optimizer-configuration-4e6c9ed2.css">
+<link rel="stylesheet" type="text/css" href="/static/docs-6e628a8c.css">
+<link rel="stylesheet" type="text/css" href="/static/code-editor-f1386401.css">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-33982282-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+var __insp=__insp||[];__insp.push(["wid",2568045892]),function(){function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"==document.location.protocol?"https":"http")+"://www.inspectlet.com/inspectlet-jq.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}window.attachEvent?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}();</script></head><body><div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"><a class="brand" href="/">RaptorJS</a><ul class="nav"><li class="divider-vertical"></li><li id="w0"><a href="/get-started/">Get Started</a></li><li class="divider-vertical"></li><li id="w1" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Learn<b class="caret"></b></a><ul class="dropdown-menu"><li id="w2"><a href="/">Overview</a></li><li id="w3"><a href="/get-started/">Get Started</a></li><li id="w4"><a href="/tutorial/">Tutorial</a></li><li id="w5"><a href="/api/">API Reference</a></li><li id="w6"><a target="_blank" href="https://github.com/raptorjs/samples">Sample Apps</a></li><li id="w7"><a href="/faq/">FAQ</a></li><li class="divider"></li><li id="w8"><a href="/modules-classes/">Modules and Classes</a></li><li id="w9"><a href="/packaging/">Packaging and Extensions</a></li><li id="w10"><a href="/module-loader/">Module Loader</a></li><li id="w11"><a href="/optimizer/">Optimizer</a></li><li id="w12"><a href="/raptor-templates/">Raptor Templates</a></li><li id="w13"><a href="/widgets/">Widget Framework</a></li><li class="divider"></li><li id="w14"><a href="/ui-components/">Building UI Components</a></li><li id="w15"><a href="/logging/">Logging</a></li><li id="w16"><a href="/resource-search-path/">Resource Search Path</a></li></ul></li><li class="divider-vertical"></li><li id="w17" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a><ul class="dropdown-menu"><li id="w18"><a href="https://github.com/raptorjs/raptorjs">Source code</a></li><li id="w19"><a href="https://github.com/raptorjs/raptorjs/issues">Issue Tracker</a></li><li id="w20"><a href="/contribute/">Contribute</a></li><li id="w21"><a href="/contributors/">Contributors</a></li><li class="divider"></li><li id="w22"><a href="http://groups.google.com/group/raptorjs">Discussion Forum</a></li><li class="divider"></li><li id="w23"><a href="http://twitter.com/raptorjs">Twitter (@raptorjs)</a></li><li id="w24"><a href="https://plus.google.com/111493691067944627473/">Google+</a></li><li class="divider"></li><li id="w25"><a href="https://github.com/raptorjs/branding">Logos</a></li></ul></li><li class="divider-vertical"></li><li id="w26" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a><ul class="dropdown-menu"><li id="w27"><a href="https://github.com/raptorjs/raptorjs/wiki/Release-Notes">Release Notes</a></li><li id="w28"><a href="/design-philosophy/">Design Philosophy</a></li><li id="w29"><a target="_blank" href="https://github.com/raptorjs/raptorjs/blob/master/LICENSE.md">License</a></li><li id="w30"><a href="/credits/">Credits</a></li><li id="w31"><a href="/creators/">Creators</a></li></ul></li><li class="divider-vertical"></li></ul></div></div></div><div class="container"><div class="docs"><div class="bd"><div class="docs-content"><h1 id="title">RaptorJS Optmizer: Configuration</h1><div class="toc nav" id="docsNav"><div class="return">&laquo; Return to <a href="/optimizer/">RaptorJS Optimizer</a></div><ul class="toc"><li class="toc toc-level-0"><a href="#Overview">Overview</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Profiles">Profiles</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Bundling">Bundling</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Minification_and_Filters">Minification and Filters</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Output_Directories">Output Directories</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#JSONParams">Configuration Params from JSON File</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Sample_Configuration_Files">Sample Configuration Files</a><ul class="toc"></ul></li><li class="toc toc-level-0"><a href="#Discussion">Discussion</a><ul class="toc"></ul></li></ul><div class="docs-nav-footer"><ul><li><span class="powered-by">Powered by <a href="/" class="raptorjs">RaptorJS</a></span></li><li><a href="/license/">License</a></li><li><a href="/credits/">Credits</a></li></ul></div></div><div class="message message-warning"><div class="icon"><i class="icon-warning-sign" style="font-size: 30px;"></i></div><div class="bd">Documentation In-Progress</div></div><div class="section section-level-0"><h2 id="Overview">Overview</h2><div class="bd"><p></p></div></div><div class="section section-level-0"><h2 id="Profiles">Profiles</h2><div class="bd"><p>The RaptorJS Optimizer configuration file supports profiles using the <code>&lt;profile></code> and <code>&lt;enable-profile></code> tags as shown in the following example:</p><div class="code-editor" id="w32"> <textarea id="w32-textarea" style="display: none;" name="code-0">&lt;optimizer-config>
+
+    &lt;params>
+        &lt;!-- Default to the "development" profile -->
+        &lt;profile>development&lt;/profile>
+    &lt;/params>
+
+    &lt;!-- Enable the profile with the specified name -->
+    &lt;enable-profile>${profile}&lt;/enable-profile>
+    
+    &lt;profile name="development">
+        ...
+        &lt;!-- Disable minification in development -->
+        &lt;minify-js>false&lt;/minify-js>
+        ...
+    &lt;/profile>
+    
+    &lt;profile name="production">
+        ...
+        &lt;!-- Enable minification in production -->
+        &lt;minify-js>false&lt;/minify-js>
+        ...
+    &lt;/profile>
+    
+    ...
+    
+&lt;/optimizer-config></textarea></div><div class="message message-info"><div class="icon"><i class="icon-info-sign" style="font-size: 30px;"></i></div><div class="bd"><p>Parameters can be loaded from a JSON file, passed in as command line arguments
+or provided to the optimizer when using the JavaScript API. For more
+information on parameters please see the following
+sections:</p><ul><li><a href="#JSONParams">Configuration &raquo; Configuration Params from JSON File</a></li><li><a href="#CLIParams">Command Line Interface &raquo; Configuration Params</a></li><li><a href="#JavaScriptAPIParams">JavaScript API &raquo; Configuration Params</a></li></ul></div></div></div></div><div class="section section-level-0"><h2 id="Bundling">Bundling</h2><div class="bd"><p>The optimizer will combine resources based on a bundle configuration to reduce
+the number of HTTP round-trips required to deliver a web page. A resource can
+only belong to one bundle and the first bundle that a resource is added to
+becomes the resource's bundle. If bundling is enabled and a particular page
+dependency is not part of a configured bundle then the dependency is added to a
+default page
+bundle.</p></div></div><div class="section section-level-0"><h2 id="Minification_and_Filters">Minification and Filters</h2><div class="bd"><p>The RaptorJS Optimizer supports custom filters. </p></div></div><div class="section section-level-0"><h2 id="Output_Directories">Output Directories</h2><div class="bd"><p>The optimizer will combine resources based on a bundle configuration to reduce
+the number of HTTP round-trips required to deliver a web page. The
+Rapt</p></div></div><div class="section section-level-0"><h2 id="JSONParams">Configuration Params from JSON File</h2><div class="bd"><p></p></div></div><div class="section section-level-0"><h2 id="Sample_Configuration_Files">Sample Configuration Files</h2><div class="bd">Sample Configuration Files: <ul><li><a href="https://github.com/raptorjs/raptorjs-legacy.github.io/blob/master/optimizer/sample-configuration-files/optimizer-config-profiles.xml" target="blank">Sample Configuration File with Profiles</a></li></ul></div></div><div class="section section-level-0"><h2 id="Discussion">Discussion</h2><div class="bd"><div id="disqus_thread"></div></div></div></div></div><div class="docs-footer-padding"></div></div></div><script type="text/javascript" src="/static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="/static/jquery-371da524.js"></script>
+<script type="text/javascript" src="/static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="/static/optimizer-configuration-02c7930e.js"></script>
+<script type="text/javascript" src="/static/code-editor-36478451.js"></script><script type="text/javascript">$rwidgets(
+["components.nav.Nav.NavItemWidget","w0",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w1",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w2",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w3",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w4",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w5",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w6",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w7",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w8",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w9",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w10",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w11",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w12",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w13",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w14",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w15",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w16",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w17",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w18",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w19",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w20",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w21",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w22",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w23",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w24",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w25",0,0,0,0]],
+["components.nav.Nav.NavItemWidget","w26",0,0,0,0,
+["components.nav.Nav.NavItemWidget","w27",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w28",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w29",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w30",0,0,0,0],
+["components.nav.Nav.NavItemWidget","w31",0,0,0,0]],
+["components/editors/CodeEditor/CodeEditorWidget","w32",{"mode":"xml","autoResize":true,"readOnly":true},0,0,0],
+["components.social.Disqus.DisqusWidget","disqus_thread",{"shortName":"raptor-js","id":"optimizer-configuration","title":"RaptorJS Optmizer: Configuration"},0,0,0]);</script></body></html>

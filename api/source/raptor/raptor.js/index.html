@@ -1,0 +1,772 @@
+<!DOCTYPE html><html><head><base href="../../.."></base><title>Source for /raptor/raptor.js — RaptorJS API</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="static/jsdoc-64998f32.css">
+<link rel="stylesheet" type="text/css" href="static/type-f3fd1b7a.css"></head></html><body><body><div id="nav"><div class="nav jstree-classic" style="visibility: hidden;" id="w0"><div id="search-form"><div class="body"><input type="text" id="searchInput" size="20" value="Search API docs" autocomplete="off" class="ac_input"></div></div><div id="navTree" class="jstree-no-dots"><ul><li id="nav_package_json" class="package"><a href="./source/package.json/">package.json</a> </li><li id="nav_raptor" class="raptor-module"><a href="./raptor/">raptor</a><ul><li id="nav_raptor_package_json" class="package"><a href="./source/raptor/package.json/">package.json</a> </li><li id="nav_raptor_arrays" class="raptor-module"><a href="./raptor/arrays/">arrays</a><ul><li id="nav_raptor_arrays_package_json" class="package"><a href="./source/raptor/arrays/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_caching" class="raptor-module"><a href="./raptor/caching/">caching</a><ul><li id="nav_raptor_caching_package_json" class="package"><a href="./source/raptor/caching/package.json/">package.json</a> </li><li id="nav_raptor_caching_BaseCache" class="raptor-class"><a href="./raptor/caching/BaseCache/">BaseCache</a> </li><li id="nav_raptor_caching_SimpleCache" class="raptor-class"><a href="./raptor/caching/SimpleCache/">SimpleCache</a> </li><li id="nav_raptor_caching_SimpleCacheProvider" class="raptor-class"><a href="./raptor/caching/SimpleCacheProvider/">SimpleCacheProvider</a> </li></ul> </li><li id="nav_raptor_component-renderer" class="raptor-module"><a href="./raptor/component-renderer/">component-renderer</a><ul><li id="nav_raptor_component-renderer_package_json" class="package"><a href="./source/raptor/component-renderer/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_config" class="raptor-module"><a href="./raptor/config/">config</a><ul><li id="nav_raptor_config_package_json" class="package"><a href="./source/raptor/config/package.json/">package.json</a> </li><li id="nav_raptor_config_Config" class="class"><a href="./raptor/config/Config/">configConfig</a> </li></ul> </li><li id="nav_raptor_console" class="folder"><a href="#">console</a><ul><li id="nav_raptor_console_package_json" class="package"><a href="./source/raptor/console/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_cookies" class="raptor-module"><a href="./raptor/cookies/">cookies</a><ul><li id="nav_raptor_cookies_package_json" class="package"><a href="./source/raptor/cookies/package.json/">package.json</a> </li><li id="nav_raptor_cookies_Cookie" class="raptor-class"><a href="./raptor/cookies/Cookie/">Cookie</a> </li><li id="nav_raptor_cookies_CookieManager" class="raptor-class"><a href="./raptor/cookies/CookieManager/">CookieManager</a> </li></ul> </li><li id="nav_raptor_css-minifier" class="raptor-module"><a href="./raptor/css-minifier/">css-minifier</a><ul><li id="nav_raptor_css-minifier_package_json" class="package"><a href="./source/raptor/css-minifier/package.json/">package.json</a> </li><li id="nav_raptor_css-minifier_Node" class="object extension"><a href="./raptor/css-minifier_Node/">Node Extension</a> </li></ul> </li><li id="nav_raptor_css-parser" class="raptor-module"><a href="./raptor/css-parser/">css-parser</a> </li><li id="nav_raptor_data-providers" class="raptor-module"><a href="./raptor/data-providers/">data-providers</a><ul><li id="nav_raptor_data-providers_package_json" class="package"><a href="./source/raptor/data-providers/package.json/">package.json</a> </li><li id="nav_raptor_data-providers_DataProviders" class="raptor-class"><a href="./raptor/data-providers/DataProviders/">DataProviders</a> </li></ul> </li><li id="nav_raptor_debug" class="raptor-module"><a href="./raptor/debug/">debug</a><ul><li id="nav_raptor_debug_package_json" class="package"><a href="./source/raptor/debug/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_dom" class="raptor-module"><a href="./raptor/dom/">dom</a><ul><li id="nav_raptor_dom_package_json" class="package"><a href="./source/raptor/dom/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_ecma" class="folder"><a href="#">ecma</a><ul><li id="nav_raptor_ecma_es5" class="folder"><a href="#">es5</a><ul><li id="nav_raptor_ecma_es5_package_json" class="package"><a href="./source/raptor/ecma/es5/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_ecma_es6" class="folder"><a href="#">es6</a><ul><li id="nav_raptor_ecma_es6_package_json" class="package"><a href="./source/raptor/ecma/es6/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_ecma_JSON" class="folder"><a href="#">JSON</a><ul><li id="nav_raptor_ecma_JSON_package_json" class="package"><a href="./source/raptor/ecma/JSON/package.json/">package.json</a> </li></ul> </li></ul> </li><li id="nav_raptor_file-watcher" class="raptor-module"><a href="./raptor/file-watcher/">file-watcher</a><ul><li id="nav_raptor_file-watcher_package_json" class="package"><a href="./source/raptor/file-watcher/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_files" class="raptor-module"><a href="./raptor/files/">files</a><ul><li id="nav_raptor_files_package_json" class="package"><a href="./source/raptor/files/package.json/">package.json</a> </li><li id="nav_raptor_files_Node" class="object extension"><a href="./raptor/files_Node/">Node Extension</a> </li><li id="nav_raptor_files_Rhino" class="object extension"><a href="./raptor/files_Rhino/">Rhino Extension</a> </li><li id="nav_raptor_files_FileMixins" class="raptor-module"><a href="./raptor/files/FileMixins/">FileMixins</a> </li><li id="nav_raptor_files_walker" class="raptor-module"><a href="./raptor/files/walker/">walker</a><ul><li id="nav_raptor_files_walker_package_json" class="package"><a href="./source/raptor/files/walker/package.json/">package.json</a> </li><li id="nav_raptor_files_walker_DirWalker" class="raptor-class"><a href="./raptor/files/walker/DirWalker/">DirWalker</a> </li></ul> </li><li id="nav_raptor_files_File_Node" class="raptor-class"><a href="./raptor/files/File_Node/">File (Node Extension)</a> </li><li id="nav_raptor_files_File_Rhino" class="raptor-class"><a href="./raptor/files/File_Rhino/">File (Rhino Extension)</a> </li></ul> </li><li id="nav_raptor_i18n" class="raptor-module"><a href="./raptor/i18n/">i18n</a><ul><li id="nav_raptor_i18n_package_json" class="package"><a href="./source/raptor/i18n/package.json/">package.json</a> </li><li id="nav_raptor_i18n_Dictionaries" class="raptor-class"><a href="./raptor/i18n/Dictionaries/">Dictionaries</a> </li><li id="nav_raptor_i18n_Dictionary" class="raptor-class"><a href="./raptor/i18n/Dictionary/">Dictionary</a> </li></ul> </li><li id="nav_raptor_java" class="raptor-module"><a href="./raptor/java/">java</a><ul><li id="nav_raptor_java_package_json" class="package"><a href="./source/raptor/java/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_js-minifier" class="raptor-module"><a href="./raptor/js-minifier/">js-minifier</a><ul><li id="nav_raptor_js-minifier_package_json" class="package"><a href="./source/raptor/js-minifier/package.json/">package.json</a> </li><li id="nav_raptor_js-minifier_Node" class="object extension"><a href="./raptor/js-minifier_Node/">Node Extension</a> </li></ul> </li><li id="nav_raptor_jsdoc" class="raptor-module"><a href="./raptor/jsdoc/">jsdoc</a><ul><li id="nav_raptor_jsdoc_package_json" class="package"><a href="./source/raptor/jsdoc/package.json/">package.json</a> </li><li id="nav_raptor_jsdoc_raptor-plugin" class="raptor-module"><a href="./raptor/jsdoc/raptor-plugin/">raptor-plugin</a> </li><li id="nav_raptor_jsdoc_ASTWalker" class="raptor-class"><a href="./raptor/jsdoc/ASTWalker/">ASTWalker</a> </li><li id="nav_raptor_jsdoc_BorrowTag" class="raptor-class"><a href="./raptor/jsdoc/BorrowTag/">BorrowTag</a> </li><li id="nav_raptor_jsdoc_Comment" class="raptor-class"><a href="./raptor/jsdoc/Comment/">Comment</a> </li><li id="nav_raptor_jsdoc_CommentParser" class="raptor-class"><a href="./raptor/jsdoc/CommentParser/">CommentParser</a> </li><li id="nav_raptor_jsdoc_Environment" class="raptor-class"><a href="./raptor/jsdoc/Environment/">Environment</a> </li><li id="nav_raptor_jsdoc_ParamTag" class="raptor-class"><a href="./raptor/jsdoc/ParamTag/">ParamTag</a> </li><li id="nav_raptor_jsdoc_ReturnTag" class="raptor-class"><a href="./raptor/jsdoc/ReturnTag/">ReturnTag</a> </li><li id="nav_raptor_jsdoc_SymbolSet" class="raptor-class"><a href="./raptor/jsdoc/SymbolSet/">SymbolSet</a> </li><li id="nav_raptor_jsdoc_Tag" class="raptor-class"><a href="./raptor/jsdoc/Tag/">Tag</a> </li><li id="nav_raptor_jsdoc_Type" class="raptor-class"><a href="./raptor/jsdoc/Type/">Type</a> </li></ul> </li><li id="nav_raptor_json" class="raptor-module"><a href="./raptor/json/">json</a><ul><li id="nav_raptor_json_package_json" class="package"><a href="./source/raptor/json/package.json/">package.json</a> </li><li id="nav_raptor_json_jQuery_Parse" class="object extension"><a href="./raptor/json_jQuery_Parse/">jQuery Parse Extension</a> </li><li id="nav_raptor_json_Raptor_Parse" class="object extension"><a href="./raptor/json_Raptor_Parse/">Raptor Parse Extension</a> </li><li id="nav_raptor_json_Raptor_Stringify" class="object extension"><a href="./raptor/json_Raptor_Stringify/">Raptor Stringify Extension</a> </li><li id="nav_raptor_json_parse" class="raptor-module"><a href="./raptor/json/parse/">parse</a><ul><li id="nav_raptor_json_parse_package_json" class="package"><a href="./source/raptor/json/parse/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_json_stringify" class="raptor-module"><a href="./raptor/json/stringify/">stringify</a><ul><li id="nav_raptor_json_stringify_package_json" class="package"><a href="./source/raptor/json/stringify/package.json/">package.json</a> </li></ul> </li></ul> </li><li id="nav_raptor_listeners" class="raptor-module"><a href="./raptor/listeners/">listeners</a><ul><li id="nav_raptor_listeners_package_json" class="package"><a href="./source/raptor/listeners/package.json/">package.json</a> </li><li id="nav_raptor_listeners_ListenerHandle" class="object"><a href="./raptor/listeners/ListenerHandle/">ListenerHandle</a> </li><li id="nav_raptor_listeners_Listeners" class="class"><a href="./raptor/listeners/Listeners/">Listeners</a> </li><li id="nav_raptor_listeners_Message" class="class"><a href="./raptor/listeners/Message/">Message</a> </li><li id="nav_raptor_listeners_Observable" class="class"><a href="./raptor/listeners/Observable/">Observable</a> </li></ul> </li><li id="nav_raptor_loader" class="raptor-module"><a href="./raptor/loader/">loader</a><ul><li id="nav_raptor_loader_package_json" class="package"><a href="./source/raptor/loader/package.json/">package.json</a> </li><li id="nav_raptor_loader_Browser" class="object extension"><a href="./raptor/loader_Browser/">Browser Extension</a> </li><li id="nav_raptor_loader_jQuery" class="object extension"><a href="./raptor/loader_jQuery/">jQuery Extension</a> </li><li id="nav_raptor_loader_Module_Loader" class="object extension"><a href="./raptor/loader_Module_Loader/">Module Loader Extension</a> </li><li id="nav_raptor_loader_Raptor" class="object extension"><a href="./raptor/loader_Raptor/">Raptor Extension</a> </li><li id="nav_raptor_loader_require" class="folder"><a href="#">require</a><ul><li id="nav_raptor_loader_require_package_json" class="package"><a href="./source/raptor/loader/require/package.json/">package.json</a> </li></ul> </li></ul> </li><li id="nav_raptor_locale" class="folder"><a href="#">locale</a><ul><li id="nav_raptor_locale_formatting" class="folder"><a href="#">formatting</a><ul><li id="nav_raptor_locale_formatting_numbers" class="raptor-module"><a href="./raptor/locale/formatting/numbers/">numbers</a><ul><li id="nav_raptor_locale_formatting_numbers_package_json" class="package"><a href="./source/raptor/locale/formatting/numbers/package.json/">package.json</a> </li><li id="nav_raptor_locale_formatting_numbers_NumberFormatter" class="class"><a href="./raptor/locale/formatting/numbers/NumberFormatter/">NumberFormatter</a> </li></ul> </li></ul> </li></ul> </li><li id="nav_raptor_logging" class="raptor-module"><a href="./raptor/logging/">logging</a><ul><li id="nav_raptor_logging_package_json" class="package"><a href="./source/raptor/logging/package.json/">package.json</a> </li><li id="nav_raptor_logging_Console" class="object extension"><a href="./raptor/logging_Console/">Console Extension</a> </li><li id="nav_raptor_logging_ConsoleAppender" class="raptor-class"><a href="./raptor/logging/ConsoleAppender/">ConsoleAppender</a> </li><li id="nav_raptor_logging_Logger" class="raptor-class"><a href="./raptor/logging/Logger/">Logger</a> </li><li id="nav_raptor_logging_voidLogger" class="object"><a href="./raptor/logging/voidLogger/">voidLogger</a> </li></ul> </li><li id="nav_raptor_lookup" class="raptor-module"><a href="./raptor/lookup/">lookup</a><ul><li id="nav_raptor_lookup_package_json" class="package"><a href="./source/raptor/lookup/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_mime" class="raptor-module"><a href="./raptor/mime/">mime</a><ul><li id="nav_raptor_mime_package_json" class="package"><a href="./source/raptor/mime/package.json/">package.json</a> </li><li id="nav_raptor_mime_Node" class="object extension"><a href="./raptor/mime_Node/">Node Extension</a> </li></ul> </li><li id="nav_raptor_objects" class="raptor-module"><a href="./raptor/objects/">objects</a><ul><li id="nav_raptor_objects_package_json" class="package"><a href="./source/raptor/objects/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_optimizer" class="raptor-module"><a href="./raptor/optimizer/">optimizer</a><ul><li id="nav_raptor_optimizer_cli" class="raptor-module"><a href="./raptor/optimizer/cli/">cli</a><ul><li id="nav_raptor_optimizer_cli_package_json" class="package"><a href="./source/raptor/optimizer/cli/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_optimizer_i18n" class="raptor-module"><a href="./raptor/optimizer/i18n/">i18n</a><ul><li id="nav_raptor_optimizer_i18n_i18n-compiler" class="raptor-module"><a href="./raptor/optimizer/i18n/i18n-compiler/">i18n-compiler</a> </li><li id="nav_raptor_optimizer_i18n_I18nContext" class="raptor-class"><a href="./raptor/optimizer/i18n/I18nContext/">I18nContext</a> </li></ul> </li><li id="nav_raptor_optimizer_MinifyCSSFilter" class="raptor-module"><a href="./raptor/optimizer/MinifyCSSFilter/">MinifyCSSFilter</a> </li><li id="nav_raptor_optimizer_MinifyJSFilter" class="raptor-module"><a href="./raptor/optimizer/MinifyJSFilter/">MinifyJSFilter</a> </li><li id="nav_raptor_optimizer_ResolveCSSUrlsFilter" class="raptor-module"><a href="./raptor/optimizer/ResolveCSSUrlsFilter/">ResolveCSSUrlsFilter</a> </li><li id="nav_raptor_optimizer_Bundle" class="raptor-class"><a href="./raptor/optimizer/Bundle/">Bundle</a> </li><li id="nav_raptor_optimizer_BundleConfig" class="raptor-class"><a href="./raptor/optimizer/BundleConfig/">BundleConfig</a> </li><li id="nav_raptor_optimizer_BundleMappings" class="raptor-class"><a href="./raptor/optimizer/BundleMappings/">BundleMappings</a> </li><li id="nav_raptor_optimizer_BundleSetConfig" class="raptor-class"><a href="./raptor/optimizer/BundleSetConfig/">BundleSetConfig</a> </li><li id="nav_raptor_optimizer_Cache" class="raptor-class"><a href="./raptor/optimizer/Cache/">Cache</a> </li><li id="nav_raptor_optimizer_Config" class="raptor-class"><a href="./raptor/optimizer/Config/">Config</a> </li><li id="nav_raptor_optimizer_ConfigXmlParser" class="raptor-class"><a href="./raptor/optimizer/ConfigXmlParser/">ConfigXmlParser</a> </li><li id="nav_raptor_optimizer_FileUrlBuilder" class="raptor-class"><a href="./raptor/optimizer/FileUrlBuilder/">FileUrlBuilder</a> </li><li id="nav_raptor_optimizer_HtmlInjector" class="raptor-class"><a href="./raptor/optimizer/HtmlInjector/">HtmlInjector</a> </li><li id="nav_raptor_optimizer_OptimizedPage" class="raptor-class"><a href="./raptor/optimizer/OptimizedPage/">OptimizedPage</a> </li><li id="nav_raptor_optimizer_OptimizerFileWriter" class="raptor-class"><a href="./raptor/optimizer/OptimizerFileWriter/">OptimizerFileWriter</a> </li><li id="nav_raptor_optimizer_OptimizerRenderContext" class="raptor-class"><a href="./raptor/optimizer/OptimizerRenderContext/">OptimizerRenderContext</a> </li><li id="nav_raptor_optimizer_OptimizerWriterMixins" class="raptor-class"><a href="./raptor/optimizer/OptimizerWriterMixins/">OptimizerWriterMixins</a> </li><li id="nav_raptor_optimizer_PageBundles" class="raptor-class"><a href="./raptor/optimizer/PageBundles/">PageBundles</a><ul><li id="nav_raptor_optimizer_PageBundles_AsyncRequire" class="class"><a href="./raptor/optimizer/PageBundles/AsyncRequire/">AsyncRequire</a> </li></ul> </li><li id="nav_raptor_optimizer_PageConfig" class="raptor-class"><a href="./raptor/optimizer/PageConfig/">PageConfig</a> </li><li id="nav_raptor_optimizer_PageOptimizer" class="raptor-class"><a href="./raptor/optimizer/PageOptimizer/">PageOptimizer</a> </li><li id="nav_raptor_optimizer_Slot" class="raptor-class"><a href="./raptor/optimizer/Slot/">Slot</a> </li><li id="nav_raptor_optimizer_SlotTracker" class="raptor-class"><a href="./raptor/optimizer/SlotTracker/">SlotTracker</a> </li></ul> </li><li id="nav_raptor_packaging" class="raptor-module"><a href="./raptor/packaging/">packaging</a><ul><li id="nav_raptor_packaging_Rhino" class="object extension"><a href="./raptor/packaging_Rhino/">Rhino Extension</a> </li><li id="nav_raptor_packaging_DependencyWalker" class="raptor-module"><a href="./raptor/packaging/DependencyWalker/">DependencyWalker</a> </li><li id="nav_raptor_packaging_Dependency" class="raptor-class"><a href="./raptor/packaging/Dependency/">Dependency</a> </li><li id="nav_raptor_packaging_Dependency_coffee" class="raptor-class"><a href="./raptor/packaging/Dependency_coffee/">Dependency_coffee</a> </li><li id="nav_raptor_packaging_Dependency_css" class="raptor-class"><a href="./raptor/packaging/Dependency_css/">Dependency_css</a> </li><li id="nav_raptor_packaging_Dependency_define" class="raptor-class"><a href="./raptor/packaging/Dependency_define/">Dependency_define</a> </li><li id="nav_raptor_packaging_Dependency_dust" class="raptor-class"><a href="./raptor/packaging/Dependency_dust/">Dependency_dust</a> </li><li id="nav_raptor_packaging_Dependency_i18n" class="raptor-class"><a href="./raptor/packaging/Dependency_i18n/">Dependency_i18n</a> </li><li id="nav_raptor_packaging_Dependency_i18n-module" class="raptor-class"><a href="./raptor/packaging/Dependency_i18n-module/">Dependency_i18n-module</a> </li><li id="nav_raptor_packaging_Dependency_js" class="raptor-class"><a href="./raptor/packaging/Dependency_js/">Dependency_js</a> </li><li id="nav_raptor_packaging_Dependency_less" class="raptor-class"><a href="./raptor/packaging/Dependency_less/">Dependency_less</a> </li><li id="nav_raptor_packaging_Dependency_loader-metadata" class="raptor-class"><a href="./raptor/packaging/Dependency_loader-metadata/">Dependency_loader-metadata</a> </li><li id="nav_raptor_packaging_Dependency_module" class="raptor-class"><a href="./raptor/packaging/Dependency_module/">Dependency_module</a> </li><li id="nav_raptor_packaging_Dependency_package" class="raptor-class"><a href="./raptor/packaging/Dependency_package/">Dependency_package</a> </li><li id="nav_raptor_packaging_Dependency_resource" class="raptor-class"><a href="./raptor/packaging/Dependency_resource/">Dependency_resource</a> </li><li id="nav_raptor_packaging_Dependency_rhtml" class="raptor-class"><a href="./raptor/packaging/Dependency_rhtml/">Dependency_rhtml</a> </li><li id="nav_raptor_packaging_Dependency_rtld" class="raptor-class"><a href="./raptor/packaging/Dependency_rtld/">Dependency_rtld</a> </li><li id="nav_raptor_packaging_ExtensionCollection" class="raptor-class"><a href="./raptor/packaging/ExtensionCollection/">ExtensionCollection</a> </li><li id="nav_raptor_packaging_PackageLoader" class="raptor-class"><a href="./raptor/packaging/PackageLoader/">PackageLoader</a> </li><li id="nav_raptor_packaging_PackageManifest" class="raptor-class"><a href="./raptor/packaging/PackageManifest/">PackageManifest</a> </li></ul> </li><li id="nav_raptor_paths" class="raptor-module"><a href="./raptor/paths/">paths</a><ul><li id="nav_raptor_paths_package_json" class="package"><a href="./source/raptor/paths/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_process" class="raptor-module"><a href="./raptor/process/">process</a><ul><li id="nav_raptor_process_package_json" class="package"><a href="./source/raptor/process/package.json/">package.json</a> </li><li id="nav_raptor_process__Node" class="object extension"><a href="./raptor/process__Node/"> Node Extension</a> </li></ul> </li><li id="nav_raptor_promises" class="raptor-module"><a href="./raptor/promises/">promises</a><ul><li id="nav_raptor_promises_package_json" class="package"><a href="./source/raptor/promises/package.json/">package.json</a> </li><li id="nav_raptor_promises_Node" class="object extension"><a href="./raptor/promises_Node/">Node Extension</a> </li></ul> </li><li id="nav_raptor_pubsub" class="raptor-module"><a href="./raptor/pubsub/">pubsub</a><ul><li id="nav_raptor_pubsub_package_json" class="package"><a href="./source/raptor/pubsub/package.json/">package.json</a> </li><li id="nav_raptor_pubsub_Channel" class="raptor-class"><a href="./raptor/pubsub/Channel/">Channel</a> </li><li id="nav_raptor_pubsub_Message" class="raptor-class"><a href="./raptor/pubsub/Message/">Message</a> </li></ul> </li><li id="nav_raptor_regexp" class="raptor-module"><a href="./raptor/regexp/">regexp</a><ul><li id="nav_raptor_regexp_package_json" class="package"><a href="./source/raptor/regexp/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_render-context" class="raptor-module"><a href="./raptor/render-context/">render-context</a><ul><li id="nav_raptor_render-context_async-package_json" class="package"><a href="./source/raptor/render-context/async-package.json/">async-package.json</a> </li><li id="nav_raptor_render-context_package_json" class="package"><a href="./source/raptor/render-context/package.json/">package.json</a> </li><li id="nav_raptor_render-context_Context" class="raptor-class"><a href="./raptor/render-context/Context/">Context</a> </li></ul> </li><li id="nav_raptor_renderer" class="raptor-module"><a href="./raptor/renderer/">renderer</a><ul><li id="nav_raptor_renderer_package_json" class="package"><a href="./source/raptor/renderer/package.json/">package.json</a> </li><li id="nav_raptor_renderer_RenderResult" class="raptor-class"><a href="./raptor/renderer/RenderResult/">RenderResult</a> </li></ul> </li><li id="nav_raptor_resources" class="raptor-module"><a href="./raptor/resources/">resources</a><ul><li id="nav_raptor_resources_package_json" class="package"><a href="./source/raptor/resources/package.json/">package.json</a> </li><li id="nav_raptor_resources_Browser" class="object extension"><a href="./raptor/resources_Browser/">Browser Extension</a> </li><li id="nav_raptor_resources_Server" class="object extension"><a href="./raptor/resources_Server/">Server Extension</a> </li><li id="nav_raptor_resources_walker" class="raptor-module"><a href="./raptor/resources/walker/">walker</a><ul><li id="nav_raptor_resources_walker_package_json" class="package"><a href="./source/raptor/resources/walker/package.json/">package.json</a> </li><li id="nav_raptor_resources_walker_DirWalker" class="raptor-class"><a href="./raptor/resources/walker/DirWalker/">DirWalker</a> </li></ul> </li><li id="nav_raptor_resources_BrowserResource" class="raptor-class"><a href="./raptor/resources/BrowserResource/">BrowserResource</a> </li><li id="nav_raptor_resources_DirSearchPathEntry" class="raptor-class"><a href="./raptor/resources/DirSearchPathEntry/">DirSearchPathEntry</a> </li><li id="nav_raptor_resources_FileResource" class="raptor-class"><a href="./raptor/resources/FileResource/">FileResource</a> </li><li id="nav_raptor_resources_MissingResource" class="raptor-class"><a href="./raptor/resources/MissingResource/">MissingResource</a> </li><li id="nav_raptor_resources_Resource" class="raptor-class"><a href="./raptor/resources/Resource/">Resource</a> </li><li id="nav_raptor_resources_RhinoResMgrSearchPathEntryAdapter" class="raptor-class"><a href="./raptor/resources/RhinoResMgrSearchPathEntryAdapter/">RhinoResMgrSearchPathEntryAdapter</a> </li><li id="nav_raptor_resources_RhinoResourceAdapter" class="raptor-class"><a href="./raptor/resources/RhinoResourceAdapter/">RhinoResourceAdapter</a><ul><li id="nav_raptor_resources_RhinoResourceAdapter_Watcher" class="class"><a href="./raptor/resources/RhinoResourceAdapter/Watcher/">Watcher</a> </li></ul> </li><li id="nav_raptor_resources_RhinoSearchPathEntryAdapter" class="raptor-class"><a href="./raptor/resources/RhinoSearchPathEntryAdapter/">RhinoSearchPathEntryAdapter</a> </li><li id="nav_raptor_resources_SearchPath" class="raptor-class"><a href="./raptor/resources/SearchPath/">SearchPath</a> </li><li id="nav_raptor_resources_SearchPathEntry" class="raptor-class"><a href="./raptor/resources/SearchPathEntry/">SearchPathEntry</a> </li></ul> </li><li id="nav_raptor_runtime" class="raptor-module"><a href="./raptor/runtime/">runtime</a><ul><li id="nav_raptor_runtime_package_json" class="package"><a href="./source/raptor/runtime/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_stacktraces" class="folder"><a href="#">stacktraces</a><ul><li id="nav_raptor_stacktraces_package_json" class="package"><a href="./source/raptor/stacktraces/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_stacktraces_Browser" class="raptor-module"><a href="./raptor/stacktraces_Browser/">stacktraces (Browser Extension)</a> </li><li id="nav_raptor_stacktraces_Node" class="raptor-module"><a href="./raptor/stacktraces_Node/">stacktraces (Node Extension)</a> </li><li id="nav_raptor_stacktraces_Rhino" class="raptor-module"><a href="./raptor/stacktraces_Rhino/">stacktraces (Rhino Extension)</a> </li><li id="nav_raptor_strings" class="raptor-module"><a href="./raptor/strings/">strings</a><ul><li id="nav_raptor_strings_package_json" class="package"><a href="./source/raptor/strings/package.json/">package.json</a> </li><li id="nav_raptor_strings_StringBuilder" class="raptor-class"><a href="./raptor/strings/StringBuilder/">StringBuilder</a> </li></ul> </li><li id="nav_raptor_temp" class="raptor-module"><a href="./raptor/temp/">temp</a><ul><li id="nav_raptor_temp_package_json" class="package"><a href="./source/raptor/temp/package.json/">package.json</a> </li></ul> </li><li id="nav_raptor_templating" class="raptor-module"><a href="./raptor/templating/">templating</a><ul><li id="nav_raptor_templating_async-package_json" class="package"><a href="./source/raptor/templating/async-package.json/">async-package.json</a> </li><li id="nav_raptor_templating_package_json" class="package"><a href="./source/raptor/templating/package.json/">package.json</a> </li><li id="nav_raptor_templating_Async" class="object extension"><a href="./raptor/templating_Async/">Async Extension</a> </li><li id="nav_raptor_templating_Rhino" class="object extension"><a href="./raptor/templating_Rhino/">Rhino Extension</a> </li><li id="nav_raptor_templating_Server" class="object extension"><a href="./raptor/templating_Server/">Server Extension</a> </li><li id="nav_raptor_templating_compiler" class="raptor-module"><a href="./raptor/templating/compiler/">compiler</a><ul><li id="nav_raptor_templating_compiler_package_json" class="package"><a href="./source/raptor/templating/compiler/package.json/">package.json</a> </li><li id="nav_raptor_templating_compiler_Rhino" class="object extension"><a href="./raptor/templating/compiler_Rhino/">Rhino Extension</a> </li><li id="nav_raptor_templating_compiler_Server" class="object extension"><a href="./raptor/templating/compiler_Server/">Server Extension</a> </li><li id="nav_raptor_templating_compiler_AttributeSplitter" class="raptor-class"><a href="./raptor/templating/compiler/AttributeSplitter/">AttributeSplitter</a> </li><li id="nav_raptor_templating_compiler_ElementNode" class="raptor-class"><a href="./raptor/templating/compiler/ElementNode/">ElementNode</a> </li><li id="nav_raptor_templating_compiler_Expression" class="raptor-class"><a href="./raptor/templating/compiler/Expression/">Expression</a> </li><li id="nav_raptor_templating_compiler_ExpressionParser" class="raptor-class"><a href="./raptor/templating/compiler/ExpressionParser/">ExpressionParser</a><ul><li id="nav_raptor_templating_compiler_ExpressionParser_ExpressionParserHelper" class="raptor-class"><a href="./raptor/templating/compiler/ExpressionParser/ExpressionParserHelper/">ExpressionParserHelper</a> </li></ul> </li><li id="nav_raptor_templating_compiler_Node" class="raptor-class"><a href="./raptor/templating/compiler/Node/">Node</a> </li><li id="nav_raptor_templating_compiler_ParseTreeBuilder" class="raptor-class"><a href="./raptor/templating/compiler/ParseTreeBuilder/">ParseTreeBuilder</a> </li><li id="nav_raptor_templating_compiler_Taglib" class="raptor-class"><a href="./raptor/templating/compiler/Taglib/">Taglib</a> </li><li id="nav_raptor_templating_compiler_TaglibCollection" class="raptor-class"><a href="./raptor/templating/compiler/TaglibCollection/">TaglibCollection</a><ul><li id="nav_raptor_templating_compiler_TaglibCollection_Imports" class="class"><a href="./raptor/templating/compiler/TaglibCollection/Imports/">Imports</a> </li></ul> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/">TaglibXmlLoader</a><ul><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Attribute" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Attribute/">Attribute</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Function" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Function/">Function</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_HelperObject" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/HelperObject/">HelperObject</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_ImportedVariable" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/ImportedVariable/">ImportedVariable</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_NestedVariable" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/NestedVariable/">NestedVariable</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Property" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Property/">Property</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Tag" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Tag/">Tag</a> </li><li id="nav_raptor_templating_compiler_TaglibXmlLoader_Transformer" class="raptor-class"><a href="./raptor/templating/compiler/TaglibXmlLoader/Transformer/">Transformer</a> </li></ul> </li><li id="nav_raptor_templating_compiler_TemplateBuilder" class="raptor-class"><a href="./raptor/templating/compiler/TemplateBuilder/">TemplateBuilder</a><ul><li id="nav_raptor_templating_compiler_TemplateBuilder_CodeWriter" class="class"><a href="./raptor/templating/compiler/TemplateBuilder/CodeWriter/">CodeWriter</a> </li></ul> </li><li id="nav_raptor_templating_compiler_TemplateCompiler" class="raptor-class"><a href="./raptor/templating/compiler/TemplateCompiler/">TemplateCompiler</a> </li><li id="nav_raptor_templating_compiler_TextNode" class="raptor-class"><a href="./raptor/templating/compiler/TextNode/">TextNode</a> </li><li id="nav_raptor_templating_compiler_TypeConverter" class="raptor-class"><a href="./raptor/templating/compiler/TypeConverter/">TypeConverter</a> </li></ul> </li><li id="nav_raptor_templating_taglibs" class="folder"><a href="#">taglibs</a><ul><li id="nav_raptor_templating_taglibs_async" class="folder"><a href="#">async</a><ul><li id="nav_raptor_templating_taglibs_async_package_json" class="package"><a href="./source/raptor/templating/taglibs/async/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_async_AsyncFragmentTag" class="raptor-module"><a href="./raptor/templating/taglibs/async/AsyncFragmentTag/">AsyncFragmentTag</a> </li><li id="nav_raptor_templating_taglibs_async_AsyncFragmentTagTransformer" class="raptor-module"><a href="./raptor/templating/taglibs/async/AsyncFragmentTagTransformer/">AsyncFragmentTagTransformer</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_caching" class="folder"><a href="#">caching</a><ul><li id="nav_raptor_templating_taglibs_caching_package_json" class="package"><a href="./source/raptor/templating/taglibs/caching/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_caching_CachedFragmentTag" class="raptor-module"><a href="./raptor/templating/taglibs/caching/CachedFragmentTag/">CachedFragmentTag</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_core" class="folder"><a href="#">core</a><ul><li id="nav_raptor_templating_taglibs_core_compile-time-package_json" class="package"><a href="./source/raptor/templating/taglibs/core/compile-time-package.json/">compile-time-package.json</a> </li><li id="nav_raptor_templating_taglibs_core_AssignNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/AssignNode/">AssignNode</a> </li><li id="nav_raptor_templating_taglibs_core_ChooseNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ChooseNode/">ChooseNode</a> </li><li id="nav_raptor_templating_taglibs_core_CoreTagTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/core/CoreTagTransformer/">CoreTagTransformer</a> </li><li id="nav_raptor_templating_taglibs_core_CoreTextTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/core/CoreTextTransformer/">CoreTextTransformer</a> </li><li id="nav_raptor_templating_taglibs_core_DefNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/DefNode/">DefNode</a> </li><li id="nav_raptor_templating_taglibs_core_ElseIfNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ElseIfNode/">ElseIfNode</a> </li><li id="nav_raptor_templating_taglibs_core_ElseNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ElseNode/">ElseNode</a> </li><li id="nav_raptor_templating_taglibs_core_ElseTagTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/core/ElseTagTransformer/">ElseTagTransformer</a> </li><li id="nav_raptor_templating_taglibs_core_ForNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ForNode/">ForNode</a> </li><li id="nav_raptor_templating_taglibs_core_IfNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/IfNode/">IfNode</a> </li><li id="nav_raptor_templating_taglibs_core_IncludeNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/IncludeNode/">IncludeNode</a> </li><li id="nav_raptor_templating_taglibs_core_InvokeNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/InvokeNode/">InvokeNode</a> </li><li id="nav_raptor_templating_taglibs_core_OtherwiseNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/OtherwiseNode/">OtherwiseNode</a> </li><li id="nav_raptor_templating_taglibs_core_ScriptletNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/ScriptletNode/">ScriptletNode</a> </li><li id="nav_raptor_templating_taglibs_core_TagHandlerNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/TagHandlerNode/">TagHandlerNode</a> </li><li id="nav_raptor_templating_taglibs_core_TemplateNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/TemplateNode/">TemplateNode</a> </li><li id="nav_raptor_templating_taglibs_core_VarNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/VarNode/">VarNode</a> </li><li id="nav_raptor_templating_taglibs_core_WhenNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/WhenNode/">WhenNode</a> </li><li id="nav_raptor_templating_taglibs_core_WithNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/WithNode/">WithNode</a> </li><li id="nav_raptor_templating_taglibs_core_WriteNode" class="raptor-class"><a href="./raptor/templating/taglibs/core/WriteNode/">WriteNode</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_html" class="folder"><a href="#">html</a><ul><li id="nav_raptor_templating_taglibs_html_compile-time-package_json" class="package"><a href="./source/raptor/templating/taglibs/html/compile-time-package.json/">compile-time-package.json</a> </li><li id="nav_raptor_templating_taglibs_html_CommentTag" class="raptor-module"><a href="./raptor/templating/taglibs/html/CommentTag/">CommentTag</a> </li><li id="nav_raptor_templating_taglibs_html_DocTypeNode" class="raptor-class"><a href="./raptor/templating/taglibs/html/DocTypeNode/">DocTypeNode</a> </li><li id="nav_raptor_templating_taglibs_html_HtmlTagTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/html/HtmlTagTransformer/">HtmlTagTransformer</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_layout" class="folder"><a href="#">layout</a><ul><li id="nav_raptor_templating_taglibs_layout_package_json" class="package"><a href="./source/raptor/templating/taglibs/layout/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_layout_PlaceholderTag" class="raptor-module"><a href="./raptor/templating/taglibs/layout/PlaceholderTag/">PlaceholderTag</a> </li><li id="nav_raptor_templating_taglibs_layout_PutTag" class="raptor-module"><a href="./raptor/templating/taglibs/layout/PutTag/">PutTag</a> </li><li id="nav_raptor_templating_taglibs_layout_UseTag" class="raptor-module"><a href="./raptor/templating/taglibs/layout/UseTag/">UseTag</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_optimizer" class="folder"><a href="#">optimizer</a><ul><li id="nav_raptor_templating_taglibs_optimizer_package_json" class="package"><a href="./source/raptor/templating/taglibs/optimizer/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_optimizer_DependenciesTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/DependenciesTag/">DependenciesTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_DependencyTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/DependencyTag/">DependencyTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_DisableExtensionTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/DisableExtensionTag/">DisableExtensionTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_EnableExtensionTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/EnableExtensionTag/">EnableExtensionTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_ImgTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/ImgTag/">ImgTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_PageTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/PageTag/">PageTag</a> </li><li id="nav_raptor_templating_taglibs_optimizer_PageTagTransformer" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/PageTagTransformer/">PageTagTransformer</a> </li><li id="nav_raptor_templating_taglibs_optimizer_SlotTag" class="raptor-module"><a href="./raptor/templating/taglibs/optimizer/SlotTag/">SlotTag</a> </li></ul> </li><li id="nav_raptor_templating_taglibs_widgets" class="folder"><a href="#">widgets</a><ul><li id="nav_raptor_templating_taglibs_widgets_compile-time-package_json" class="package"><a href="./source/raptor/templating/taglibs/widgets/compile-time-package.json/">compile-time-package.json</a> </li><li id="nav_raptor_templating_taglibs_widgets_package_json" class="package"><a href="./source/raptor/templating/taglibs/widgets/package.json/">package.json</a> </li><li id="nav_raptor_templating_taglibs_widgets_WidgetFunctions" class="raptor-module"><a href="./raptor/templating/taglibs/widgets/WidgetFunctions/">WidgetFunctions</a> </li><li id="nav_raptor_templating_taglibs_widgets_InitWidgetsTag" class="raptor-class"><a href="./raptor/templating/taglibs/widgets/InitWidgetsTag/">InitWidgetsTag</a> </li><li id="nav_raptor_templating_taglibs_widgets_WidgetsTagTransformer" class="raptor-class"><a href="./raptor/templating/taglibs/widgets/WidgetsTagTransformer/">WidgetsTagTransformer</a> </li><li id="nav_raptor_templating_taglibs_widgets_WidgetTag" class="raptor-class"><a href="./raptor/templating/taglibs/widgets/WidgetTag/">WidgetTag</a> </li></ul> </li></ul> </li></ul> </li><li id="nav_raptor_widgets" class="raptor-module"><a href="./raptor/widgets/">widgets</a><ul><li id="nav_raptor_widgets_package_json" class="package"><a href="./source/raptor/widgets/package.json/">package.json</a> </li><li id="nav_raptor_widgets_Browser" class="object extension"><a href="./raptor/widgets_Browser/">Browser Extension</a> </li><li id="nav_raptor_widgets_Server" class="object extension"><a href="./raptor/widgets_Server/">Server Extension</a> </li><li id="nav_raptor_widgets_Widget" class="raptor-class"><a href="./raptor/widgets/Widget/">Widget</a><ul><li id="nav_raptor_widgets_Widget_jQuery" class="object extension"><a href="./raptor/widgets/Widget_jQuery/">jQuery Extension</a> </li><li id="nav_raptor_widgets_Widget_Legacy" class="object extension"><a href="./raptor/widgets/Widget_Legacy/">Legacy Extension</a> </li></ul> </li><li id="nav_raptor_widgets_WidgetDef" class="raptor-class"><a href="./raptor/widgets/WidgetDef/">WidgetDef</a> </li><li id="nav_raptor_widgets_WidgetsContext" class="raptor-class"><a href="./raptor/widgets/WidgetsContext/">WidgetsContext</a> </li></ul> </li><li id="nav_raptor_xml" class="folder"><a href="#">xml</a><ul><li id="nav_raptor_xml_dom" class="raptor-module"><a href="./raptor/xml/dom/">dom</a><ul><li id="nav_raptor_xml_dom_package_json" class="package"><a href="./source/raptor/xml/dom/package.json/">package.json</a> </li><li id="nav_raptor_xml_dom_DomParser_jQuery" class="raptor-class"><a href="./raptor/xml/dom/DomParser_jQuery/">DomParser (jQuery Extension)</a> </li></ul> </li><li id="nav_raptor_xml_dom-to-sax" class="raptor-module"><a href="./raptor/xml/dom-to-sax/">dom-to-sax</a><ul><li id="nav_raptor_xml_dom-to-sax_package_json" class="package"><a href="./source/raptor/xml/dom-to-sax/package.json/">package.json</a> </li><li id="nav_raptor_xml_dom-to-sax_Attribute" class="class"><a href="./raptor/xml/dom-to-sax/Attribute/">Attribute</a> </li><li id="nav_raptor_xml_dom-to-sax_Element" class="class"><a href="./raptor/xml/dom-to-sax/Element/">Element</a> </li></ul> </li><li id="nav_raptor_xml_sax" class="raptor-module"><a href="./raptor/xml/sax/">sax</a><ul><li id="nav_raptor_xml_sax_package_json" class="package"><a href="./source/raptor/xml/sax/package.json/">package.json</a> </li><li id="nav_raptor_xml_sax_object-mapper" class="raptor-module"><a href="./raptor/xml/sax/object-mapper/">object-mapper</a><ul><li id="nav_raptor_xml_sax_object-mapper_package_json" class="package"><a href="./source/raptor/xml/sax/object-mapper/package.json/">package.json</a> </li><li id="nav_raptor_xml_sax_object-mapper_Reader" class="class"><a href="./raptor/xml/sax/object-mapper/Reader/">Reader</a> </li></ul> </li><li id="nav_raptor_xml_sax_BaseSaxParser" class="raptor-class"><a href="./raptor/xml/sax/BaseSaxParser/">BaseSaxParser</a> </li><li id="nav_raptor_xml_sax_SaxParserDom" class="raptor-class"><a href="./raptor/xml/sax/SaxParserDom/">SaxParserDom</a> </li></ul> </li><li id="nav_raptor_xml_utils" class="raptor-module"><a href="./raptor/xml/utils/">utils</a><ul><li id="nav_raptor_xml_utils_package_json" class="package"><a href="./source/raptor/xml/utils/package.json/">package.json</a> </li><li id="nav_raptor_xml_utils_" class="object extension"><a href="./raptor/xml/utils_/">null Extension</a> </li></ul> </li><li id="nav_raptor_xml_Attribute" class="raptor-class"><a href="./raptor/xml/Attribute/">Attribute</a> </li><li id="nav_raptor_xml_Element" class="raptor-class"><a href="./raptor/xml/Element/">Element</a> </li><li id="nav_raptor_xml_SaxParser_Node" class="raptor-class"><a href="./raptor/xml/SaxParser_Node/">SaxParser (Node Extension)</a><ul><li id="nav_raptor_xml_SaxParser_Node_Attribute" class="class"><a href="./raptor/xml/SaxParser_Node/Attribute/">Attribute (Node Extension)</a> </li><li id="nav_raptor_xml_SaxParser_Node_Element" class="class"><a href="./raptor/xml/SaxParser_Node/Element/">Element (Node Extension)</a> </li></ul> </li><li id="nav_raptor_xml_SaxParser_Rhino" class="raptor-class"><a href="./raptor/xml/SaxParser_Rhino/">SaxParser (Rhino Extension)</a><ul><li id="nav_raptor_xml_SaxParser_Rhino_Attribute" class="class"><a href="./raptor/xml/SaxParser_Rhino/Attribute/">Attribute (Rhino Extension)</a> </li><li id="nav_raptor_xml_SaxParser_Rhino_Element" class="class"><a href="./raptor/xml/SaxParser_Rhino/Element/">Element (Rhino Extension)</a> </li></ul> </li></ul> </li><li id="nav_raptor_configConfig" class="class"><a href="./raptor/configConfig/">configConfig</a> </li><li id="nav_raptor_loaderTransaction" class="object"><a href="./raptor/loaderTransaction/">loaderTransaction</a> </li></ul> </li><li id="nav_raptor-legacy" class="folder"><a href="#">raptor-legacy</a><ul><li id="nav_raptor-legacy_package_json" class="package"><a href="./source/raptor-legacy/package.json/">package.json</a> </li></ul> </li><li id="nav_JSON" class="object"><a href="./JSON/">JSON</a> </li><li id="nav_global" class="global"><a href="./global/">Global</a> </li></ul></div></div></div><div id="main"><div class="header"><h1><a href="./"><span class="title">RaptorJS API Docs</span></a><span class="version">2.6.16</span><div class="powered-by">Powered by <a href="http://raptorjs.org/">RaptorJS</a></div></h1></div><div id="mainContent"><h1>/raptor/raptor.js</h1><pre class="code sh_javascript_dom">(function() {
+    /* jshint strict:false */
+    
+    if ((typeof window !== 'undefined') &amp;&amp; (window.raptorDefine !== undefined)) {
+        /* global require:true */
+        // TODO: Maybe in raptor-no-conflict mode the global variable names for storing the raptor define and
+        //       require methods should be randomly generated so Raptor can avoid conflicting with itself?
+        define = window.raptorDefine;
+        require = window.raptorRequire;
+        // short-circuit raptor initialization in browser environment if it already exists
+        return;
+    }
+
+    var raptor, //The "raptor" module being created
+        defs = {}, //Registered module definitions are added to this object
+        getOrCreateDef = function(id) { //Returns the module definition entry for the given ID or creates one of one does not exist
+            return (id &amp;&amp; defs[id]) || (defs[id] = {postCreate: []});
+        },
+        cache = {}, //Loaded module cache
+        separator = "/",
+        lookup = {},
+        slice = [].slice,
+        isArray = Array.isArray, //Helper function to check if an object is an Array object
+
+        /**
+         * Extends an object with the properties of another object.
+         *
+         * @param  {Object} target The target object to extend (optional, if not provided an empty object is used as the target)
+         * @param  {Object} source The source object with properties
+         * @return {Object} The extended object
+         */
+        extend = function(target, source) { //A simple function to copy properties from one project to another
+            if (!target) { //Check if a target was provided, otherwise create a new empty object to return
+                target = {};
+            }
+            for (var propName in source) {
+                if (source.hasOwnProperty(propName)) { //Only look at source properties that are not inherited
+                    target[propName] = source[propName]; //Copy the property
+                }
+            }
+
+            return target;
+        },
+        isString = function(s) {
+            return typeof s == 'string';
+        },
+        isFunction = function(f) {
+            return typeof f == 'function';
+        },
+
+        /**
+         * Utility method to iterate over elements in an Array that
+         * internally uses the "forEach" property of the array.
+         *
+         * &lt;p>
+         * If the input Array is null/undefined then nothing is done.
+         *
+         * &lt;p>
+         * If the input object does not have a "forEach" method then
+         * it is converted to a single element Array and iterated over.
+         *
+         *
+         * @param  {Array|Object} a An Array or an Object
+         * @param  {Function} fun The callback function for each property
+         * @param  {Object} thisp The "this" object to use for the callback function
+         * @return {void}
+         */
+        forEach = function(a, func, thisp) {
+            if (a != null) {
+                (a.forEach ? a : [a]).forEach(func, thisp);
+            }
+        },
+
+        /**
+         * Invokes a provided callback for each name/value pair
+         * in a JavaScript object.
+         *
+         * &lt;p>
+         * &lt;h2>Usage&lt;/h2>
+         * &lt;js>
+         * raptor.forEachEntry(
+         *     {
+         *         firstName: "John",
+         *         lastName: "Doe"
+         *     },
+         *     function(name, value) {
+         *         console.log(name + '=' + value);
+         *     },
+         *     this);
+         * )
+         * // Output:
+         * // firstName=John
+         * // lastName=Doe
+         * &lt;/js>
+         * @param  {Object} o A JavaScript object that contains properties to iterate over
+         * @param  {Function} fun The callback function for each property
+         * @param  {Object} thisp The "this" object to use for the callback function
+         * @return {void}
+         */
+        forEachEntry = function(o, fun, thisp) {
+            for (var k in o)
+            {
+                if (o.hasOwnProperty(k))
+                {
+                    fun.call(thisp, k, o[k]);
+                }
+            }
+        },
+        /**
+         * Creates a module for the first time based on the provided factory function and provided post create functions
+         * @param   {String}                   id         The ID of the module being built (not used, but simplifies code for callee)
+         * @param   {Function|Object}          factory    The factory function or object instance
+         * @param   {Function|Array&lt;Function>} postCreate A function used to modify the instance before it is cached or an array of functions to modify the instance
+         * @return  {Object}            [description]
+         * @private
+         */
+        _build = function(id, factory, postCreate) {
+            var instance = isFunction(factory) ? factory() : factory,
+                o;
+
+            if (postCreate) {
+                forEach(postCreate, function(func) {
+                    if ((o = func(instance))) { //Check if the postCreate function produced a new function...
+                        instance = o; //if so, use that instead
+                    }
+                });
+            }
+            return instance;
+        },
+        /**
+         * Wire up the prototypes to support inheritance
+         *
+         * @param   {Function} clazz    The constructor function
+         * @param   {String} superclass The name of the super class
+         * @param   {Boolean} copyProps If true, then all properties of the original prototype will be copied to the new prototype
+         * @return  {Object}            The newly created prototype object with the prototypes chained together
+         * @private
+         */
+        _inherit = function(clazz, superclass, copyProps) { //Helper function to setup the prototype chain of a class to inherit from another class's prototype
+            
+            var proto = clazz.prototype,
+                F = function() {};
+              
+            var inherit = isString(superclass) ? _require(superclass) : superclass;
+            
+            F.prototype = inherit.prototype;
+            clazz.superclass = F.prototype;
+
+            clazz.prototype = new F();
+              
+            if (copyProps) {
+                extend(clazz.prototype, proto);
+            }
+              
+            return proto;
+        },
+        _makeClass = function(clazz, superclass, name) {
+            if (!isFunction(clazz)) {
+                var o = clazz;
+                clazz = o.init || function() {};
+                extend(clazz.prototype, o);
+            }
+            
+            if (superclass) {
+                _inherit(clazz, superclass, true);
+            }
+
+            clazz.getName = clazz.getName || function() {
+                return name;
+            };
+
+            var proto = clazz.prototype;
+            proto.constructor = clazz;
+            proto.getClass = function() {
+                return clazz;
+            };
+            
+            return clazz;
+        },
+        _enumValueOrdinal = function() {
+            return this._ordinal;
+        },
+        _enumValueName = function() {
+            return this._name;
+        },
+        _enumValueCompareTo = function(other) {
+            return this._ordinal - other._ordinal;
+        },
+        /**
+         * Normalizes a module ID by resolving relative paths (if baseName is provided)
+         * and by converting all dots to forward slashes.
+         *
+         * Examples:
+         * normalize('test.MyClass') --> 'test/MyClass'
+         * normalize('./AnotherClass', 'test/MyClass') --> 'test/AnotherClass'
+         *
+         * @param   {String} id       The module ID to normalize
+         * @param   {String} baseName The base name for the module ID that is used to resolve relative paths. (optional)
+         * @return  {String}          The normalized module ID
+         * @private
+         */
+        _normalize = function(id, baseName) {
+            if (id.charAt(0) == separator) {
+                id = id.substring(1);
+            }
+
+            if (id.charAt(0) == '.') {
+                if (!baseName) {
+                    return id;
+                }
+
+                var baseNameParts = baseName.split(separator).slice(0, -1);
+
+                forEach(id.split(separator), function(part, i) {
+                    if (part == '..') {
+                        baseNameParts.splice(baseNameParts.length-1, 1); //Remove the last element
+                    }
+                    else if (part != '.') {
+                        baseNameParts.push(part);
+                    }
+                });
+
+                return baseNameParts.join(separator);
+            }
+            else {
+                return id.replace(/\./g, separator);
+            }
+        },
+        /**
+         * Resolves a module with specified ID or asynchronously resolves a set of modules if a callback function is provided.
+         *
+         * &lt;p>
+         * If a callback is provided then the {@Link raptor/loader} module is used to load the specified modules.
+         *
+         * @param   {String|Array}   id A String module ID or an Array of String module IDs (an Array is only allowed if a callback is provided)
+         * @param   {Function} callback A callback function to use for asynchronous loading (optional)
+         * @param   {Object}   thisObj  The "this" object to use for the callback function
+         * @return  {Object} The loaded module (if synchronous) or the result of calling {@Link raptor/loader#load}
+         */
+        _require = function(id, callback, thisObj) {
+            if (callback) {
+                return _require('raptor/loader').load(id, callback, thisObj);
+            }
+
+            if (cache.hasOwnProperty(id)) {
+                return cache[id];
+            }
+            
+            if (raptor.exists(id)) {
+                var defEntry = defs[id];
+                return (cache[id] = _build(id, defEntry.factory, defEntry.postCreate));
+            }
+            else {
+                throw new Error(id + ' not found');
+            }
+        },
+        /**
+         * These are properties that get added to all "require" functions.
+         *
+         * NOTE: The require function will always include a "normalize" function
+         *       that can be used to normalize a module ID based on the context
+         *       where the require was created
+         */
+        requireProps = {
+            load: function(dependencies, callback) {
+                var normalize = this.normalize;
+                
+                if (!isArray(dependencies)) {
+                    dependencies = [dependencies];
+                }
+                
+                for (var i=0, len=dependencies.length; i&lt;len; i++) {
+                    dependencies[i] = normalize(dependencies[i]);
+                }
+
+                return _require(dependencies, callback);
+            },
+            
+            exists: function(id) {
+                return raptor.exists(this.normalize(id));
+            },
+            
+            find: function(id) {
+                
+                return raptor.find(this.normalize(id));
+            }
+        },
+        /**
+         * These are properties that get added to all "define" functions.
+         *
+         * NOTE: The define function will always include a "require" function
+         *       that can be used to require other modules.
+         */
+        defineProps = {
+            extend: function() {
+                return _define(arguments, this.require, 0, 1);
+            },
+
+            Class: function() {
+                return _define(arguments, this.require, 1);
+            },
+
+            Enum: function() {
+                return _define(arguments, this.require, 0, 0, 1);
+            }
+        },
+        _extendDefine = function(define) {
+            //Unfortunately functions cannot have custom prototypes so we much manually copy properties for each new instance
+            return extend(define, defineProps);
+        },
+        _extendRequire = function(require) {
+            return extend(require, requireProps);
+        },
+        /**
+         * This functions takes in the arguments to define, define.Class and define.extend
+         * calls and does the hard work of handling optional arguments.
+         *
+         * @param   {arguments}  args The arguments object for the define, define.Class or define.extend
+         * @param   {Function}  simpleRequire The function that should be used to actually perform the require of an object
+         * @param   {Boolean} isClass Should only be true if this is define.Class call
+         * @param   {Boolean} isExtend Should only be true if this is a define.extend call
+         * @return  {Object|undefined} If no id is provided then the anonymous object is immediately built and returned. Otherwise, undefined is returned.
+         * @private
+         */
+        _define = function(args, simpleRequire, isClass, isExtend, isEnum) {
+            var i=0,
+                last = args.length-1,
+                finalFactory, //The function that wraps the user provided factory function to handle building the correct arguments to the user function
+                arg,
+                id, //The object id (optional)
+                superclass, //The superclass (optional, should only be allowed for define.Class but that is not enforced currently...less code)
+                enumValues,
+                dependencies = [], //The dependencies arguments... defaults to an empty array
+                postCreate, //A function that should be invoked after the object is created for the first time...Used to handle inheritance and to apply an extension
+                factory, //The factory function or object definition (required, always the last argument)
+                require = _extendRequire(function(requestedId, callback) { //This is the "require" function that the user code will see...Need to add the required props
+                    return callback ?
+                        require.load(requestedId, callback) :
+                        simpleRequire(requestedId, id); //Pass along the requested ID and the base ID to the require implementation
+                }),
+                module = new Module(require), //Create a module object
+                exports = module.exports, //Use the exports associated with the module object
+                local = { //Map local functions and objects to names so that the names can be explicitly used. For example: define(['require', 'exports', 'module'], function(require, exports, module) {})
+                    require: require,
+                    exports: exports,
+                    module: module
+                },
+                getSuperclass= function() {
+                    return (superclass = isString(superclass) ? require(superclass) : superclass);
+                },
+                _gather = function() { //Converts an array of dependency IDs to the actual dependency objects (input array is modified)
+                    forEach(dependencies, function(requestedId, i) {
+                        if (isString(requestedId)) {
+                            var d;
+
+                            if (!(d = local[requestedId])) { //See if the requested module is a local module and just use that module if it is
+                                d = requestedId == 'super' ? getSuperclass().prototype : simpleRequire(requestedId, id); //Not a local module, look it up...they will do the normalization
+                            }
+
+                            dependencies[i] = d;
+                        }
+                    });
+
+                    return dependencies;
+                };
+
+            require.normalize = function(requestedId) { //Helper function to normalize a module based on the parent define for the require
+                return _normalize(requestedId, id);
+            };
+
+            /*
+             Loop through the arguments to sort things out...
+             */
+            for (; i&lt;last; i++) {
+                arg = args[i];
+                if (isString(arg)) { //We found a string argument
+                    if (id) { //If we already found an "id" then this string must be the superclass
+                        superclass = _normalize(arg, id);
+                    }
+                    else { //Otherwise it is the module ID
+                        id = module.id = _normalize(arg);
+                    }
+                }
+                else if (isArray(arg)) { //We found an array...The argument must be the array of dependency IDs
+                    dependencies = arg;
+                }
+                else if (isEnum) {
+                    enumValues = arg;
+                }
+                else {
+                    superclass = arg.superclass;
+                }
+            }
+            
+            factory = args[last]; //The factory function is always the last argument
+
+
+            if (isExtend) { //If define.extend then we need to register a "post create" function to modify the target module
+                postCreate = function(target) {
+                    if (isFunction(factory)) {
+                        factory = factory.apply(raptor, _gather().concat([require, target]));
+                    }
+                    
+                    if (factory) {
+                        extend(isFunction(target) ? target.prototype : target, factory);
+                    }
+                };
+            }
+            else {
+                if (isClass || superclass) {
+                    postCreate = function(instance) {
+                        return _makeClass(instance, getSuperclass(), id);
+                    };
+                }
+                else if (isEnum) {
+
+                    if (isArray(factory)) {
+                        enumValues = factory;
+                        factory = null;
+                    }
+
+                    postCreate = function(EnumClass) {
+                        if (EnumClass) {
+                            if (typeof EnumClass == 'object') {
+                                EnumClass = _makeClass(EnumClass, 0, id); // Convert the class object definition to
+                                                                          // a class constructor function
+                            }
+                        } else {
+                            EnumClass = function() {};
+                        }
+
+                        var proto = EnumClass.prototype,
+                            count = 0,
+                            _addEnumValue = function(name, EnumCtor) {
+                                return extend(
+                                    EnumClass[name] = new EnumCtor(),
+                                    {
+                                        _ordinal: count++,
+                                        _name: name
+                                    });
+                            };
+
+                        if (isArray(enumValues)) {
+                            forEach(enumValues, function(name) {
+                                _addEnumValue(name, EnumClass);
+                            });
+                        }
+                        else if (enumValues) {
+                            var EnumCtor = function() {};
+                            EnumCtor.prototype = proto;
+
+                            forEachEntry(enumValues, function(name, args) {
+                                EnumClass.apply(_addEnumValue(name, EnumCtor), args || []);
+                            });
+                        }
+
+                        EnumClass.valueOf = function(name) {
+                            return EnumClass[name];
+                        };
+
+                        extend(proto, {
+                            name : _enumValueName,
+                            ordinal : _enumValueOrdinal,
+                            compareTo : _enumValueCompareTo
+                        });
+
+                        if (proto.toString == Object.prototype.toString) {
+                            proto.toString = _enumValueName;
+                        }
+
+                        return EnumClass;
+                    };
+                }
+
+
+                
+
+                finalFactory = isFunction(factory) ?
+                    function() {
+                        var result = factory.apply(raptor, _gather().concat([require, exports, module]));
+                        return result === undefined ? module.exports : result;
+                    } :
+                    factory;
+            }
+
+            return raptor.define(id, finalFactory, postCreate);
+        },
+        Module = function(require) {
+            var _this = this;
+            _this.require = require;
+            _this.exports = {};
+        };
+
+    Module.prototype = {
+        logger: function() {
+            var _this = this;
+            return _this.l || (_this.l = _require('raptor/logging').logger(_this.id));
+        }
+    };
+
+    /**
+     * The core raptor module provides an AMD implementation that can be used
+     * on the server or in the web browser.
+     *
+     * @module
+     * @name raptor
+     * @raptor
+     */
+    raptor = {
+        cache: cache,
+        
+        inherit: _inherit,
+
+        extend: extend,
+
+        forEach: forEach,
+        
+        /**
+         * Converts a native arguments object to a native JavaScript
+         * Array.
+         *
+         * @param  {arguments} args The arguments object
+         * @param  {int} startIndex The starting index (optional)
+         * @return {Array} The native JavaScript error
+         */
+        arrayFromArguments: function(args, startIndex) {
+            if (!args) {
+                return [];
+            }
+            
+            if (startIndex) {
+                return startIndex &lt; args.length ? slice.call(args, startIndex) : [];
+            }
+            else
+            {
+                return slice.call(args);
+            }
+        },
+        
+        forEachEntry: forEachEntry,
+        
+        /**
+         * Creates an Error object with the root cause stored. In addition,
+         * this method normalizes how stack traces are recorded
+         * across environments.
+         *
+         * &lt;p>
+         * Recommended usage:
+         * &lt;ul>
+         *  &lt;li>&lt;js>throw raptor.createError(new Error('Invalid. Exception: ' + cause), cause);&lt;/js>&lt;/li>
+         *  &lt;li>&lt;js>throw raptor.createError(new Error('Invalid'));&lt;/js>&lt;/li>
+         * &lt;/ul>
+         *
+         * @param  {String|Error} message An error message or an Error object
+         * @param  {Error} cause The cause of the error
+         * @return {Error} The resulting Error object that can then be thrown.
+         */
+        createError: function(message, cause) {
+            var error,
+                argsLen = arguments.length,
+                E = Error;
+            
+            if (argsLen == 2)
+            {
+                error = message instanceof E ? message : new E(message);
+                error._cause = cause;
+            }
+            else if (argsLen == 1)
+            {
+                if (message instanceof E)
+                {
+                    error = message;
+                }
+                else
+                {
+                    error = new E(message);
+                }
+            }
+            
+            return error;
+        },
+
+        setImplicitId: function(id) {
+            this._implicitId = id;
+        },
+
+        /**
+         * Registers a factory function or object with an ID.
+         *
+         * NOTE: This function does no normalization of module IDs
+         *       and it executes the factory function with no arguments.
+         *
+         * @param  {String}          id         The ID of the object being defined
+         * @param  {Function|Object} factory    The factory function or Object instance
+         * @param  {Function}        postCreate A function to execute after the object is created for the first time (optional)
+         * @return {Object} Returns undefined if an "id" is provided. If an "id" is provided then the object is immediately built and returned.
+         */
+        define: function(id, factory, postCreate) {
+            var instance;
+            if (!id) {
+                if (!this._implicitId) {
+                    return _build.apply(raptor, arguments);
+                }
+                
+                id = this._implicitId;
+                this._implicitId = undefined;
+            }
+
+            var def = getOrCreateDef(id);
+            if (factory) {
+                def.factory = factory;
+            }
+            
+            if (postCreate) {
+                def.postCreate.push(postCreate);
+
+                if ((instance = cache[id])) {
+                    postCreate(instance);
+                }
+            }
+            
+            if (typeof instance == 'object' &amp;&amp; instance.toString === Object.prototype.toString) {
+                instance.toString = function() {
+                    return '[' + id + ']';
+                };
+            }
+
+        },
+
+        /**
+         * Returns true if a RaptorJS AMD module with specified ID exists, false otherwise.
+         *
+         * @param  {String} id The ID of a module
+         * @return {Boolean} true if a RaptorJS AMD module with specified ID exists, false otherwise.
+         */
+        exists: function(id) {
+            return defs.hasOwnProperty(id);
+        },
+        
+        /**
+         * Returns an initialized RaptorJS AMD module with specified ID if it exists, undefined otherwise.
+         *
+         * @param  {String} id The ID of a module
+         * @return {Object} an initialized RaptorJS AMD module with specified ID if it exists, undefined otherwise
+         */
+        find: function(id) {
+            return raptor.exists(id) ? raptor.require(id) : undefined;
+        },
+
+        require: _require,
+
+        normalize: _normalize,
+
+        _define: _define,
+
+        props: [requireProps, defineProps]
+    };  //End raptor
+
+    var _global;
+
+    if (typeof window !== 'undefined') {
+        // browser environment
+        _global = window;
+
+        /*global require:true */
+        var defineRequire = defineProps.require = function(id, baseName) {
+            return _require(_normalize(id, baseName));
+        };
+        
+        // always export raptorDefine function to global scope (this should not cause a conflict)
+        window.raptorDefine = define = _extendDefine(
+            function() {
+                return _define(arguments, defineRequire);
+            });
+
+        // always export raptorRequire function to global scope (this should not cause a conflict)
+        window.raptorRequire = require = _extendRequire(function(id, callback) {
+            return isFunction(callback) ?
+                require.load(id, callback) :
+                _require(_normalize(id));
+        });
+
+        if (typeof raptorNoConflict === 'undefined' || raptorNoConflict !== true) {
+            // We are not in no-conflict mode so expose define and require.
+            // Put AMD-style define and require functions in the global window scope.
+            window.define = raptorDefine;
+            window.require = raptorRequire;
+        }
+        
+        require.normalize = _normalize;
+
+        define.amd = {};
+    }
+    else {
+        // server-side environment
+        _global = global;
+        module.exports = raptor;
+    }
+    
+    raptor.define('raptor', raptor);
+    
+    /*
+    The below code adds global lookup related functions that can always used
+    look up objects by keys or to look up an array of objects by key. These
+    functions are used by compiled code only and should not be used by
+    user code directly.
+    TODO: provide a "raptor/lookup" module for user code
+     */
+    
+
+
+    extend(_global, {
+        /**
+         * @param  {String} category The category name for the object being added to the lookup
+         * @param  {String} key      The object key
+         * @param  {Object} data     The object to associate with the key
+         * @return {void}
+         */
+        $rset: function(category, key, data) {
+            
+            if (typeof key === 'object'){
+                forEachEntry(key, function(k, v){
+                    $rset(category, k, v);
+                });
+            } else {
+                var catData = lookup[category];
+                if (!catData) {
+                    catData = lookup[category] = {};
+                }
+                if (data !== undefined) {
+                    catData[key] = data;
+                }
+                else {
+                    delete catData[key];
+                }
+            }
+            
+        },
+
+        $radd: function(category, data) {
+            var catData = lookup[category];
+            if (!catData) {
+                catData = lookup[category] = [];
+            }
+            catData.push(data);
+        },
+
+        $rget: function(category, key) {
+            var catData = lookup[category];
+            return arguments.length == 2 ? catData &amp;&amp; catData[key] : catData;
+        },
+
+        $rdef: function(name) {
+            var def = function() {
+                define.apply(this,[name].concat(raptor.arrayFromArguments(arguments)));
+            };
+
+            def.amd = {};
+
+            return def;
+        }
+    });
+
+    
+    raptor.global = _global;
+}());</pre> </div></div><div id="footer"><div class="fineprint" style="clear:both">&copy; Documentation generated by <a href="http://raptorjs.org/jsdoc" target="_blank">Raptor JSDoc</a></div></div><script type="text/javascript" src="static/core-b80e8d87.js"></script>
+<script type="text/javascript" src="static/jquery-371da524.js"></script>
+<script type="text/javascript" src="static/jsdoc-ff81c58a.js"></script>
+<script type="text/javascript" src="static/widgets-7dc6a28f.js"></script>
+<script type="text/javascript" src="static/type-b348694c.js"></script><script type="text/javascript">$rwidgets(
+["components.jsdoc.Nav.NavWidget","w0",{},0,0,0]);</script><script type="text/javascript">sh_highlightDocument();</script></body></body>

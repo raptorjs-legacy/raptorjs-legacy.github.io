@@ -1,0 +1,1 @@
+$rset("rhtml","ui/demo/ColorChangeButton",function(e,t){var n=e.e,r=e.ne,i=e.t,s=i("raptor/templating/taglibs/widgets/WidgetTag"),o=e.x;return function(e,t){var n=e.label;t.t(s,{jsClass:"ui/demo/ColorChangeButton/ColorChangeButtonWidget",_cfg:e.widgetConfig},function(e){t.w('<button type="button"').a("id",e.elId()).w(">").w(o(n)).w("</button>")})}});
